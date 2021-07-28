@@ -1,0 +1,185 @@
+:root{  /*chỗ khai báo biến, VD*/
+    --color_menu: khaki;
+}
+
+/*========================= MENU ===============*/
+div.Menu{
+    background-color: var(--color_menu);
+    height: 30px;
+    width: 100%;
+}
+ul.ListForMenu{
+    list-style: none;   /*Bỏ dấu trước list*/
+    margin-right: auto; /*combo 3 thuộc tính này*/
+    margin-left: auto;      /*dùng để căn zữa*/
+    text-align: center; /*Căn ngang*/
+}
+ul.ListForMenu li{
+    display: inline;
+}
+ul.ListForMenu a{ /*Dùng css tạo ra div rỗng bằng thẻ after hoặc before*/
+    color: cadetblue;
+    text-decoration: none; /*Bỏ underline đoạn link*/
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+
+    text-transform: uppercase; /*in thường-> in hoa*/
+    font-size: 16px;
+
+    padding-top: 4px;  /*combo 2 thuộc tính này*/
+    display: inline-block;       /*đi với nhau*/
+    padding-right: 20px;
+    padding-left: 20px;
+
+    /*Khoảng time di chuyển chuột đồi màu là 0.4s*/
+    transition: 0.4s;   /*di chuyển chuột mượt hơn*/
+    
+    content: '';
+    /* position: absolute; */
+    /* bottom: 0; */
+    /* left: 0; */
+    /* width: 0%; */
+    /* height: 2px; */
+}
+
+ul.ListForMenu a:hover ::after{/*trạng thái di chuyển chuột*/
+    background-color: yellowgreen;
+    padding-top: 2px;
+    padding-bottom: 4px;
+
+    /*di chuyển chuột thì có viền xanh bao quanh*/
+    border: 1px solid green;
+    border-radius: 20px;  /*thuộc tính bo tròn cạnh*/
+
+    width: 100%;
+}
+/* =================== BANNAER ================== */
+.Banner{
+    display: flex;
+    width: 1300px;
+    background-color: rgba(165, 162, 162, 0.322);
+    margin: auto;
+}
+/* =============== KHỐI BÊN TRÁI ================ */
+.Banner .rightSmallNewsBlock{
+    display: flex;
+    width: 300px;
+    justify-content: space-between;
+    margin-left: auto;  /*dịch hết sang phải*/
+    margin-right: 10px;
+}
+.smallNewsLeft{
+    width: 25%;
+}
+.smallNewsRight{
+    width: 60%;
+}
+img{
+    width: 100%;
+}
+.smallNewsRight div{
+    display: flex;
+    font-family: Tahoma;
+    font-size: 9px;
+    color: gray ;
+}
+.smallNewsRight a.Thetitle{
+    font-family: Courier New;
+    font-size: 15px;
+    display: block;     /*xuống dòng*/
+    /*Ngược lại vs thẻ display: block là thẻ display: inline
+    -display: block: các thẻ k xuống dòng -> thẻ xuống dòng
+    -display: inline: các thẻ xuống dòng -> thẻ ko xuống dòng*/
+    color: black;
+    
+}
+.smallNewsRight a{
+    text-decoration: none;/*xóa gạch chân của link*/
+}
+
+/* ========== CHỈNH SỬA SLIDE: KHỐI ZỮA ========= */
+.Banner .slideForCss{
+    width: 500px;
+    margin-right: auto;
+}
+.slideForCss img{
+    width: 500px;
+    height: 300px;
+}
+/* Bỏ 3 dấu phía dưới ngang slide */
+.slideForCss .carousel-indicators{
+    visibility: hidden;  /* dùng 1 trong 3  */
+    opacity: 0;             /* thuộc tính này */
+    display: none;          /* đều được */
+}
+
+/* =============== KHỐI BÊN PHẢI ================ */
+.Banner .leftSmallBlock{
+    width: 400px;
+    justify-content: space-between;
+    margin-right: auto;  /*dịch hết sang phải*/
+}
+.Banner .leftSmallBlock .oneRowForLeftBlock{
+    display: flex;
+}
+.Banner .leftSmallBlock .oneRowForLeftBlock .leftSideInLeftBlock{
+    width: 40px;
+    height: 40px;
+    /*Nghĩa là thuộc tính là mốc, dùng cho nhiều layer đè lên nhau.*/
+    /*thuộc tính này phải đặt ở lớp cha mới có*/
+    position: relative; /*tác dụng.*/
+}
+.Banner .leftSmallBlock .oneRowForLeftBlock .leftSideInLeftBlock .backgroundForImg{
+    width: 40px;    /*đặt ảnh autumn*/
+    height: 40px;
+    transition: 1s;
+}
+.Banner .leftSmallBlock .oneRowForLeftBlock .leftSideInLeftBlock:hover .backgroundForImg{
+    transform: rotate(360deg); 
+    /*xoay ảnh 360độ trong vòng 1s*/
+}
+.Banner .leftSmallBlock .oneRowForLeftBlock .leftSideInLeftBlock .divBlack{
+    width: 40px;
+    height: 40px;
+    background-color: black;
+    opacity: 0;  /*Làm mờ màu đen, ban đầu =0, invisibility*/
+    transition: 0.4s;   /*di chuyển chuột mượt hơn*/
+
+    /*3 thuộc tính cơ bản để chia layer gồm:*/
+    position:absolute; /*kích hoạt layer, các layer đè lên nhau chồng lên nhau*/
+    top: 0; left: 0;    /*Xác định vị trí của layer*/
+}
+
+/*Di chuyển chuột vào lớp cha, tác dụng vào lớp con*/
+.Banner .leftSmallBlock .oneRowForLeftBlock .leftSideInLeftBlock:hover .divBlack{
+    opacity: 0.4;  /*Làm mờ màu đen, di chuột = 40%*/
+}
+.Banner .leftSmallBlock .oneRowForLeftBlock .leftSideInLeftBlock .FontAwesomePlay{ 
+    color: white;
+    font-size: 25px;
+    opacity: 0;     /*Làm mờ màu đen, ban đầu =0*/
+    transform: scale(0);    /*zoom lên, ban đầu=0*/
+    transition: 0.4s;   /*di chuyển chuột mượt hơn*/
+
+    /*sau đó dùng 3 thuộc tính cho layer*/
+    position: absolute;
+    top: 3px; left: 18px;
+}
+.Banner .leftSFmallBlock .oneRowForLeftBlock .leftSideInLeftBlock:hover .FontAwesomePlay{ 
+    opacity: 1;
+    transform: scale(1);    /*zoom lên, sau đó=100%*/
+}
+
+.Banner .leftSmallBlock .oneRowForLeftBlock .rightSideInLeftBlock{
+    /*Thuộc tính căn ngang theo chiều ngang:
+    Cách 1: */
+    text-align: center;
+    /*Cách 2 (dùng combo) thuộc tính:*/
+    display: flex;
+    justify-content: center;
+    
+    /*Thuộc tính căn theo chiều dọc, dùng combo */
+    display: flex;
+    align-items: center;
+
+}
+

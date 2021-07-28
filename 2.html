@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8"/>
+    <title>New Web Page </title>
+<!--css-->        
+    <!--css1-->
+    <style type="text/css">
+        styleColor1 {
+            color:chocolate;     
+        }
+    </style>
+    <!--css2-->
+    <link rel="stylesheet" href="css2.css">
+<!--end css-->
+</head>
+
+<body>
+    <nav>   <!--trỏ đến id của từng section-->
+        <a href="#Duong_xa_uot_mua">Đường xa ướt mưa</a> | <a href="#Ai_dua_em_ve">Ai đưa em về</a> | 
+          <!--Dùng CSS cho #Ai_dua_em_ve hoặc có thể gõ-->
+        <a href="2.html#Duong_xa_uot_mua">Đường xa ướt mưa</a> | <a href="2.html#Ai_dua_em_ve">Ai đưa em về</a>
+    </nav>
+    
+    <section id="top_page">DONALD TRUMP</section>
+
+    <section id="Duong_xa_uot_mua"> <!--section 1-->
+        <div title="vì đường xa ướt mưa" style="background-color: aqua; color: brown;">
+            Vì đường xa ướt mưa, em muốn anh đưa em về.
+        </div>
+        <div title="Xin em ở lại"><strong>Anh xin em ở lại đây đêm nay</strong></div>
+        <div title="Ngại đường xa ướt mưa"><em>Ngại</em> <mark>đường xa ướt mưa</mark></div>
+        <div title="Đừng bắt anh đưa em về"><del>Đừng</del> bắt anh đưa em về</div> 
+        <div title="Anh xin em đừng về">Anh <sub>xin em</sub> đừng về vì <sup>đường</sup> quá xa xôi.</div>
+    </section>
+
+    <h3 title="UnOrdered List">Danh sách không được sắp xếp: &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;UnOrdered list</h3>
+    <ul style="list-style-type:disc;">
+        <li title="bài 1" style="color: cornflowerblue;">bài 1</li>
+        <li title="bài 2" style="color: darkblue;">bài 2</li>
+        <li title="bài 3" style="color: darkolivegreen;">bài 3</li>
+    </ul>
+    
+    <h4 title="Ordered List"> Danh sách được sắp xếp: Ordered List</h4>
+    <ol type="i">
+        <li title="bài 1" style="color:darkseagreen ;">bài 1</li>
+        <li title="bài 2" style="color:dodgerblue ;">bài 2</li>
+        <li title="bài 3" style="color: greenyellow;">bài 3</li>
+    </ol>
+    <figure>
+        <img src="NguyenDucLongLab01/lab01/images/nectarine_lg.jpg" alt="win"/>
+        <figcaption><strong><em>win</em></strong></figcaption>
+    </figure> <!--Có thể sử dụng thẻ a để chèn link vào ảnh-->
+                <!--Dùng CSS cho #Ai_dua_em_ve-->
+    <section id="Ai_dua_em_ve">     <!--section 2-->
+        <a href="https://www.nhaccuatui.com" target="_blank" title="Mở tại 1 cửa sổ khác">Đêm nay ai đưa em về</a><br>
+        <a href="https://www.nhaccuatui.com" target="_self" title="Mở ở cửa sổ hiện tại">Đêm nay ai đưa em về</a><br>
+        <a href="https://www.nhaccuatui.com" target="_parent" title="Mở tại cửa sổ cha">Đêm nay ai đưa em về</a><br>
+        <a href="https://www.nhaccuatui.com" target="_top" title="Mở toàn màn hình">Đêm nay ai đưa em về</a><br>
+        <a href="https://www.nhaccuatui.com" target="_openFrame1">Đêm nay ai đưa em về</a><br>
+        <a href="https://www.nhaccuatui.com" target="_openFrame2">Đêm nay ai đưa em về</a><br>
+
+        <iframe name="_openFrame1" width="200" height="100"></iframe>
+        <iframe name="_openFrame2" width="100" height="50"></iframe>
+        <iframe src="https://www.nhaccuatui.com" style="width: 200px; height: 150px; border:none"></iframe>
+
+        <div title="Đường khuya">Đường khuya sao trời lấp lánh</div>
+        
+        <p><a href="#top_page">Về đầu trang</a></p>
+    </section>
+    
+<!--use css-->    
+<!--css1-->
+    <p><styleColor1>&copy;Copyright Paul 2020</styleColor1></p>
+<!--css2-->
+    <p><styleColor2 class="classColor2">This page is designed by Paul. Please send me email at
+        <a href="mailto: educlong@gmail.com" title="send email to paul">educlong@gmail.com
+    </a></styleColor2></p>
+    <hr>    <!--thẻ dấu gạch ngang, không có thẻ đóng-->
+    <table border="1" style="width: 50%;">  <!--Bảng trong html-->
+        <caption class="headder_text">LỊCH TRỰC ĐƠN VỊ</caption>
+        <tr class="headder_text">
+            <td>Monday</td><td>Tuesday</td><td>Wednesday</td><td>Thursday</td><td>Friday</td>
+        </tr>
+        <tr>
+            <td>Donald Trump</td><td>Tập Cận Bình</td><td>Kim Jong Un</td><td>Putin</td><td>Barrack Obama</td>
+        </tr>
+        <tr>
+            <td>Donald Trump</td><td>Tập Cận Bình</td><td>Kim Jong Un</td><td>Putin</td><td>Barrack Obama</td>
+        </tr>
+        <tr>
+            <td>Donald Trump</td><td>Tập Cận Bình</td><td>Kim Jong Un</td><td>Putin</td><td>Barrack Obama</td>
+        </tr>
+    </table>
+<!--end css-->
+</body>
+</html>

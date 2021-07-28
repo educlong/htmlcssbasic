@@ -1,0 +1,895 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document 2</title>
+    <!-- my css -->
+    <link rel="stylesheet" href="2.css">
+    <!--thư viện jquery-->
+    <script src="https://code.jquery.com/jquery-2.2.4.js" 	integrity="sha256-iT6Q9iMJYuQiMWNd9lDyBUStIq/8PuOW33aOqmvFpqI=" crossorigin="anonymous"></script> 
+
+    
+
+    <!-- BOOTSTRAP (ko đc dùng chung vs thư viện fancy box)-->
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+    <!-- Optional theme -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css" integrity="sha384-fLW2N01lMqjakBkx3l/M9EahuwpSfeNvV63J5ezn3uZzapT0u7EYsXMjQV+0En5r" crossorigin="anonymous">
+    <!-- Latest compiled and minified JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+
+
+    
+    <!-- thư viện boostrap và font-awesome -->
+    <link rel="stylesheet" href="vendor/bootstrap.css">
+	<link rel="stylesheet" href="vendor/font-awesome.css">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!--thư viện easing jquery-->  
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.min.js"></script>
+    <!--load font từ google-->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Josefin+Slab:wght@100&display=swap" rel="stylesheet">      
+
+
+
+    <!--thư viện xử lý hình ảnh fancy box (ko đc dùng chung vs thư viện BOOTSTRAP)-->
+    <!-- <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4/jquery.min.js"></script>
+    <script>
+		!window.jQuery && document.write('<script src="jquery-1.4.3.min.js"><\/script>');
+	</script>
+	<script type="text/javascript" src="./jquery.fancybox-1.3.4/fancybox/jquery.mousewheel-3.0.4.pack.js"></script>
+	<script type="text/javascript" src="./jquery.fancybox-1.3.4/fancybox/jquery.fancybox-1.3.4.pack.js"></script>
+	<link rel="stylesheet" type="text/css" href="./jquery.fancybox-1.3.4/fancybox/jquery.fancybox-1.3.4.css" media="screen" /> -->
+
+
+
+    <!-- thư viện tweenMax GreenSock (thư viện load hiệu ứng)-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.1/gsap.min.js"></script>
+    <!-- thư viện xử lý animateCss (xử lý animation) -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+    <!-- thư viện xử lý hiệu ứng wow js -->
+	<script src="wow.js"></script>
+    <!-- thư viện isotope (chỉnh sửa vị trí hình ảnh) -->
+    <script src="https://unpkg.com/isotope-layout@3/dist/isotope.pkgd.min.js"></script>
+
+
+    <!-- my js -->
+	<script src="2.js"></script>
+
+</head>
+<body>
+    <!-- Hiệu ứng Accordion -->
+    <div class="container">
+        <div class="effectAccordions">
+            <h2 class="headerAccordion">Hiệu ứng Accordion</h2>
+            <div class="effectAccordion">
+                <h3>Selector Hiệu ứng Accordion 1 <img src="image/3.JPG" alt=""> </h3>
+                <div class="contentEffectAccordion">
+                    Lorem ipsum dolor, sit amet consectetur adipisicing elit. Necessitatibus amet tempore enim, ut atque dolores assumenda laborum quis eum sunt neque veritatis, quaerat ullam veniam? Vero maxime veritatis consectetur laborum!
+                    <div class="imagesContentEffectAccordion">
+                        <a href="image/4.JPG" rel="group1ImgAccordion"><img class="imageContentEffectAccordion" src="image/4.JPG" alt=""></a>   <!--rel: gán 3 hình ảnh này cùng 1 nhóm-->
+                        <a href="image/5.JPG" rel="group1ImgAccordion"><img class="imageContentEffectAccordion" src="image/5.JPG" alt=""></a>
+                        <a href="image/6.JPG" rel="group1ImgAccordion"><img class="imageContentEffectAccordion" src="image/6.JPG" alt=""></a>
+                    </div>
+                </div>
+            </div>
+            <div class="effectAccordion">
+                <h3>Selector Hiệu ứng Accordion 2 <img src="image/3.JPG" alt=""> </h3>
+                <div class="contentEffectAccordion">
+                    Lorem ipsum dolor, sit amet consectetur adipisicing elit. Necessitatibus amet tempore enim, ut atque dolores assumenda laborum quis eum sunt neque veritatis, quaerat ullam veniam? Vero maxime veritatis consectetur laborum!
+                    <div class="imagesContentEffectAccordion">
+                        <a href="image/5.JPG" rel="group2ImgAccordion"><img class="imageContentEffectAccordion" src="image/5.JPG" alt=""></a>
+                        <a href="image/6.JPG" rel="group2ImgAccordion"><img class="imageContentEffectAccordion" src="image/6.JPG" alt=""></a>
+                        <a href="image/1.png" rel="group2ImgAccordion"><img class="imageContentEffectAccordion" src="image/1.png" alt=""></a>
+                    </div>
+                </div>
+            </div>
+            <div class="effectAccordion">
+                <h3>Selector Hiệu ứng Accordion 3 <img src="image/3.JPG" alt=""> </h3>
+                <div class="contentEffectAccordion">
+                    Lorem ipsum dolor, sit amet consectetur adipisicing elit. Necessitatibus amet tempore enim, ut atque dolores assumenda laborum quis eum sunt neque veritatis, quaerat ullam veniam? Vero maxime veritatis consectetur laborum!
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+    <!-- One page (web 1 trang) -->
+    <header>
+        <nav class="menuOnePage">
+            <ul>
+                <li><a href="">Chapter 1</a></li>
+                <li><a href="">Chapter 2</a></li>
+                <li><a href="">Chapter 3</a></li>
+                <li><a href="">Chapter 4</a></li>
+            </ul>
+        </nav>
+    </header>
+    <div class="homeOnePage"></div>
+    <div class="Content1OnePage">
+        <h2 class="mainContentOnePage">Nội dung 1. Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident, nam? Itaque deserunt corporis, quidem provident a doloribus sed voluptatem saepe animi deleniti rerum fugiat enim sint quod, aliquam repellat veritatis!</h2>
+    </div>
+    <div class="chapter1OnePage">
+        <h2 class="_OnePage">1</h2>
+    </div>
+    <div class="Content2OnePage">
+        <h2 class="mainContentOnePage">Nội dung 2. Lorem ipsum dolor, sit amet consectetur adipisicing elit. Adipisci quod recusandae nam? Exercitationem qui illo ut veritatis laudantium quia deleniti, velit tempore id cupiditate hic illum molestias fuga fugit? Voluptatum!</h2>
+    </div>
+    <div class="chapter2OnePage">
+        <h2 class="_OnePage">2</h2>
+    </div>
+    <div class="Content3OnePage">
+        <h2 class="mainContentOnePage">Nội dung 3. Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ratione recusandae a perferendis, tenetur corrupti, sapiente, optio eveniet dolore fugit cumque consectetur totam. Quis nemo minus distinctio. Quo quaerat consequuntur ullam!</h2>
+    </div>
+    <div class="chapter3OnePage">
+        <h2 class="_OnePage">3</h2>
+    </div>
+    <div class="Content4OnePage">
+        <h2 class="mainContentOnePage">Nội dung 4. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consectetur est repellat et sint veniam, doloribus voluptas. Rem, laborum autem ullam fuga architecto quasi voluptatum, id nesciunt, earum assumenda modi quidem.</h2>
+    </div>
+    <div class="chapter4OnePage">
+        <h2 class="_OnePage">4</h2>
+    </div>
+    <div class="goHomeOnePage">Go Home</div>
+
+
+
+
+
+
+
+    
+
+
+    <!-- sử dụng thư viện tweenMax -->
+    <div class="text-center">
+        <button class="tweenMaxbtn1">Hiệu ứng sử dụng gsap</button>
+        <button class="tweenMaxbtn7">Xử lý hiệu ứng staggerTo</button>
+        <button class="tweenMaxbtn9">Xử lý hiệu ứng staggerFrom</button>
+    </div>
+    <hr>
+    <div class="text-center">   <!--hiệu ứng sử dụng gsap-->
+        <div class="btn-group">
+            <button class="tweenMaxbtn2 btn btn-primary">Hiệu ứng 2</button>
+            <button class="tweenMaxbtn3 btn btn-info">Hiệu ứng 3</button>
+            <button class="tweenMaxbtn4 btn btn-danger">Hiệu ứng 4</button>
+            <button class="tweenMaxbtn5 btn btn-secondary">Hiệu ứng 5</button>
+        </div>
+    </div>
+    <hr>
+    <div class="text-center">
+        <div class="btn-group">
+            <button class="tweenMaxbtn6 btn btn-primary">Hiệu ứng 6.1</button>
+            <button class="tweenMaxbtn6 btn btn-info">Hiệu ứng 6.2</button>
+            <button class="tweenMaxbtn6 btn btn-danger">Hiệu ứng 6.3</button>
+            <button class="tweenMaxbtn6 btn btn-secondary">Hiệu ứng 6.4</button>
+            
+            <button class="tweenMaxbtn8 btn btn-primary">Hiệu ứng 8.1</button>
+            <button class="tweenMaxbtn8 btn btn-info">Hiệu ứng 8.2</button>
+            <button class="tweenMaxbtn8 btn btn-danger">Hiệu ứng 8.3</button>
+            <button class="tweenMaxbtn8 btn btn-secondary">Hiệu ứng 8.4</button>
+        </div>
+    </div>
+
+    <!-- slide effect gallary 1 -->
+    <div class="container">
+        <div class="loadingPictureGroupDemo7">
+            <div class="row">
+                <div class="pictureGroupDemo7">
+                    <img src="image/1.png" alt="" class="pictureDemo7">
+                    <div class="grayBackground7"></div>
+                    <div class="gradient7"></div>
+                    <div class="retangle7"></div>
+                    <div class="uppercaseLetter7">Paul Long</div>
+                    <div class="lowercaseLetter7">Mary Nhan</div>
+                </div>
+                <div class="pictureGroupDemo7">
+                    <img src="image/2.JPG" alt="" class="pictureDemo8">
+                    <div class="blueBackground8"></div>
+                    <div class="stripes1_8"></div>
+                    <div class="stripes2_8"></div>
+                    <div class="uppercaseLetter8">Paul Long</div>
+                    <div class="lowercaseLetter8">Mary Nhan</div>
+                </div>
+                <div class="pictureGroupDemo7">
+                    <img src="image/3.JPG" alt="" class="pictureDemo7">
+                    <div class="grayBackground7"></div>
+                    <div class="gradient7"></div>
+                    <div class="retangle7"></div>
+                    <div class="uppercaseLetter7"></div>
+                    <div class="lowercaseLetter7"></div>
+                </div>
+            </div>  <!--close row-->
+        </div>
+    </div>  <!--close container-->
+    <div class="MoreImagesDemo7">More Images...</div>
+
+
+    <!-- effect gallary 2 -->
+    <div class="container-fluid effectGallary2 text-center">
+        <hr>
+        <img src="image/3.JPG" width="10%" style="margin-left: 45%;" alt="" class="img-responsive hinhCuoiEffect2"><br>
+        <h2 class="text-center titleHinhCuoi2">Hình ảnh 2 vợ chồng</h2>
+        <div class="summaryVoChong2 text-center"><small>Với <i>Long</i> and <i>Nhàn</i></small></div>
+    </div>
+    <hr class="separateHeaderAndAlbum2" style="border-color: goldenrod;">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-xs-6 col-sm-3 blockEffectGallary2">
+                <div class="thumbnail">
+                    <img src="image/4.JPG" alt="">
+                    <div class="captionEffectGallary2">
+                        <h3>Hình cưới 1</h3>
+                    </div>
+                </div>
+            </div>
+            <div class="col-xs-6 col-sm-3 blockEffectGallary2">
+                <div class="thumbnail">
+                    <img src="image/5.JPG" alt="">
+                    <div class="captionEffectGallary2">
+                        <h3>Hình cưới 2</h3>
+                    </div>
+                </div>
+            </div>
+            <div class="col-xs-6 col-sm-3 blockEffectGallary2">
+                <div class="thumbnail">
+                    <img src="image/6.JPG" alt="">
+                    <div class="captionEffectGallary2">
+                        <h3>Hình cưới 3</h3>
+                    </div>
+                </div>
+            </div>
+            <div class="col-xs-6 col-sm-3 blockEffectGallary2">
+                <div class="thumbnail">
+                    <img src="image/1.png" alt="">
+                    <div class="captionEffectGallary2">
+                        <h3>Hình cưới 4</h3>
+                    </div>
+                </div>
+            </div>
+            <div class="col-xs-6 col-sm-3 blockEffectGallary2">
+                <div class="thumbnail">
+                    <img src="image/2.JPG" alt="">
+                    <div class="captionEffectGallary2">
+                        <h3>Hình cưới 5</h3>
+                    </div>
+                </div>
+            </div>
+            <div class="col-xs-6 col-sm-3 blockEffectGallary2">
+                <div class="thumbnail">
+                    <img src="image/3.JPG" alt="">
+                    <div class="captionEffectGallary2">
+                        <h3>Hình cưới 6</h3>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+
+
+    <!-- TimelineMax -->
+    <hr class="separateTimelineMax1">
+    <div class="text-center">
+        <div class="btnTimelineMax btn btn-info" style="color: indianred; font-weight: bold;">VD TimelineMax</div>
+        <div class="btnTimelineMaxStop btn btn-danger">Stop TimelineMax</div>
+        <div class="btnTimelineMaxPlay btn btn-danger">Play TimelineMax</div>
+        <div class="btnTimelineMaxReverse btn btn-danger">Reverse TimelineMax</div>
+    </div>
+    <hr class="separateTimelineMax2">
+
+
+    
+
+
+
+
+
+
+
+
+
+    <!-- effect gallary 3 -->
+    <div class="loadingEffectGallary3"> <!--hiệu ứng loading khi vào page-->
+        <div class="loadBlock"></div>
+    </div>
+    <div class="container-fluid effectGallary3 text-center">
+        <hr>
+        <img src="image/3.JPG" width="10%" style="margin-left: 45%;" alt="" class="img-responsive hinhCuoiEffect3"><br>
+        <h2 class="text-center titleHinhCuoi3">Hình ảnh 2 vợ chồng</h2>
+        <div class="summaryVoChong3 text-center"><small>Với <i>Long</i> and <i>Nhàn</i></small></div>
+    </div>
+    <hr class="separateHeaderAndAlbum3" style="border-color: goldenrod;">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-xs-6 col-sm-3 blockEffectGallary3">
+                <div class="thumbnail">
+                    <img src="image/4.JPG" alt="">
+                    <div class="captionEffectGallary3">
+                        <h3>Hình cưới 1</h3>
+                    </div>
+                </div>
+            </div>
+            <div class="col-xs-6 col-sm-3 blockEffectGallary3">
+                <div class="thumbnail">
+                    <img src="image/5.JPG" alt="">
+                    <div class="captionEffectGallary3">
+                        <h3>Hình cưới 2</h3>
+                    </div>
+                </div>
+            </div>
+            <div class="col-xs-6 col-sm-3 blockEffectGallary3">
+                <div class="thumbnail">
+                    <img src="image/6.JPG" alt="">
+                    <div class="captionEffectGallary3">
+                        <h3>Hình cưới 3</h3>
+                    </div>
+                </div>
+            </div>
+            <div class="col-xs-6 col-sm-3 blockEffectGallary3">
+                <div class="thumbnail">
+                    <img src="image/1.png" alt="">
+                    <div class="captionEffectGallary3">
+                        <h3>Hình cưới 4</h3>
+                    </div>
+                </div>
+            </div>
+            <div class="col-xs-6 col-sm-3 blockEffectGallary3">
+                <div class="thumbnail">
+                    <img src="image/2.JPG" alt="">
+                    <div class="captionEffectGallary3">
+                        <h3>Hình cưới 5</h3>
+                    </div>
+                </div>
+            </div>
+            <div class="col-xs-6 col-sm-3 blockEffectGallary3">
+                <div class="thumbnail">
+                    <img src="image/3.JPG" alt="">
+                    <div class="captionEffectGallary3">
+                        <h3>Hình cưới 6</h3>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+
+
+    
+
+
+
+
+
+    <!-- Demo animation 1 -->
+    <header class="headerAnimation">
+        <nav class="menuAnimation">
+            <ul>
+                <li><a href="">Chapter 1</a></li>
+                <li><a href="">Chapter 2</a></li>
+                <li><a href="">Chapter 3</a></li>
+                <li><a href="">Chapter 4</a></li>
+            </ul>
+        </nav>
+        <div class="effectHeaderAnimation">
+            <div class="backgroundHeaderAnimation1"></div>
+            <img src="image/7.JPG" alt="" class="backgroundHeaderAnimation2">
+            <div class="upperLetterAnimation">1000 opportunities</div>
+            <div class="lowerLetterAnimation">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Odit consectetur autem, blanditiis laudantium nobis sit consequatur at excepturi repellat odio eos perspiciatis labore provident recusandae placeat quasi modi velit voluptatum.</div>
+            <button class="btnAppointment">Make an appointment</button>
+        </div>
+    </header>
+
+
+
+
+
+
+
+
+    <!-- Modal Box -->
+    <div class="modalBox">
+        <div class="titleSummaryModalBox">
+            <h2 class="titleModalBox">Lorem ipsum, dolor sit amet consectetur adipisicing elit. </h2>
+            <small class="summaryModalBox">Lorem ipsum dolor, sit amet consectetur adipisicing elit.</small>
+        </div>
+        <div class="menuModalBox">
+            <div class="menuLeftModalBox">Lorem ipsum, dolor sit amet consectetur adipisicing elit.</div>
+            <div class="menuRightModalBox">
+                <div class="btnFadeinScale">Fade in & Scale</div>
+                <div class="btnSlideinRight">Slide in (Right)</div>
+                <div class="btnNewspaper">Newspapers</div>
+                <div class="btnSplit3d">3D Split</div>
+            </div>
+        </div>
+        <div class="disappearBackgroundModalBox"></div>
+        <div class="detailsModalBox">
+            <h3>Sign in</h3>
+            <div class="containModalBox">Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi illo quaerat quas. Maiores nisi sit quis? Obcaecati voluptas nihil modi. Architecto minima quaerat cumque maiores ratione quod quas aliquid sequi!</div>
+            <div class="closeModalBox">Close</div>
+        </div>
+    </div>
+
+
+
+
+    <!-- demo menu trái -->
+    <div class="detailContent">
+		<div class="controlMenu btn btn-success btn-lg">Push</div>
+		<div class="menuDetail goToLeft">
+			<h3 class="display-3 text-xs-center">Menu trái</h3>
+			<ul class="list-group">
+				<li class="list-group-item">Text</li>
+				<li class="list-group-item">Disabled item</li>
+			</ul>
+		</div>
+		<div class="displayDetail"></div>
+	</div>
+
+
+
+
+
+
+ 
+    <!-- Slide Page DEMO 2 (Apple Slide) -->
+    <div class="container">
+		<div class="containerslidesPageDemo2">
+			<div class="slidesPageDemo2"><!--phần xử lý content cho slidePageDemo2-->
+				<ul>
+					<li class="activeSlidePageDemo2">
+						<div class="slidePageDemo2">
+							<div class="imgSlidePageDemo2">
+								<div class="imgSlidePageDemo2" style="background-image: url(image/4.JPG)"></div>
+								<img src="image/2.JPG" class="imgBackgroundDown1SlidePageDemo2" alt="">
+								<img src="image/2.JPG" class="imgBackgroundDown2SlidePageDemo2" alt="">
+								<img src="image/3.JPG" class="imgBackgroundUpSlidePageDemo2" alt="">
+								<div class="contentSlidePageDemo2">
+									<h2>Title</h2>
+									<small>Mohawk College</small>
+									<div class="separateTileAndContentSlidePageDemo2"></div>
+									<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero similique porro, architecto mollitia dicta, dolores minus numquam laborum quo molestias nihil suscipit minima ad accusantium sunt cum quidem saepe repellendus.</p>
+									<a href="" class="btnSlidePageDemo2">More Details</a>
+								</div>
+							</div>
+						</div>		
+					</li>
+					<li>
+						<div class="slidePageDemo2">
+							<div class="imgSlidePageDemo2">
+								<div class="imgSlidePageDemo2" style="background-image: url(image/6.JPG)"></div>
+								<img src="image/4.JPG" class="imgBackgroundDown1SlidePageDemo2" alt="">
+								<img src="image/4.JPG" class="imgBackgroundDown2SlidePageDemo2" alt="">
+								<img src="image/5.JPG" class="imgBackgroundUpSlidePageDemo2" alt="">
+								<div class="contentSlidePageDemo2">
+									<h2>Title</h2>
+									<small>Mohawk College</small>
+									<div class="separateTileAndContentSlidePageDemo2"></div>
+									<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero similique porro, architecto mollitia dicta, dolores minus numquam laborum quo molestias nihil suscipit minima ad accusantium sunt cum quidem saepe repellendus.</p>
+									<a href="" class="btnSlidePageDemo2">More Details</a>
+								</div>
+							</div>
+						</div>
+			
+					</li>
+					<li>
+						<div class="slidePageDemo2">
+							<div class="imgSlidePageDemo2">
+								<div class="imgSlidePageDemo2" style="background-image: url(image/2.JPG)"></div>
+								<img src="image/6.JPG" class="imgBackgroundDown1SlidePageDemo2" alt="">
+								<img src="image/6.JPG" class="imgBackgroundDown2SlidePageDemo2" alt="">
+								<img src="image/1.png" class="imgBackgroundUpSlidePageDemo2" alt="">
+								<div class="contentSlidePageDemo2">
+									<h2>Title</h2>
+									<small>Mohawk College</small>
+									<div class="separateTileAndContentSlidePageDemo2"></div>
+									<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero similique porro, architecto mollitia dicta, dolores minus numquam laborum quo molestias nihil suscipit minima ad accusantium sunt cum quidem saepe repellendus.</p>
+									<a href="" class="btnSlidePageDemo2">More Details</a>
+								</div>
+							</div>
+						</div>		
+					</li>
+				</ul>
+			</div>
+            <div class="effectPageDemo2">	
+				<div class="choiceEffectPageDemo2">
+					<div class="moreSettingIconPageDemo2" more-details-page-demo3="moreDetailListPageDemo2">
+						<i class="fa fa-caret-down"></i>    			
+					</div>
+					<div class="moreSettingListPageDemo2" id="moreDetailListPageDemo2">
+						<ul class="list-group">
+							<li class="list-group-item">Stick it</li>
+							<li class="list-group-item">Press away</li>
+							<li class="list-group-item">Apple effect</li>
+							<li class="list-group-item">Side Swing</li>
+							<li class="list-group-item">Fortune wheel</li>
+							<li class="list-group-item">Swipe</li>
+							<li class="list-group-item">Push reveal</li>
+							<li class="list-group-item">Snap in</li>
+							<li class="list-group-item">Let me in</li>
+							<li class="list-group-item">Archive me</li>
+						</ul>
+					</div>	
+				</div>
+			</div>
+            <div class="controlSlides2">
+                <b class="previousSlideDemo2"> <i class="fa fa-angle-left" aria-hidden="true"></i></b>
+                <b class="nextSlideDemo2"><i class="fa fa-angle-right" aria-hidden="true"></i></b>
+            </div>
+            
+			<div class="controlSlides"><!--phần xử lý button cho slide page Demo 2-->
+				<ul>
+					<li class="runningAciveSlide">1</li>
+					<li>2</li>
+					<li>3</li>
+				</ul>
+			</div>
+		</div>
+	</div>
+
+
+
+
+
+
+
+
+    
+	<!-- demo 3: scroll -->
+	<div class="menuScroll">
+		<div class="container">
+			<div class="row">
+				<div class="col-sm-4 leftScroll">LOGO</div>
+				<div class="col-sm-8 rightScroll">
+					<div class="float-xs-right">
+						<a href="">Trang chủ</a>
+						<a href="">News</a>
+						<a href="">Contact</a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="container">
+		<div class="row">
+			<div class="col-sm-8 contentLeft">
+				<div class="loadPage">Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur recusandae quam omnis aperiam quo. Alias molestias vel porro mollitia quas voluptatibus rem quibusdam, cumque expedita fuga sequi assumenda aspernatur fugit?</div>
+				<div class="loadPage">Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur recusandae quam omnis aperiam quo. Alias molestias vel porro mollitia quas voluptatibus rem quibusdam, cumque expedita fuga sequi assumenda aspernatur fugit?</div>
+				<div class="loadPage">Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur recusandae quam omnis aperiam quo. Alias molestias vel porro mollitia quas voluptatibus rem quibusdam, cumque expedita fuga sequi assumenda aspernatur fugit?</div>
+				<div class="loadPage">Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur recusandae quam omnis aperiam quo. Alias molestias vel porro mollitia quas voluptatibus rem quibusdam, cumque expedita fuga sequi assumenda aspernatur fugit?</div>
+				<div class="loadPage">Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur recusandae quam omnis aperiam quo. Alias molestias vel porro mollitia quas voluptatibus rem quibusdam, cumque expedita fuga sequi assumenda aspernatur fugit?</div>
+				<div class="loadPage">Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur recusandae quam omnis aperiam quo. Alias molestias vel porro mollitia quas voluptatibus rem quibusdam, cumque expedita fuga sequi assumenda aspernatur fugit?</div>
+				<div class="loadPage">Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur recusandae quam omnis aperiam quo. Alias molestias vel porro mollitia quas voluptatibus rem quibusdam, cumque expedita fuga sequi assumenda aspernatur fugit?</div>
+				<div class="loadPage">Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur recusandae quam omnis aperiam quo. Alias molestias vel porro mollitia quas voluptatibus rem quibusdam, cumque expedita fuga sequi assumenda aspernatur fugit?</div>
+				<div class="loadPage">Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur recusandae quam omnis aperiam quo. Alias molestias vel porro mollitia quas voluptatibus rem quibusdam, cumque expedita fuga sequi assumenda aspernatur fugit?</div>
+				<div class="loadPage">Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur recusandae quam omnis aperiam quo. Alias molestias vel porro mollitia quas voluptatibus rem quibusdam, cumque expedita fuga sequi assumenda aspernatur fugit?</div>
+				<div class="loadPage">
+					Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure nostrum rem placeat voluptate quidem! Nesciunt, blanditiis iste unde dolorem voluptates doloremque, porro, omnis enim tempora ipsam alias veniam. Id, quia.			
+					Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure nostrum rem placeat voluptate quidem! Nesciunt, blanditiis iste unde dolorem voluptates doloremque, porro, omnis enim tempora ipsam alias veniam. Id, quia.		
+					Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure nostrum rem placeat voluptate quidem! Nesciunt, blanditiis iste unde dolorem voluptates doloremque, porro, omnis enim tempora ipsam alias veniam. Id, quia.		
+					Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure nostrum rem placeat voluptate quidem! Nesciunt, blanditiis iste unde dolorem voluptates doloremque, porro, omnis enim tempora ipsam alias veniam. Id, quia.		
+					Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure nostrum rem placeat voluptate quidem! Nesciunt, blanditiis iste unde dolorem voluptates doloremque, porro, omnis enim tempora ipsam alias veniam. Id, quia.		
+					Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure nostrum rem placeat voluptate quidem! Nesciunt, blanditiis iste unde dolorem voluptates doloremque, porro, omnis enim tempora ipsam alias veniam. Id, quia.			
+					Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure nostrum rem placeat voluptate quidem! Nesciunt, blanditiis iste unde dolorem voluptates doloremque, porro, omnis enim tempora ipsam alias veniam. Id, quia.
+					Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure nostrum rem placeat voluptate quidem! Nesciunt, blanditiis iste unde dolorem voluptates doloremque, porro, omnis enim tempora ipsam alias veniam. Id, quia.
+				</div>
+			</div>
+			<div class="col-sm-4 contentRight"> 
+                <!--các class sử dụng thư viện wow cần đặt tên class là wow-->
+				<div class="wow bounceInLeft">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Placeat nemo voluptatibus veritatis blanditiis eum earum harum amet? Minima quos possimus accusamus placeat corrupti aliquid et, illum vel voluptatum debitis. Distinctio?</div> <!--add bounceInLeft (animated) vào-->
+				<div class="advertisement2">
+					<img src="image/1.png" alt="" class="img-fluid" width="320px" height="auto"> 
+				</div>
+				<div class="wow bounceInLeft"  data-wow-delay ="0.2s">Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat iusto quisquam ducimus repellat deserunt repudiandae reprehenderit eligendi sit dolore magni expedita laboriosam sed possimus architecto, maiores aliquam, velit officia voluptate?</div>
+			</div>
+		</div>
+	</div>
+
+
+
+
+
+
+    <!-- isotope -->
+    <section>
+        <div class="contentIsotope">
+            <ul>
+                <li><a href=""><img src="image/1.png" alt=""></a></li>
+                <li><a href=""><img src="image/2.JPG" alt=""></a></li>
+                <li><a href=""><img src="image/3.JPG" alt=""></a></li>
+                <li><a href=""><img src="image/4.JPG" alt=""></a></li>
+                <li><a href=""><img src="image/5.JPG" alt=""></a></li>
+                <li><a href=""><img src="image/6.JPG" alt=""></a></li>
+                <li><a href=""><img src="image/7.JPG" alt=""></a></li>
+                <li><a href=""><img src="image/4.JPG" alt=""></a></li>
+                <li><a href=""><img src="image/5.JPG" alt=""></a></li>
+                <li><a href=""><img src="image/3.JPG" alt=""></a></li>
+                <li><a href=""><img src="image/4.JPG" alt=""></a></li>
+                <li><a href=""><img src="image/5.JPG" alt=""></a></li>
+                <li><a href=""><img src="image/6.JPG" alt=""></a></li>
+                <li><a href=""><img src="image/7.JPG" alt=""></a></li>
+                <li><a href=""><img src="image/4.JPG" alt=""></a></li>
+                <li><a href=""><img src="image/5.JPG" alt=""></a></li>
+                <li><a href=""><img src="image/6.JPG" alt=""></a></li>
+                <li><a href=""><img src="image/7.JPG" alt=""></a></li>
+            </ul>
+        </div>
+    </section>
+
+
+    <!-- filter (ko sử dụng isotope) -->
+    <header class="headerFilterNonIsotope"><nav><ul>
+        <li><a href="" data-class="filterPeople">people</a></li>
+        <li><a href="" data-class="filterLanscape">lanscape</a></li>
+        <li><a href="" data-class="filterMountains">mountains</a></li>
+        <li><a href="" data-class="filterFurnitures">furnitures</a></li>
+    </ul></nav></header>
+    <section>
+        <h1>Tất cả ảnh</h1>
+        <div class="contentFilterNonIsotope">
+            <ul>
+                <li class="people"><a href=""><img src="image/1.png" alt=""></a></li>
+                <li class="lanscape"><a href=""><img src="image/2.JPG" alt=""></a></li>
+                <li class="people"><a href=""><img src="image/3.JPG" alt=""></a></li>
+                <li class="furnitures"><a href=""><img src="image/4.JPG" alt=""></a></li>
+                <li class="mountains"><a href=""><img src="image/5.JPG" alt=""></a></li>
+                <li class="mountains"><a href=""><img src="image/6.JPG" alt=""></a></li>
+                <li class="lanscape"><a href=""><img src="image/7.JPG" alt=""></a></li>
+                <li class="people"><a href=""><img src="image/4.JPG" alt=""></a></li>
+                <li class="lanscape"><a href=""><img src="image/5.JPG" alt=""></a></li>
+                <li class="mountains"><a href=""><img src="image/3.JPG" alt=""></a></li>
+                <li class="furnitures"><a href=""><img src="image/4.JPG" alt=""></a></li>
+                <li class="lanscape"><a href=""><img src="image/5.JPG" alt=""></a></li>
+                <li class="people"><a href=""><img src="image/6.JPG" alt=""></a></li>
+                <li class="mountains"><a href=""><img src="image/7.JPG" alt=""></a></li>
+                <li class="furnitures"><a href=""><img src="image/4.JPG" alt=""></a></li>
+                <li class="lanscape"><a href=""><img src="image/5.JPG" alt=""></a></li>
+                <li class="furnitures"><a href=""><img src="image/6.JPG" alt=""></a></li>
+                <li class="mountains"><a href=""><img src="image/7.JPG" alt=""></a></li>
+            </ul>
+        </div>
+    </section>
+  
+  
+  
+  
+  
+  
+
+
+  
+    <!-- filter (sử dụng isotope) -->
+    <div class="searchIsotope">
+        <input type="text" class="keyCategory" list="listSearch">
+        <h4>Nhập từ khóa search</h4>
+    </div>
+    <datalist id="listSearch">      <!--Qucik search (auto complete)-->
+        <option value="people"></option>
+        <option value="lanscape"></option>
+        <option value="mountains"></option>
+        <option value="furnitures"></option>
+    </datalist>
+
+
+    <header class="headerFilterIsotope"><nav><ul>
+        <li><a href="" data-danhmuc="filterAll">Tất cả ảnh</a></li>
+        <li><a href="" data-danhmuc="filterPeople">people</a></li>
+        <li><a href="" data-danhmuc="filterLanscape">lanscape</a></li>
+        <li><a href="" data-danhmuc="filterMountains">mountains</a></li>
+        <li><a href="" data-danhmuc="filterFurnitures">furnitures</a></li>
+    </ul></nav></header>
+    <section>
+        <h1>Tất cả ảnh</h1>
+        <div class="contentFilterIsotope">
+            <ul>
+                <li class="people"><a href=""><img src="image/1.png" alt=""></a></li>
+                <li class="lanscape"><a href=""><img src="image/2.JPG" alt=""></a></li>
+                <li class="people"><a href=""><img src="image/3.JPG" alt=""></a></li>
+                <li class="furnitures"><a href=""><img src="image/4.JPG" alt=""></a></li>
+                <li class="mountains"><a href=""><img src="image/5.JPG" alt=""></a></li>
+                <li class="mountains"><a href=""><img src="image/6.JPG" alt=""></a></li>
+                <li class="lanscape"><a href=""><img src="image/7.JPG" alt=""></a></li>
+                <li class="people"><a href=""><img src="image/4.JPG" alt=""></a></li>
+                <li class="lanscape"><a href=""><img src="image/5.JPG" alt=""></a></li>
+                <li class="mountains"><a href=""><img src="image/3.JPG" alt=""></a></li>
+                <li class="furnitures"><a href=""><img src="image/4.JPG" alt=""></a></li>
+                <li class="lanscape"><a href=""><img src="image/5.JPG" alt=""></a></li>
+                <li class="people"><a href=""><img src="image/6.JPG" alt=""></a></li>
+                <li class="mountains"><a href=""><img src="image/7.JPG" alt=""></a></li>
+                <li class="furnitures"><a href=""><img src="image/4.JPG" alt=""></a></li>
+                <li class="lanscape"><a href=""><img src="image/5.JPG" alt=""></a></li>
+                <li class="furnitures"><a href=""><img src="image/6.JPG" alt=""></a></li>
+                <li class="mountains"><a href=""><img src="image/7.JPG" alt=""></a></li>
+            </ul>
+        </div>
+    </section>
+
+
+
+    
+
+
+
+
+
+
+
+
+
+    <!-- BOOTSTRAP-->
+    <div class="btn btn-primary">Button 1</div>
+
+    <!-- Ví dụ về bootstrap (gõ bs3-carousel -> tab, ko cần css, js) 
+        demo carousel (tạo slide)-->
+    <div class="container"> <!--trước khi gõ bs3-carousel, cần thu nhỏ slide-->
+        <div class="col-md-10">  <!--lại để dễ nhìn bằng container và col-md-8-->
+            <div id="carousel-id" class="carousel slide" data-ride="carousel">
+                <ol class="carousel-indicators">
+                    <li data-target="#carousel-id" data-slide-to="0" class=""></li>
+                    <li data-target="#carousel-id" data-slide-to="1" class=""></li>
+                    <li data-target="#carousel-id" data-slide-to="2" class="active"></li>
+                </ol>
+                <div class="carousel-inner">
+                    <div class="item">
+                        <img data-src="holder.js/900x500/auto/#777:#7a7a7a/text:First slide" alt="First slide" src="image/5.JPG" class="img-responsive"> <!--đưa hình ảnh (nội dung) vào đây-->
+                        <div class="container">
+                            <div class="carousel-caption">
+                                <h1>Example headline.</h1>
+                                <p>Note: If you're viewing this page via a <code>file://</code> URL, the "next" and "previous" Glyphicon buttons on the left and right might not load/display properly due to web browser security rules.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <img data-src="holder.js/900x500/auto/#666:#6a6a6a/text:Second slide" alt="Second slide" src="image/6.JPG" class="img-responsive">
+                        <div class="container">
+                            <div class="carousel-caption">
+                                <h1>Another example headline.</h1>
+                                <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
+                                <p><a class="btn btn-lg btn-primary" href="#" role="button">Learn more</a></p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="item active">
+                        <img data-src="holder.js/900x500/auto/#555:#5a5a5a/text:Third slide" alt="Third slide" src="image/3.JPG" class="img-responsive">
+                        <div class="container">
+                            <div class="carousel-caption">
+                                <h1>One more for good measure.</h1>
+                                <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
+                                <p><a class="btn btn-lg btn-primary" href="#" role="button">Browse gallery</a></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <a class="left carousel-control" href="#carousel-id" data-slide="prev"><span class="glyphicon glyphicon-chevron-left"></span></a>
+                <a class="right carousel-control" href="#carousel-id" data-slide="next"><span class="glyphicon glyphicon-chevron-right"></span></a>
+            </div>
+        </div>
+    </div>
+    
+
+    <!--demo popover-->
+    <div class="mainBootstrap">
+        <img src="image/2.JPG" data-hieuungpopover="hieuungpopover" alt="" data-title="LongNhan" data-content="nội dung hình cưới">
+        <b data-hieuungpopover="hieuungpopover" data-title="LongNhan" data-content="nội dung hình cưới">Click for more details</b>
+    </div>
+
+
+
+
+
+    <hr> <!--demo tooltip (bootstrap)-->
+    <div class="text-center">   <!--text-center đc đn trong boostrap (căn zữa)-->
+        <div class="button1Bootsrap btn btn-primary" data-hieuungtooltip="tooltip" title="Hiệu ứng tooltip">Button1 demo tooltip</div>
+        <div class="button2Bootsrap btn btn-infos" data-hieuungtooltip="tooltip" title="Hiệu ứng tooltip">Button2 demo tooltip</div>
+        <div class="button3Bootsrap btn btn-primary" data-hieuungtooltip="tooltip" title="Hiệu ứng tooltip">Button3 demo tooltip</div>
+    </div>
+
+    
+    <hr>    <!--Demo hiệu ứng tab-->
+    <div class="text-center">
+        <h2>Hiệu ứng tab</h2>
+        
+        <div role="tabpanel">
+            <!-- Nav tabs -->
+            <ul class="nav nav-tabs" role="tablist">
+                <li role="presentation" class="active tabBootstrapLi">
+                    <a href="#PopOver" aria-controls="PopOver" role="tab" data-toggle="tab">PopOver</a>
+                </li>
+                <li role="presentation" class="tabBootstrapLi">
+                    <a href="#Tooltip" aria-controls="Tooltip" role="tab" data-toggle="tab">Tooltip</a>
+                </li>
+            </ul>
+        
+            <!-- Tab panes -->
+            <div class="tab-content">
+                <div role="tabpanel" class="tab-pane active" id="PopOver">
+                    <div class="button4Bootsrap btn btn-primary"  data-hieuungpopover="hieuungpopover" alt="" data-title="LongNhan" data-content="nội dung hình cưới">Button4 tab PopOver</div>
+                </div>
+                <div role="tabpanel" class="tab-pane" id="Tooltip">
+                    <div class="button5Bootsrap btn btn-danger" data-hieuungtooltip="tooltip" title="Hiệu ứng tooltip">Button5 tab Tooltip</div>
+                </div>
+            </div>
+        </div>
+        
+    </div>
+
+
+    <hr> <!--hiệu ứng modal (gõ bs3-modal ->tab) -> ứng dụng có thể xổ 1 màn hình đăng nhập-->
+    <div class="text-center"> <!--gồm 2 phần: p1 -> nút nhấn vào để xổ ra-->
+        <a class="btn btn-primary" data-toggle="modal" href='#modal-id'>
+            <img src="image/6.JPG" style="width: 100px;" alt="">
+        </a>
+        <div class="modal fade" id="modal-id">  <!--p2 -> nội dung-->
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                        <h4 class="modal-title">Modal title</h4>
+                    </div>
+                    <div class="modal-body">    <!--phần body-->
+                        <img src="image/5.JPG" alt="" class="img-responsive">
+                    </div>  <!--img-responsive: ảnh nhỏ hơn chút-->
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                        <button type="button" class="btn btn-primary">Save changes</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <hr><!--Hiệu ứng Scrollspy-->
+    <div class="menuScrollspy"><div class="nav"><ul>    <!--để làm Scrollspy-->
+        <li><a href="#homeScrollspy">Home</a></li>  <!--cần có div nav bọc lấy-->
+        <li><a href="#aboutScrollspy">About</a></li>    <!--ul ở phía trên-->
+        <li><a href="#productsScrollspy">Products</a></li>  <!--và đặt id cho-->
+        <li><a href="#contactScrollspy">Contact</a></li>  <!--thẻ a tương ứng-->
+        <li><a href="#newsScrollspy">News</a></li> <!--vs id dưới phần content-->
+    </ul></div></div>
+    <div class="contentScrollspy">
+        <div class="homeScrollspy" id="homeScrollspy">
+            <div class="container">
+                <h3 class="text-center wow bounceInUp">Lorem ipsum, dolor sit amet consectetur adipisicing elit. </h3>
+                <div class="text-center"><img src="image/2.JPG" alt="" class="img-responsive wow bounceInUp"></div>
+            </div>  <!--sử dụng wow bounceInUp để có hiệu ứng khi cuộn chuột-->
+        </div>
+        <div class="aboutScrollspy" id="aboutScrollspy">
+            <div class="container">
+                <h3 class="text-center wow bounceInUp">Lorem ipsum, dolor sit amet consectetur adipisicing elit. </h3>
+                <div class="text-center"><img src="image/3.JPG" alt="" class="img-responsive wow bounceInUp"></div>
+            </div>  <!--sử dụng wow bounceInUp để có hiệu ứng khi cuộn chuột-->
+        </div>
+        <div class="productsScrollspy" id="productsScrollspy">
+            <div class="container">
+                <h3 class="text-center wow bounceInUp">Lorem ipsum, dolor sit amet consectetur adipisicing elit. </h3>
+                <div class="text-center"><img src="image/4.JPG" alt="" class="img-responsive wow bounceInUp"></div>
+            </div>  <!--sử dụng wow bounceInUp để có hiệu ứng khi cuộn chuột-->
+        </div>
+        <div class="contactScrollspy" id="contactScrollspy">
+            <div class="container">
+                <h3 class="text-center wow bounceInUp">Lorem ipsum, dolor sit amet consectetur adipisicing elit. </h3>
+                <div class="text-center"><img src="image/5.JPG" alt="" class="img-responsive wow bounceInUp"></div>
+            </div>  <!--sử dụng wow bounceInUp để có hiệu ứng khi cuộn chuột-->
+        </div>
+        <div class="newsScrollspy" id="newsScrollspy">
+            <div class="container">
+                <h3 class="text-center wow bounceInUp">Lorem ipsum, dolor sit amet consectetur adipisicing elit. </h3>
+                <div class="text-center"><img src="image/6.JPG" alt="" class="img-responsive wow bounceInUp"></div>
+            </div>  <!--sử dụng wow bounceInUp để có hiệu ứng khi cuộn chuột-->
+        </div>
+    </div>
+
+</body>
+</html>

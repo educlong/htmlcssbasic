@@ -1,0 +1,631 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+	<link rel="stylesheet" href="vendor/bootstrap.css">
+	<link rel="stylesheet" href="vendor/font-awesome.css">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+	<link rel="stylesheet" href="1.css">
+	<!-- jquery -->
+	<!-- <script src="https://code.jquery.com/jquery-2.2.4.js" 	integrity="sha256-iT6Q9iMJYuQiMWNd9lDyBUStIq/8PuOW33aOqmvFpqI=" crossorigin="anonymous"></script>
+	<script src="2.js"></script> -->
+	
+</head>
+<body>	
+	<div class="container">
+		<button class="btn btn-info btn-block" onclick="runTest()">Click</button>
+		<div class="row">
+			<div class="col-sm-6 push-sm-3" id="comments">
+				<div class="kcm" id="kcm-1">
+					<img src="https://upload.wikimedia.org/wikipedia/commons/8/8b/Ngoc_Trinh_va_Fan_%28cropped%29.png" alt="" class="float-xs-left pr-1" width="40px">
+					<b>Long: </b><span>Em ơi, cho a số đt đi</span>
+				</div>
+			</div>		
+		</div>
+	</div>
+	
+
+
+    <div class="card-columns">
+        <div class="card">
+            <img class="card-img-top" src="" alt="">
+            <div class="card-block">
+                <h4 class="card-title">Title</h4>
+                <p class="card-text">Text</p>
+		        <div class="card-block" data-thongbao="Day la dai tieng noi Viet Nam">
+		            
+		        </div>
+            </div>
+        </div>
+        <div class="card card-block">
+        	<blockquote class="card-blockquote">
+        		<footer>
+        			<small class="text-muted">
+        				
+        			</small>
+        		</footer>
+        	</blockquote>
+        </div>
+        <div class="card">
+            <img class="card-img-top" src="" alt="">
+            <div class="card-body">
+                <h4 class="card-title">Title</h4>
+                <p class="card-text">Text</p>
+                <div class="card-block" data-thongbao="Day la dai tieng noi Viet Nam">
+                
+            	</div>
+            	<div class="text-xs-center">
+			    	<button type="button" class="btn btn-outline-info n1">Button n1</button>
+				    <button type="button" class="btn btn-outline-danger n2">Button n2</button>	
+				    <button type="button" class="btn btn-outline-success n3">Button n3</button>
+				    <button type="button" class="btn btn-outline-secondary n4">Button n4</button>
+			    </div>
+            </div>
+            
+        </div>
+        <div class="card">
+            <img class="card-img-top" src="" alt="">
+            <div class="card-block">
+                <h4 class="card-title">Title</h4>
+                <p class="card-text">Text</p>
+                <div class="btn btn-block btn-outline-info" id="n4">View Detail</div>
+            </div>
+        </div>
+    </div>
+
+
+
+    
+
+    <div class="container text-xs-center">
+    	<div class="row ">
+    		<div class="col-sm-4" id="comments">
+				<div class="kcm" id="kcm-1">
+					<button class="btn btn-info" id="n5">Click to test toggle function n5</button>
+				    <div class="card">
+				        <div class="card-header">
+				            Nội dung
+				        </div>
+				        <div class="card-body">
+				            <h5 class="card-title">Title</h5>
+				            <p class="card-text">Content</p>
+				        </div>
+				    </div>	
+				</div>
+
+				<div class="kcm" id="kcm-2">
+					<button class="btn btn-info btn-block btn-lg" id="n6">Demo toggle class bang tay n6</button>
+				    <div class="card non-moving" id="movingN6">
+				    	<div class="btn btn-danger" >moving</div>
+				        <div class="card-header">
+				            Nội dung
+				        </div>
+				        <div class="card-body">
+				            <h5 class="card-title">Title</h5>
+				            <p class="card-text">Content</p>
+				        </div>
+				    </div>	
+				</div>
+			</div>
+		</div>
+    </div>
+
+
+
+
+    <!-- Facebook -->
+    <div class="blueHeader">
+    	<div class="moreSettings">
+    		<div class="moreSettingIcon" more-details="moreDetailTangle">
+    			<i class="fa fa-caret-down"></i>    			
+    		</div>
+    		<div class="moreSettingList" id="moreDetailTangle">
+				<ul class="list-group">
+				    <li class="list-group-item">Text</li>
+				    <li class="list-group-item">Disabled item</li>
+				</ul>
+    		</div>	
+    	</div>
+    	<div class="moreSettings">
+    		<div class="moreSettingIcon" more-details="moreDetailUser">
+				<i class="fa fa-user-circle"></i>
+    		</div>
+    		<div class="moreSettingList" id="moreDetailUser">
+				<ul class="list-group">
+				    <li class="list-group-item">Text</li>
+				    <li class="list-group-item">Disabled item</li>
+				</ul>
+    		</div>	
+    	</div>
+		<div class="moreSettings">
+    		<div class="moreSettingIcon" more-details="moreDetailComment">
+    			<i class="fa fa-comment" ></i>
+    		</div>
+    		<div class="moreSettingList" id="moreDetailComment">
+				<ul class="list-group">
+				    <li class="list-group-item">Text</li>
+				    <li class="list-group-item">Disabled item</li>
+				</ul>
+    		</div>	
+    	</div>
+		<div class="moreSettings">
+    		<div class="moreSettingIcon" more-details="moreDetailGlobe">
+    			<i class="fa fa-globe"></i>
+    		</div>
+    		<div class="moreSettingList" id="moreDetailGlobe">
+				<ul class="list-group">
+				    <li class="list-group-item">Text</li>
+				    <li class="list-group-item">Disabled item</li>
+				</ul>
+    		</div>	
+    	</div>
+		<div class="moreSettings">
+    		<div class="moreSettingIcon" more-details="moreDetailQuestions">
+    			<i class="fa fa-question-circle"></i>
+    		</div>
+    		<div class="moreSettingList" id="moreDetailQuestions">
+				<ul class="list-group">
+				    <li class="list-group-item">Text</li>
+				    <li class="list-group-item">Disabled item</li>
+				</ul>
+    		</div>	
+    	</div>
+    </div>
+
+
+
+	<!-- demo 2 -->
+	<div class="detailContent">
+		<div class="controlMenu btn btn-success btn-lg">Push</div>
+		<div class="menuDetail goToLeft">
+			<h3 class="display-3 text-xs-center">Menu trái</h3>
+			<ul class="list-group">
+				<li class="list-group-item">Text</li>
+				<li class="list-group-item">Disabled item</li>
+			</ul>
+		</div>
+		<div class="displayDetail"></div>	<!-- background đen-->
+	</div>
+
+
+	<!-- demo 3: scroll -->
+	<div class="menuScroll">
+		<div class="container">
+			<div class="row">
+				<div class="col-sm-4 leftScroll">LOGO</div>
+				<div class="col-sm-8 rightScroll">
+					<div class="float-xs-right">
+						<a href="">Trang chủ</a>
+						<a href="">News</a>
+						<a href="">Contact</a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="container">
+		<div class="row">
+			<div class="col-sm-8 contentLeft">
+				<div class="loadPage">Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur recusandae quam omnis aperiam quo. Alias molestias vel porro mollitia quas voluptatibus rem quibusdam, cumque expedita fuga sequi assumenda aspernatur fugit?</div>
+				<div class="loadPage">Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur recusandae quam omnis aperiam quo. Alias molestias vel porro mollitia quas voluptatibus rem quibusdam, cumque expedita fuga sequi assumenda aspernatur fugit?</div>
+				<div class="loadPage">Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur recusandae quam omnis aperiam quo. Alias molestias vel porro mollitia quas voluptatibus rem quibusdam, cumque expedita fuga sequi assumenda aspernatur fugit?</div>
+				<div class="loadPage">Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur recusandae quam omnis aperiam quo. Alias molestias vel porro mollitia quas voluptatibus rem quibusdam, cumque expedita fuga sequi assumenda aspernatur fugit?</div>
+				<div class="loadPage">Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur recusandae quam omnis aperiam quo. Alias molestias vel porro mollitia quas voluptatibus rem quibusdam, cumque expedita fuga sequi assumenda aspernatur fugit?</div>
+				<div class="loadPage">Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur recusandae quam omnis aperiam quo. Alias molestias vel porro mollitia quas voluptatibus rem quibusdam, cumque expedita fuga sequi assumenda aspernatur fugit?</div>
+				<div class="loadPage">Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur recusandae quam omnis aperiam quo. Alias molestias vel porro mollitia quas voluptatibus rem quibusdam, cumque expedita fuga sequi assumenda aspernatur fugit?</div>
+				<div class="loadPage">Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur recusandae quam omnis aperiam quo. Alias molestias vel porro mollitia quas voluptatibus rem quibusdam, cumque expedita fuga sequi assumenda aspernatur fugit?</div>
+				<div class="loadPage">Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur recusandae quam omnis aperiam quo. Alias molestias vel porro mollitia quas voluptatibus rem quibusdam, cumque expedita fuga sequi assumenda aspernatur fugit?</div>
+				<div class="loadPage">Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur recusandae quam omnis aperiam quo. Alias molestias vel porro mollitia quas voluptatibus rem quibusdam, cumque expedita fuga sequi assumenda aspernatur fugit?</div>
+				<div class="loadPage">
+					Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure nostrum rem placeat voluptate quidem! Nesciunt, blanditiis iste unde dolorem voluptates doloremque, porro, omnis enim tempora ipsam alias veniam. Id, quia.			
+					Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure nostrum rem placeat voluptate quidem! Nesciunt, blanditiis iste unde dolorem voluptates doloremque, porro, omnis enim tempora ipsam alias veniam. Id, quia.		
+					Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure nostrum rem placeat voluptate quidem! Nesciunt, blanditiis iste unde dolorem voluptates doloremque, porro, omnis enim tempora ipsam alias veniam. Id, quia.		
+					Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure nostrum rem placeat voluptate quidem! Nesciunt, blanditiis iste unde dolorem voluptates doloremque, porro, omnis enim tempora ipsam alias veniam. Id, quia.		
+					Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure nostrum rem placeat voluptate quidem! Nesciunt, blanditiis iste unde dolorem voluptates doloremque, porro, omnis enim tempora ipsam alias veniam. Id, quia.		
+					Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure nostrum rem placeat voluptate quidem! Nesciunt, blanditiis iste unde dolorem voluptates doloremque, porro, omnis enim tempora ipsam alias veniam. Id, quia.			
+					Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure nostrum rem placeat voluptate quidem! Nesciunt, blanditiis iste unde dolorem voluptates doloremque, porro, omnis enim tempora ipsam alias veniam. Id, quia.
+					Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure nostrum rem placeat voluptate quidem! Nesciunt, blanditiis iste unde dolorem voluptates doloremque, porro, omnis enim tempora ipsam alias veniam. Id, quia.
+				</div>
+			</div>
+			<div class="col-sm-4 contentRight">
+				<div>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Placeat nemo voluptatibus veritatis blanditiis eum earum harum amet? Minima quos possimus accusamus placeat corrupti aliquid et, illum vel voluptatum debitis. Distinctio?</div>
+				<div class="advertisement2">
+					<img src="image/1.png" alt="" class="img-fluid" width="320px" height="auto"> 
+				</div>
+				<div>Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat iusto quisquam ducimus repellat deserunt repudiandae reprehenderit eligendi sit dolore magni expedita laboriosam sed possimus architecto, maiores aliquam, velit officia voluptate?</div>
+			</div>
+		</div>
+	</div>
+
+
+
+
+
+
+
+
+	<!-- css 3D -->
+	<div class="container">
+		<div class="row">
+			<div class="pictureGroupDemo1">
+				<div class="pictureDemo1">
+					<img src="image/1.png" alt="">
+				</div>
+			</div>
+		
+			<!--  -->
+			<div class="pictureGroupDemo2">
+				<div class="pictureDemo2">
+					<img src="image/1.png" alt="">
+					<img src="image/2.JPG" alt="">
+					<img src="image/3.JPG" alt="">
+					<img src="image/4.JPG" alt="">
+				</div>
+			</div>
+		</div>
+		<button class="btnCss3D">Demo Css3D</button>
+
+		<!--  -->
+		<hr>
+		<div class="row">
+			<div class="pictureDemo3">
+				<img src="image/5.JPG" alt="">
+			</div>
+			<div class="pictureDemo4">
+				<img src="image/4.JPG" alt="">
+			</div>
+		</div>
+
+		<!--  -->
+		<hr>
+		<div class="row">
+			<div class="pictureGroupDemo5">
+				<div class="pictureDemo5">
+					<img src="image/1.png" alt="">
+					<img src="image/2.JPG" alt="">
+					<img src="image/5.JPG" alt="">
+					<img src="image/4.JPG" alt="">
+				</div>
+			</div>
+
+			<div class="pictureGroupDemo6">
+				<div class="pictureDemo6">
+					<div class="picDemo6_1"><img src="image/1.png" alt=""></div>
+					<div class="picDemo6_2"><img src="image/2.JPG" alt=""></div>
+					<div class="picDemo6_3"><img src="image/3.JPG" alt=""></div>
+					<div class="picDemo6_4"><img src="image/4.JPG" alt=""></div>
+					<div class="picDemo6_5"><img src="image/5.JPG" alt=""></div>
+					<div class="picDemo6_6"><img src="image/6.JPG" alt=""></div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+
+
+
+	<!-- Youtube -->
+	<div class="container">
+		<div class="listSlidesYoutube">
+			<div class="btnListYoutube">
+				<div class="btnPreviousListYoutube"></div>
+				<div class="btnNextListYoutube activeBtnListYoutube"></div>
+			</div>
+			<div class="linkContentYoutube">
+				<div class="slideYoutube">
+					<img src="image/1.png" alt="">
+					<b>Lorem ipsum dolor sit amet consectetur adipisicing elit.</b>
+					<div class="summarySlideYoutube">
+						Lorem ipsum, dolor sit amet consectetur adipisicing elit
+					</div>
+				</div>
+				<div class="slideYoutube">
+					<img src="image/2.JPG" alt="">
+					<b>Lorem ipsum dolor sit amet consectetur adipisicing elit.</b>
+					<div class="summarySlideYoutube">
+						Lorem ipsum, dolor sit amet consectetur adipisicing elit
+					</div>
+				</div>
+				<div class="slideYoutube">
+					<img src="image/3.JPG" alt="">
+					<b>Lorem ipsum dolor sit amet consectetur adipisicing elit.</b>
+					<div class="summarySlideYoutube">
+						Lorem ipsum, dolor sit amet consectetur adipisicing elit
+					</div>
+				</div>
+				<div class="slideYoutube">
+					<img src="image/4.JPG" alt="">
+					<b>Lorem ipsum dolor sit amet consectetur adipisicing elit.</b>
+					<div class="summarySlideYoutube">
+						Lorem ipsum, dolor sit amet consectetur adipisicing elit
+					</div>
+				</div>
+				<div class="slideYoutube">
+					<img src="image/5.JPG" alt="">
+					<b>Lorem ipsum dolor sit amet consectetur adipisicing elit.</b>
+					<div class="summarySlideYoutube">
+						Lorem ipsum, dolor sit amet consectetur adipisicing elit
+					</div>
+				</div>
+				<div class="slideYoutube">
+					<img src="image/6.JPG" alt="">
+					<b>Lorem ipsum dolor sit amet consectetur adipisicing elit.</b>
+					<div class="summarySlideYoutube">
+						Lorem ipsum, dolor sit amet consectetur adipisicing elit
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+
+
+
+	<!-- Slide Demo -->
+	<div class="container">
+		<div class="contentSlidesDemo">
+			<ul>
+				<li><div class="slideDemo">	<img src="image/2.JPG" height="300px" alt=""></div></li>
+				<li><div class="slideDemo">	<img src="image/3.JPG" height="300px" alt=""></div></li>
+				<li><div class="slideDemo">	<img src="image/4.JPG" height="300px" alt=""></div></li>
+				<li><div class="slideDemo">	<img src="image/5.JPG" height="300px" alt=""></div></li>
+				<li><div class="slideDemo">	<img src="image/6.JPG" height="300px" alt=""></div></li>
+				<li><div class="slideDemo">	<img src="image/1.png" height="300px" alt=""></div></li>
+			</ul>
+		</div>
+		<div class="btnListSlideDemo">
+			<ul>
+				<li>N11</li>
+				<li>N12</li>
+				<li>N13</li>
+				<li>N14</li>
+				<li>N15</li>
+				<li>N16</li>
+			</ul>
+		</div>
+	</div>
+
+
+
+
+	<!-- Slide Page DEMO 2-->
+	<div class="container">
+		<div class="containerslidesPageDemo2">
+			<div class="slidesPageDemo2"><!--phần xử lý content cho slidePageDemo2-->
+				<ul>
+					<li class="activeSlidePageDemo2">
+						<div class="slidePageDemo2">
+							<div class="imgSlidePageDemo2">
+								<div class="imgSlidePageDemo2" style="background-image: url(image/4.JPG)"></div>
+								<img src="image/2.JPG" class="imgBackgroundDown1SlidePageDemo2" alt="">
+								<img src="image/2.JPG" class="imgBackgroundDown2SlidePageDemo2" alt="">
+								<img src="image/3.JPG" class="imgBackgroundUpSlidePageDemo2" alt="">
+								<div class="contentSlidePageDemo2">
+									<h2>Title</h2>
+									<small>Mohawk College</small>
+									<div class="separateTileAndContentSlidePageDemo2"></div>
+									<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero similique porro, architecto mollitia dicta, dolores minus numquam laborum quo molestias nihil suscipit minima ad accusantium sunt cum quidem saepe repellendus.</p>
+									<a href="" class="btnSlidePageDemo2">More Details</a>
+								</div>
+							</div>
+						</div>		
+					</li>
+					<li>
+						<div class="slidePageDemo2">
+							<div class="imgSlidePageDemo2">
+								<div class="imgSlidePageDemo2" style="background-image: url(image/6.JPG)"></div>
+								<img src="image/4.JPG" class="imgBackgroundDown1SlidePageDemo2" alt="">
+								<img src="image/4.JPG" class="imgBackgroundDown2SlidePageDemo2" alt="">
+								<img src="image/5.JPG" class="imgBackgroundUpSlidePageDemo2" alt="">
+								<div class="contentSlidePageDemo2">
+									<h2>Title</h2>
+									<small>Mohawk College</small>
+									<div class="separateTileAndContentSlidePageDemo2"></div>
+									<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero similique porro, architecto mollitia dicta, dolores minus numquam laborum quo molestias nihil suscipit minima ad accusantium sunt cum quidem saepe repellendus.</p>
+									<a href="" class="btnSlidePageDemo2">More Details</a>
+								</div>
+							</div>
+						</div>
+			
+					</li>
+					<li>
+						<div class="slidePageDemo2">
+							<div class="imgSlidePageDemo2">
+								<div class="imgSlidePageDemo2" style="background-image: url(image/2.JPG)"></div>
+								<img src="image/6.JPG" class="imgBackgroundDown1SlidePageDemo2" alt="">
+								<img src="image/6.JPG" class="imgBackgroundDown2SlidePageDemo2" alt="">
+								<img src="image/1.png" class="imgBackgroundUpSlidePageDemo2" alt="">
+								<div class="contentSlidePageDemo2">
+									<h2>Title</h2>
+									<small>Mohawk College</small>
+									<div class="separateTileAndContentSlidePageDemo2"></div>
+									<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero similique porro, architecto mollitia dicta, dolores minus numquam laborum quo molestias nihil suscipit minima ad accusantium sunt cum quidem saepe repellendus.</p>
+									<a href="" class="btnSlidePageDemo2">More Details</a>
+								</div>
+							</div>
+						</div>		
+					</li>
+				</ul>
+			</div>
+		
+
+
+			<div class="controlSlides"><!--phần xử lý button cho slide page Demo 2-->
+				<ul>
+					<li class="runningAciveSlide">1</li>
+					<li>2</li>
+					<li>3</li>
+				</ul>
+			</div>
+		</div>
+	</div>
+
+	Lorem, ipsum dolor sit amet consectetur adipisicing elit. Possimus obcaecati quidem, facere, sit repellat sequi dolor dolores aliquam ex aut incidunt illum dignissimos consequuntur nobis explicabo minus quam neque error.
+
+	
+	<!-- Slide Page DEMO 3 -->
+	<div class="container">
+		<div class="WrapperSlidesPageDemo3">
+			<div class="effectPageDemo3">	
+				<div class="choiceEffectPageDemo3">
+					<div class="moreSettingIconPageDemo3" more-details-page-demo3="moreDetailListPageDemo3">
+						<i class="fa fa-caret-down"></i>    			
+					</div>
+					<div class="moreSettingListPageDemo3" id="moreDetailListPageDemo3">
+						<ul class="list-group">
+							<li class="list-group-item">Soft scale</li>
+							<li class="list-group-item">Press away</li>
+							<li class="list-group-item">Apple effect</li>
+							<li class="list-group-item">Side Swing</li>
+							<li class="list-group-item">Fortune wheel</li>
+							<li class="list-group-item">Swipe</li>
+							<li class="list-group-item">Push reveal</li>
+							<li class="list-group-item">Snap in</li>
+							<li class="list-group-item">Let me in</li>
+						</ul>
+					</div>	
+				</div>
+			</div>
+			<div class="slidesPageDemo3">
+				<ul>
+					<li class="activeSlidePageDemo3" style="background-image: url('image/1.png');"></li>
+					<li  style="background-image: url('image/2.JPG');"></li>
+					<li  style="background-image: url('image/3.JPG');"></li>
+					<li  style="background-image: url('image/4.JPG');"></li>
+					<li  style="background-image: url('image/5.JPG');"></li>
+					<li  style="background-image: url('image/6.JPG');"></li>
+				</ul>
+			</div>
+			<div class="controlSlides3">
+				<b class="previousSlideDemo3"> <i class="fa fa-angle-left" aria-hidden="true"></i></b>
+				<b class="nextSlideDemo3"><i class="fa fa-angle-right" aria-hidden="true"></i></b>
+			</div>
+		</div>
+	</div>
+
+
+
+
+
+	<!-- Facebook 2 -->
+	<div class="popUp">
+		<div class="blackBackground">
+			<div class="closeBlackBgrd"></div> <!--nút close trên nền đen-->
+		</div>
+		<div class="informationImage">
+			<div class="infoImage">
+				<div class="imageBlockFb">
+					<ul>
+						<li><img src="image/1.png" alt=""></li>
+						<li><img src="image/2.JPG" alt=""></li>
+						<li><img src="image/3.JPG" alt=""></li>
+						<li><img src="image/4.JPG" alt=""></li>
+						<li><img src="image/7.JPG" alt=""></li>
+					</ul>
+				</div>
+				<div class="buttonImageFb">
+					<b class="buttonImagePreviousFb">Previous</b>
+					<b class="buttonImageNextFb">Next</b>
+				</div>
+			</div>
+			<div class="inforImageDetails"></div>
+		</div>
+	</div>
+	<div class="menuFacebook">
+		<div class="blueHeader">
+			<div class="moreSettings">
+				<div class="moreSettingIcon" more-details="moreDetailTangle">
+					<i class="fa fa-caret-down"></i>    			
+				</div>
+				<div class="moreSettingList" id="moreDetailTangle">
+					<ul class="list-group">
+						<li class="list-group-item">Text</li>
+						<li class="list-group-item">Disabled item</li>
+					</ul>
+				</div>	
+			</div>
+			<div class="moreSettings">
+				<div class="moreSettingIcon" more-details="moreDetailUser">
+					<i class="fa fa-user-circle"></i>
+				</div>
+				<div class="moreSettingList" id="moreDetailUser">
+					<ul class="list-group">
+						<li class="list-group-item">Text</li>
+						<li class="list-group-item">Disabled item</li>
+					</ul>
+				</div>	
+			</div>
+			<div class="moreSettings">
+				<div class="moreSettingIcon" more-details="moreDetailComment">
+					<i class="fa fa-comment" ></i>
+				</div>
+				<div class="moreSettingList" id="moreDetailComment">
+					<ul class="list-group">
+						<li class="list-group-item">Text</li>
+						<li class="list-group-item">Disabled item</li>
+					</ul>
+				</div>	
+			</div>
+			<div class="moreSettings">
+				<div class="moreSettingIcon" more-details="moreDetailGlobe">
+					<i class="fa fa-globe"></i>
+				</div>
+				<div class="moreSettingList" id="moreDetailGlobe">
+					<ul class="list-group">
+						<li class="list-group-item">Text</li>
+						<li class="list-group-item">Disabled item</li>
+					</ul>
+				</div>	
+			</div>
+			<div class="moreSettings">
+				<div class="moreSettingIcon" more-details="moreDetailQuestions">
+					<i class="fa fa-question-circle"></i>
+				</div>
+				<div class="moreSettingList" id="moreDetailQuestions">
+					<ul class="list-group">
+						<li class="list-group-item">Text</li>
+						<li class="list-group-item">Disabled item</li>
+					</ul>
+				</div>	
+			</div>
+		</div>
+	</div>
+	<section class="mainContentFacebook">
+		<div class="leftMainContentFacebook"><img src="image/5.JPG" alt=""></div>
+		<div class="middleMainContentsFacebook">
+			<div class="middleMainContentFacebook">
+				<div class="avatarFacebook">
+					<div class="avatar">
+						<img src="image/1.png" alt="">
+					</div>
+					<div class="thinking">
+						<b>Nguyễn Đức Long</b>
+						<span>đang ở Hamilton</span>
+						<div class="dateTimeFacebook">16/5/2021</div>
+					</div>
+				</div>
+				<div class="imagesContentFacebook">
+					<img src="image/1.png" alt="" class="imagesMainFacebook">
+					<div class="imagesFacebook">
+						<img src="image/2.JPG" alt="">
+						<img src="image/3.JPG" alt="">
+						<div class="lastImageFb2">
+							<img src="image/4.JPG" alt="">
+							<div class="numberOfImage"></div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="rightMainContentFacebook"><img src="image/6.JPG"alt=""></div>
+	</section>
+	
+
+
+	
+	<script type="text/javascript" src="1.js"></script>
+	
+</body>
+</html>

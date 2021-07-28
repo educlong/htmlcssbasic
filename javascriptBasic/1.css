@@ -1,0 +1,1642 @@
+.diXuong{
+	transition: 0.4s;
+	margin-top: 200px;
+	opacity: 0;
+}
+
+.card {transition: 0.4s;}
+.goToRight{		/*di chuyển sang phải*/
+		
+	/*cách 1*/
+	/*transform: translateX(400px);		*/
+	
+	/*cách 2: dùng animation*/
+	animation: gotoright 1s forwards; /*tên chuyển động, time chuyển động, kiểu chuyển động*/
+}		
+@-webkit-keyframes gotoright{		/*định  nghĩa cho animation trên (cách 2)*/
+	0%{			/*di chuyển từ đâu*/
+		transform: translateX(0);
+		margin-top: 0px;
+		opacity: 1;
+	}		
+	50%{		/*đến đâu (qua phải)*/
+		transform: translateX(400px);
+		margin-top: 0px;
+		opacity: 1;
+	}	
+	75%{		/*đến đâu (đi xuống)*/
+		transform: translateX(400px); 
+		margin-top: 200px;
+		opacity: 0.8;
+	}
+	100%{		/*đến đâu (qua phải tiếp)*/
+		transform: translateX(800px); 
+		margin-top: 200px;
+		opacity: 0;
+	}
+}
+
+
+
+
+.non-moving{
+	animation: none!important;		/*khi chưa click thì k có animation, important để ưu tiên thực hiện class này*/
+}
+
+.goToRightNoToggleFirst{
+	animation: gotorightnotogglefirst 2s forwards!important;	/*khi click lần 1 thì bỏ class non-moving đi, add class này, để important*/
+}
+#movingN6{
+	animation: movingn6Animation 2s forwards;
+}
+
+@-webkit-keyframes gotorightnotogglefirst{
+	0%{			
+		transform: translateX(0px) translateY(0px);
+		opacity: 1;
+	}
+	25%{			
+		transform: translateX(200px) translateY(0px);
+		opacity: 1;
+	}		
+	50%{		
+		transform: translateX(200px) translateY(200px);
+		opacity: 1;
+	}	
+	75%{		
+		transform: translateX(500px) translateY(200px);
+		opacity: 0.8;
+	}
+	90%{		
+		transform: translateX(500px) translateY(500px);
+		opacity: 0.5;
+	}
+	100%{		
+		transform: translateX(700px) translateY(500px);
+		opacity: 0;
+	}
+}
+@-webkit-keyframes movingn6Animation{		/*đảo ngược lại 0% thành 100%, tương tự 25% thành 90%,...*/
+	100%{			
+		transform: translateX(0px) translateY(0px);
+		opacity: 1;
+	}
+	90%{			
+		transform: translateX(200px) translateY(0px);
+		opacity: 1;
+	}		
+	75%{		
+		transform: translateX(200px) translateY(200px);
+		opacity: 1;
+	}	
+	50%{		
+		transform: translateX(500px) translateY(200px);
+		opacity: 0.8;
+	}
+	25%{		
+		transform: translateX(500px) translateY(500px);
+		opacity: 0.5;
+	}
+	0%{		
+		transform: translateX(700px) translateY(500px);
+		opacity: 0;
+	}
+}
+
+
+
+
+
+
+/*-------------------facebook-----------------*/
+.blueHeader{
+	height: 50px;
+	background: #3b5998;
+	overflow:hidden;
+}
+.moreSettings{
+	position: relative;
+	float: right;
+	margin-right: 10px;
+	margin-top: 15px;
+	transition: 0.4s;	/*có chuyển động cho 0.4s*/
+	perspective: 500px;
+}
+.moreSettingIcon{
+	color: white;
+	font-size: 30px;
+	transition: 0.4s;
+	color: black;
+	margin-top: -15px;
+	cursor: pointer;	/*set chuột khi di chuyển vào có hình bàn tay*/
+	padding: 0px 0px;
+}
+.moreSettingList{
+	position: absolute;
+	top: 35px;
+	right: -10px;
+	width: 300px;
+	transition: 0.4s;
+	opacity: 0;			/*ẩn danh sách đi*/
+	visibility: hidden;	/*ẩn danh sách đi*/
+}
+
+.moreSettingList::after {
+    content: "";
+    position: absolute;
+	top: -20px;	/*tạo 1 tam zác, bởi vì width rất nhỏ mà border thì rất dày*/
+	width: 0;	/*nên nó sẽ tạo thành 1 tam zác*/
+    height: 0;
+    right: 8px;
+    border: 10px rgba(255, 215, 0, 0) solid;
+    border-bottom-color: white;
+}
+
+li.list-group-item{
+	font-size: 13px;
+	padding: 10px 26px;
+}
+li.list-group-item:hover{
+	color: white;
+	background: #3b5998;
+}
+/* when click */
+.moreSettingIconWhite{	/*nút tam zác xuất hiện màu tráng*/
+	color: white;
+}
+.moreSettingListDisplay{	/*và danh sách hiện ra*/
+	opacity: 1;
+	visibility: visible;
+	animation: openUp 0.4s forwards;
+}
+@-webkit-keyframes openUp{	/*hiệu ứng quay*/
+	from{ 	
+		transform: rotateY(-90deg); 	
+		opacity: 0; 
+		transform-origin: 100% 100%;
+	}
+	to{		
+		transform: rotateY(0deg); 	
+		opacity: 1;
+		transform-origin: 100% 100%;
+	}
+}
+
+
+
+
+
+
+
+
+/* ------------------demo 2 ------------------ */
+html,body{		
+	/*height: 100%;		/*thủ thuật để các class trong demo2 full màn hình*/
+	overflow-x: hidden;	/*bỏ thanh cuộn (scroll) theo chiều ngang (trục x)*/
+}	/*bỏ height: 100%; để xử lý sự kiện cho scroll*/
+
+.detailContent {
+    height: 100%;
+}
+
+.detailContent {
+    height: 100%;
+    transition: linear 0.4s;	/*linear: chuyển động đều*/
+    padding-top: 5%;
+    box-sizing: border-box;	/*cho dù padding-top có bao nhiêu thì vẫn zữ nguyên độ rộng là 100%*/
+}
+
+li.list-group-item {
+    background: none;
+    color: red;
+    text-transform: uppercase;
+}
+
+h3.display-3.text-xs-center {
+    font-size: 35px;
+    padding: 20px;
+    color: white;
+}
+
+.menuDetail {
+    height: 100%;
+    background: #5cb85c;
+    width: 300px;
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    z-index: 2;
+    transition: 0.4s;
+}
+
+.menuDetail.goToLeft{
+	transform: translateX(-100%);
+}
+
+.controlMenu {
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+    /* margin-top: 40%; */
+    width: 100px;
+}
+
+.displayDetail {
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    z-index: 1;
+    background: #0000007a;
+    width: 100%;
+    height: 100%;
+    cursor: pointer;
+    transition: 0.4s;
+	opacity: 0;
+	visibility: hidden;
+}
+
+/* when click */
+.hiddenDetail{
+	opacity: 1;
+	visibility:visible;
+}
+
+.goToRightDetailContent{
+	transform: translateX(300px);
+}
+
+
+
+
+
+/* ------------- demo 3: scroll ------------ */
+.menuScroll {
+    background: #cccccc;
+    padding: 41px 0;
+    font-size: 40px;
+    font-weight: bold;
+    margin-top: 30px;
+    transition: 0.4s;
+	/*position: fixed;	/*menu này luôn luôn hiển thị*/
+	/* z-index: 2; */
+	width: 100%;
+}
+
+.rightScroll a {
+    color: #323232;
+    font-weight: bold;
+    font-size: 14px;
+    padding: 0 40px;
+    text-transform: uppercase;
+    transition: 0.4s;
+}
+.rightScroll a:active, .rightScroll a:visited{
+	text-decoration: none;
+}
+
+.menuScroll.menuScrollSmall{	
+    padding: 20px 0;
+    font-size: 30px;
+    background: #0ccccc;
+}
+
+
+.advertisement2{
+	background: burlywood;
+}
+
+.advertisement2.advertisement2Stop{
+	position: fixed;
+	top: 50px;
+}
+.loadPage{
+	transition: 0.4s;
+	opacity: 0;
+}
+.loadPage.loadPageUp{
+	animation: loadPageChuyenDongUp 1s ease forwards;
+}
+@-webkit-keyframes loadPageChuyenDongUp{
+	from{transform: translateX(100px); opacity: 0;}
+	to{transform: translate(0px); opacity: 1;}
+}
+
+
+
+
+
+/* --------------- css 3D ----------------- 
+1. dịch chuyển	: translateX,Y,Z (+cần perspective)
+				  	+transform-style: perserve-3d 
+						-> xử lý các thuộc tính liên quan đến trục z
+						-> vị trí: ở div trên
+2. zoom			: perspective -> thuộc tính lấy bối cảnh (đặt ở div trên)
+				  transform: rotateX,Y,Z(10deg) (+cần perspective)
+3. quay			: transform:scaleX,Y,Z(1)
+				  transform-origin: 10% 20% -> tâm cách trái 10% và cách trên 20%
+*/
+.pictureCss3D{
+	position: relative;
+}
+.pictureGroupDemo1{
+	width: 400px;
+	height: 300px;
+	position: relative;
+	margin-left: 50px;
+	perspective: 200px;
+}
+.pictureDemo1 img{
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	width: 400px;
+	height: auto;
+	transition: 2.4s;
+	transform-origin: 50% 0;
+	
+}
+.pictureGroupDemo1:hover .pictureDemo1 img{	/*di chuột lên pictureGroupDemo2*/
+	transform:  translateZ(300px) 	/* nhưng tác dụng lên img trong picture*/
+				rotateX(360deg) scale(0.5);
+}
+row
+/*  */
+.pictureGroupDemo2{
+	width: 400px;
+	height: 300px;
+	position: relative;
+	margin-left: 50px;
+	perspective: 1000px;
+	transform-origin: 0 0%;	/*tâm quay tại cạnh trên*/
+}
+.pictureDemo2 img{
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	width: auto;
+	height: 300px;
+	transition: .4s;
+	
+}
+.rotatePictureX .pictureDemo2 img:nth-child(4){	/*nth-child(): số lượng phần tử quay*/	
+	transform: rotateX(65deg);	/*quay 1 góc 65deg*/
+}
+.rotatePictureX .pictureDemo2 img:nth-child(3){	/*nth-child(): ảnh thứ 3 (n=3)*/	
+	transform: rotateX(45deg);	/*quay 1 góc 45deg*/
+}
+.rotatePictureX .pictureDemo2 img:nth-child(2){	/*nth-child(): ảnh thứ 2 (n=2)*/	
+	transform: rotateX(25deg);	/*quay 1 góc 25deg*/
+}
+.rotatePictureX .pictureDemo2 img:nth-child(1){	/*nth-child(): ảnh thứ 1 (n=1)*/	
+	transform: rotateX(5deg);	/*quay 1 góc 5deg*/
+}
+
+
+/*  */
+.pictureDemo3{
+	width: 400px;
+	height: 300px;
+	position: relative;
+	overflow: hidden;
+}
+.pictureDemo3 img{
+	width: auto;
+	height: 300px;
+}
+.pictureDemo3::before{
+	content: "";
+	width: 700px;
+	height: 500px;
+	background: rgb(172, 170, 170);
+	transform-origin: 0 0;
+	transition: 0.4s;
+	position: absolute;
+	top: 300px;
+	left: 0px;
+	transform: rotateZ(0deg);
+	opacity: 0.5;
+}
+.pictureDemo3:hover::before{
+	transform: rotateZ(-25deg);
+}
+
+
+/*  */
+.pictureDemo4{
+	width: 400px;
+	height: 300px;
+	position: relative;
+	overflow: hidden;
+}
+.pictureDemo4 img{
+	width: auto;
+	height: 300px;
+}
+.pictureDemo4::after, .pictureDemo4::before{
+	content: "";
+	display: block;
+	position: absolute;
+	top: 50px;
+	left: 50px;
+	width: 300px;
+	height: 200px;
+	border: 1px solid white;
+	border-left-color: transparent;
+	border-right-color: transparent;
+	transition: 0.4s;
+	transform: scaleX(0);
+}
+.pictureDemo4::before{
+	border-left-color: white;
+	border-right-color: white;
+	border-top-color: transparent;
+	border-bottom-color: transparent;
+	transform: scaleX(1) scaleY(0);
+	
+}
+.pictureDemo4:hover::after{
+	transform: scaleX(1);
+}
+.pictureDemo4:hover::before{
+	transform: scaleX(1) scaleY(1);
+}
+
+
+
+
+
+/*  */
+.pictureGroupDemo5{
+	width: 400px;
+	height: 300px;
+	margin-left: 50px;
+	perspective: 700px;
+}
+.pictureDemo5 img{
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	z-index: 4;
+	width: auto;
+	height: 300px;
+}
+.pictureDemo5{
+	width: 400px;
+	height: 300px;
+	position: relative;
+	transform-style: preserve-3d;	
+	transform: rotateX(0deg) rotateY(0deg) rotateZ(0deg);	/*quay chéo 45deg*/
+	transition: 0.4s;
+	margin: auto;
+}
+.pictureGroupDemo5:hover .pictureDemo5{
+	transform: rotateX(-45deg) rotateY(-45deg) rotateZ(45deg);/*quay chéo 45deg*/
+}
+.pictureGroupDemo5 .pictureDemo5 img:nth-child(4){	/*nth-child(): số lượng phần tử quay*/	
+	transform: translateZ(0px);
+}
+.pictureGroupDemo5 .pictureDemo5 img:nth-child(3){	/*nth-child(): ảnh thứ 3 (n=3)*/	
+	transform: translateZ(-100px)	/*lùi về sau màn chiếu*/
+}
+.pictureGroupDemo5 .pictureDemo5 img:nth-child(2){	/*nth-child(): ảnh thứ 2 (n=2)*/	
+	transform: translateZ(-200px)	/*lùi về sau màn chiếu*/
+}
+.pictureGroupDemo5 .pictureDemo5 img:nth-child(1){	/*nth-child(): ảnh thứ 1 (n=1)*/	
+	transform: translateZ(-300px)	/*lùi về sau màn chiếu*/
+}
+
+/*  */
+.pictureDemo6 img{
+	width: 400px;
+	height: 300px;
+} 
+.pictureGroupDemo6{
+	width: 400px;
+	height: 300px;
+	perspective: 700px;
+	margin-top: 100px;
+	margin-left: 250px;
+	margin-right: 0;
+	margin-bottom: 300px;
+}
+.pictureDemo6{
+	width: 400px;
+	height: 300px;
+	position: relative;
+	transform-style: preserve-3d;
+    transform: rotateY(-120deg) rotateZ(20deg) translateX(50px);
+    transition: 0.5s;
+}
+.pictureDemo6 div{
+	width: 400px;
+	height: 300px;
+	background: black;
+	color: white;
+	line-height: 200px;
+	font-size: 50px;
+	text-align: center;
+	position: absolute;
+	top: 0px;
+	left: 0px;
+}
+.picDemo6_1{
+	transform: translateZ(200px);
+}
+.picDemo6_2{
+	transform: rotateY(-90deg) translateZ(200px);
+}
+.picDemo6_3{
+	transform: rotateY(90deg) translateZ(200px);
+}
+.picDemo6_4{
+	transform: rotateX(90deg) translateZ(150px);
+}
+.picDemo6_5{
+	transform: rotateX(-90deg) translateZ(150px);
+}
+.picDemo6_6{
+	transform: rotateY(180deg) translateZ(200px);
+}
+
+
+
+
+
+
+
+/* Youtube */
+.slideYoutube img{
+	height: 300px;
+	width: auto;
+	width: 100%;
+}
+.slideYoutube {
+    width: 20%;
+    font-family: segoe ui light;
+    font-size: 13px;
+}
+.listSlidesYoutube{
+	width: 100%;
+	height: 480px;
+	overflow: hidden;	/*dài 300% nhưng chỉ nhìn đc 100% thôi*/
+	margin: auto;
+	margin-bottom: 50px;
+}
+.linkContentYoutube{
+	width: 300%;
+	display: flex;
+	position: absolute;
+	z-index: 1;
+	top: 0px;
+	left: 0px;
+}
+.listSlidesYoutube {
+    position: relative;
+}
+
+.btnListYoutube {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    width: 100%;
+    /* background: black; */
+    height: 70px;
+    z-index: 2;
+}
+
+.btnListYoutube {
+    transform: translateY(-130px);
+}
+
+.btnListYoutube .btnPreviousListYoutube, .btnListYoutube .btnNextListYoutube {
+    float: left;
+    width: 70px;
+    height: 70px;
+    background: rgb(192, 190, 190);
+    cursor: pointer;
+    border-radius: 50%;
+	opacity: 0;
+}
+
+.btnListYoutube .btnNextListYoutube {float: right;}
+
+.btnListYoutube .activeBtnListYoutube{
+	opacity: 0.7;
+}
+
+.linkContentYoutube.previousListYoutube{
+	transition: 0.4s;
+	transform: translateX(-1100px);
+}
+
+
+
+
+
+
+/* Slide demo */
+.contentSlidesDemo {
+    width: 600px;
+    height: 366px;
+    overflow: hidden;
+    margin: auto;
+    border: 3px solid royalblue;
+    border-bottom: 2px solid royalblue;
+}
+
+.contentSlidesDemo ul {
+    height: 400px;
+    width: 600%;
+    list-style: none;
+    margin-top: 33px;
+	transition: 0.4s;
+	transform: translateX(0px);
+    padding-left: 0px;
+}
+
+.contentSlidesDemo li {
+    width: 500px;
+    float: left;
+    margin-right: 47px;
+    margin-left: 47px;
+}
+
+.slideDemo {
+    width: 100%;
+}
+
+.slideDemo img {
+    width: 100%;
+}
+
+.btnListSlideDemo {
+    width: 600px;
+    height: 41px;
+    border: 3px solid royalblue;
+    margin: auto;
+    margin-top: -3;
+    border-top: 1px solid royalblue;
+    margin-bottom: 50px;
+}
+
+.btnListSlideDemo ul {
+    width: 100%;
+}
+
+.btnListSlideDemo li {
+    width: 16%;
+    border-right: 3px solid royalblue;
+    float: left;
+    height: 40px;
+    text-align: center;
+    line-height: 38px;
+    font-size: 14px;
+    font-family: segoe ui light;
+    list-style: none;
+    box-sizing: border-box;
+    transition: 0.4s;
+}
+
+.btnListSlideDemo ul li:last-child {
+    border: none;
+}
+
+.btnListSlideDemo ul li button {
+    background: white;
+    border: none;
+    cursor: pointer;
+}
+
+.btnListSlideDemo li:hover {
+    background: royalblue;
+    color: white;
+}
+
+
+.btnListSlideDemo li.activeSlideDemo{
+	background: royalblue;
+	color: white;
+}
+
+
+
+.contentSlidesDemo ul.contentSlidesDemoNumber0{
+	transform: translateX(0px);
+}
+.contentSlidesDemo ul.contentSlidesDemoNumber1{
+	transform: translateX(-17%);
+}
+.contentSlidesDemo ul.contentSlidesDemoNumber2{
+	transform: translateX(-1200px);
+}
+.contentSlidesDemo ul.contentSlidesDemoNumber3{
+	transform: translateX(-1800px);
+}
+.contentSlidesDemo ul.contentSlidesDemoNumber4{
+	transform: translateX(-2400px);
+}
+.contentSlidesDemo ul.contentSlidesDemoNumber5{
+	transform: translateX(-3000px);
+}
+
+
+
+
+
+
+
+
+/* Slide page Demo 2*/
+.containerslidesPageDemo2 {
+    width: 100%;
+	/* height: 100%; */
+    height: 740px;
+    overflow: hidden;
+	position: relative;
+}
+
+/* phần xử lý button cho slide page Demo 2 */
+.controlSlides {
+    text-align: center;
+	position: absolute;
+	bottom: 0%;
+	/* bottom: -595%; */
+	left: 50%;						/*thủ thuật để */
+	transform: translateX(-50%);		/*căn zữa*/
+	z-index: 9;
+}
+
+.controlSlides ul {
+    display: inline;
+}
+
+.controlSlides ul li {
+    display: inline-block;
+    border: 1px solid grey;
+    text-indent: -9999px;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    margin: 20px 10px;
+    transition: 0.4s;
+    cursor: pointer;
+}
+
+.controlSlides ul li:hover, .controlSlides .runningAciveSlide {
+    background: darkgrey;
+}
+
+/* phần xử lý content cho slidePageDemo2 */
+
+.containerslidesPageDemo2 .slidesPageDemo2{
+	position: absolute;
+	width: 100%;
+	height: 100%;
+}
+.slidesPageDemo2 ul {	/*có 2 cặp relative và absolute*/
+    height: 100%;		/*1 cặp là ul, li*/
+	position: relative;
+}
+.slidesPageDemo2 ul li {
+    list-style: none;
+    position: absolute;
+    height: 100%;
+    width: 100%;
+	transition: 0.4s;
+	opacity: 0;
+}
+.slidesPageDemo2 ul li .slidePageDemo2{	/*có 2 cặp relative và absolute*/
+	position: relative;					/*1 cặp là ul, li ở trên*/
+	width: 100%;height: auto;			/*và 1 cặp là slidePageDemo2 và*/
+	height: 100%;						/* các phần tử bên trong*/
+    margin-left: -40px;	
+}
+.slidesPageDemo2 ul li .slidePageDemo2 .imgSlidePageDemo2{
+    width: 100%;
+    height: 100%;
+	background-position: center; 
+	background-size: contain;
+	background-repeat: no-repeat;
+}
+.slidesPageDemo2 ul li .slidePageDemo2 img{
+	width: 100%;
+	height: 100%;
+}
+.slidesPageDemo2 ul li .slidePageDemo2 .imgBackgroundDown1SlidePageDemo2,
+.slidesPageDemo2 ul li .slidePageDemo2 .imgBackgroundDown2SlidePageDemo2,
+.slidesPageDemo2 ul li .slidePageDemo2 .imgBackgroundUpSlidePageDemo2,
+.slidesPageDemo2 ul li .slidePageDemo2 .contentSlidePageDemo2{
+	position:absolute;	/*có 2 cặp relative và absolute*/
+	z-index: 1;			/*1 cặp là ul, li ở trên*/
+	top: 0px;			/*và 1 cặp là slidePageDemo2 và*/
+	opacity: 0;			/* các phần tử bên trong*/
+}
+.slidesPageDemo2 ul li .slidePageDemo2 .imgBackgroundDown1SlidePageDemo2{
+	/* opacity: 0.7; */
+	top: 55%;
+	width: auto;
+	height: 45%;
+	opacity: 0;
+}
+
+.slidesPageDemo2 ul li .slidePageDemo2 .imgBackgroundDown2SlidePageDemo2 {
+    /* opacity: 0.5; */
+    top: 40%;
+	width: auto;
+	height: 60%;
+	opacity: 0;
+}
+
+.slidesPageDemo2 ul li.activeSlidePageDemo2 .slidePageDemo2 .imgBackgroundDown1SlidePageDemo2,
+.slidesPageDemo2 ul li.activeSlidePageDemo2 .slidePageDemo2 .imgBackgroundDown2SlidePageDemo2{
+	animation: imgBackgroundDown 1s forwards;
+}
+
+@-webkit-keyframes imgBackgroundDown{
+	from{
+		transform: translateX(-100%) translateY(100%);
+		opacity: 0;
+	}
+	to{
+		transform: translateX(1) translateY(1);
+		opacity: 0.5;
+	}
+}
+.slidesPageDemo2 ul li.activeSlidePageDemo2 .slidePageDemo2 .imgBackgroundDown1SlidePageDemo2{
+	animation-delay: 0.3s;
+}
+.slidesPageDemo2 ul li .slidePageDemo2 .imgBackgroundUpSlidePageDemo2 {
+    /* opacity: 0.5; */
+    right: 0px;
+    width: 40%;
+    height: auto;
+	opacity: 0;
+}
+.slidesPageDemo2 ul li.activeSlidePageDemo2 .slidePageDemo2 .imgBackgroundUpSlidePageDemo2{
+	animation: imgBackgroundUp 1s forwards;
+	animation-delay: 0.5s;
+}
+@-webkit-keyframes imgBackgroundUp{
+	from{
+		transform: translateX(100%) translateY(-100%);
+		opacity: 0;
+	}
+	to{
+		transform: translateX(0) translateY(0);
+		opacity: 0.5;
+	}
+}
+
+.slidesPageDemo2 ul li .slidePageDemo2 .contentSlidePageDemo2 {
+    width: 15%;
+    left: 4%;
+    z-index: 3;
+    opacity: 1;
+    top: 40%;
+    color: white;
+	opacity: 1;
+}
+.slidesPageDemo2 ul li .slidePageDemo2 .contentSlidePageDemo2 h2{
+	font-size: 80px;
+	font-weight: normal;
+	font-family: 'Times New Roman', Times, serif;
+	opacity: 0;
+}
+
+.slidesPageDemo2 ul li .slidePageDemo2 .contentSlidePageDemo2 small{
+	font-size: 20px;
+	font-weight: bold;
+	text-transform: uppercase;
+	padding: 10px 0 9px 0;
+	display: block;
+	opacity: 0;
+}
+.slidesPageDemo2 ul li .slidePageDemo2 .contentSlidePageDemo2 .separateTileAndContentSlidePageDemo2{
+	width: 80%;
+	height: 2px;
+	background: #dfdfdf;
+	margin: 1px 0 12px 0;
+	opacity: 0;
+}
+.slidesPageDemo2 ul li .slidePageDemo2 .contentSlidePageDemo2 p{
+	font-size: 13px;
+	line-height: 20px;
+	color: #dfdfdf;
+	opacity: 0;
+}
+.slidesPageDemo2 ul li .slidePageDemo2 .contentSlidePageDemo2 .btnSlidePageDemo2{
+	color: white;
+	text-decoration: none;
+	border: 1px solid white;
+	padding: 10px 20px;
+	margin:10px 0 0 0;
+	display: inline-block;
+	font-size: 17px;
+	text-transform: uppercase;
+	opacity: 0;
+}
+
+
+.slidesPageDemo2 ul li.activeSlidePageDemo2 .slidePageDemo2 .contentSlidePageDemo2 h2,
+.slidesPageDemo2 ul li.activeSlidePageDemo2 .slidePageDemo2 .contentSlidePageDemo2 small,
+.slidesPageDemo2 ul li.activeSlidePageDemo2 .slidePageDemo2 .contentSlidePageDemo2 .separateTileAndContentSlidePageDemo2,
+.slidesPageDemo2 ul li.activeSlidePageDemo2 .slidePageDemo2 .contentSlidePageDemo2 p,
+.slidesPageDemo2 ul li.activeSlidePageDemo2 .slidePageDemo2 .contentSlidePageDemo2 .btnSlidePageDemo2{
+	animation: contentSlidePageDemo2 1s forwards;
+	animation-delay: 0.1s;
+}
+@-webkit-keyframes contentSlidePageDemo2{
+	from{
+		transform: translateX(-100px);
+		opacity: 0;
+	}
+	to{
+		transform: translateX(0px);
+		opacity: 1;
+	}
+}
+.slidesPageDemo2 ul li.activeSlidePageDemo2 .slidePageDemo2 .contentSlidePageDemo2 h2{
+	animation-delay: 0.4s;
+}
+.slidesPageDemo2 ul li.activeSlidePageDemo2 .slidePageDemo2 .contentSlidePageDemo2 small{
+	animation-delay: 0.7s;
+}
+.slidesPageDemo2 ul li.activeSlidePageDemo2 .slidePageDemo2 .contentSlidePageDemo2 .separateTileAndContentSlidePageDemo2{
+	animation-delay: 1s;
+}
+.slidesPageDemo2 ul li.activeSlidePageDemo2 .slidePageDemo2 .contentSlidePageDemo2 p{
+	animation-delay: 1.3s;
+}
+.slidesPageDemo2 ul li.activeSlidePageDemo2 .slidePageDemo2 .contentSlidePageDemo2 .btnSlidePageDemo2{
+	animation-delay: 1.6s;
+}
+
+.slidesPageDemo2 ul li.activeSlidePageDemo2 {
+	opacity: 1;
+}
+
+
+
+
+
+
+
+
+/* <!-- Slide Page DEMO 3 --> */
+.WrapperSlidesPageDemo3 {
+    width: 100%;
+    height: 775px;
+    overflow: hidden;
+    position: relative;
+}
+
+.WrapperSlidesPageDemo3 .slidesPageDemo3,
+.WrapperSlidesPageDemo3 .slidesPageDemo3 ul,
+.WrapperSlidesPageDemo3 .slidesPageDemo3 ul li {
+    width: 100%;
+    height: 100%;
+}
+.WrapperSlidesPageDemo3 .slidesPageDemo3 {
+    position: relative;
+	overflow: hidden;
+	background: black;
+}
+.WrapperSlidesPageDemo3 .slidesPageDemo3 ul {
+    position: relative;
+}
+.WrapperSlidesPageDemo3 .slidesPageDemo3 ul li {
+	background-position: top; 
+	background-size: contain;
+	background-repeat: no-repeat;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+	opacity: 0;
+}
+.WrapperSlidesPageDemo3 .slidesPageDemo3 ul li.activeSlidePageDemo3{
+	opacity: 1;
+}
+
+.WrapperSlidesPageDemo3 .controlSlides3{
+	position: absolute;
+    top: 0px;
+    right: 0px;
+    z-index: 9;
+}
+.WrapperSlidesPageDemo3 .controlSlides3 b {
+    font-size: 80px;
+    color: gray;
+    padding: 10px 40px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.WrapperSlidesPageDemo3 .controlSlides3 b:hover {
+    color: royalblue;
+}
+
+.WrapperSlidesPageDemo3 .controlSlides3 .previousSlideDemo3{}
+.WrapperSlidesPageDemo3 .controlSlides3 .nextSlideDemo3{}
+
+/* xử lý hiệu ứng thứ nhất: Soft scale */
+.disapearNextSoftScale{
+	animation: disapearNextSoftScale 1s forwards;
+}
+@-webkit-keyframes disapearNextSoftScale{
+	from{transform: scale(1); opacity: 1;}	/*phóng to lên 100%*/
+	to{ transform: scale(2); opacity: 0;}	/*phóng to lên 200%*/
+}
+.apearNextSoftScale{
+	animation:  apearNextSoftScale 1s forwards;
+}
+@-webkit-keyframes apearNextSoftScale{
+	from{transform: scale(0.7); opacity: 0;}	/*phóng to lên 70%*/
+	to{ transform: scale(1); opacity: 1;}	/*phóng to lên 100%*/
+}
+.disapearPreviousSoftScale{
+	animation: disapearPreviousSoftScale 1s forwards;
+}
+@-webkit-keyframes disapearPreviousSoftScale{
+	from{ transform: scale(1); opacity: 1;}
+	to{ transform: scale(0.7);opacity: 0;}
+}
+.apearPreviousSoftScale{
+	animation: apearPreviousSoftScale 1s forwards;
+}
+@-webkit-keyframes apearPreviousSoftScale{
+	from{transform: scale(2); opacity: 0;}
+	to{transform: scale(1); opacity: 1;}
+}
+
+/* xử lý hiệu ứng thứ 2: Press away */
+.disapearNextPressAway{
+	animation: disapearNextPressAway 1s forwards;
+}
+@-webkit-keyframes disapearNextPressAway{
+	from{transform: translateX(0); opacity: 1;}	
+	to{ transform: translateX(100%); opacity: 0;}
+}
+.apearNextPressAway{
+	animation:  apearNextPressAway 1s forwards;
+}
+@-webkit-keyframes apearNextPressAway{
+	from{transform: translateX(-100%); opacity: 0;}
+	to{ transform: translateX(0); opacity: 1;}	
+}
+.disapearPreviousPressAway{
+	animation: disapearPreviousPressAway 1s forwards;
+}
+@-webkit-keyframes disapearPreviousPressAway{
+	to{transform: translateX(-100%); opacity: 0;}
+	from{ transform: translateX(0); opacity: 1;}	
+}
+.apearPreviousPressAway{
+	animation: apearPreviousPressAway 1s forwards;
+}
+@-webkit-keyframes apearPreviousPressAway{
+	to{transform: translateX(0); opacity: 1;}	
+	from{ transform: translateX(100%); opacity: 0;}
+}
+
+/* xử lý hiệu ứng thứ 3: Press away and scale (trượt sang và zoom lên) */
+.disapearNextPressAndZoom{
+	animation: disapearNextPressAndZoom 1s ease-in-out forwards;
+}
+@-webkit-keyframes disapearNextPressAndZoom{
+	from{transform: scale(1); opacity: 1;}	
+	to{ transform: scale(0.8); opacity: 0;}
+}
+.apearNextPressAndZoom{
+	animation:  apearNextPressAndZoom 1s ease-in-out forwards;
+}
+@-webkit-keyframes apearNextPressAndZoom{
+	from{transform: translateX(100%); opacity: 0;}
+	to{ transform: translateX(0); opacity: 1;}	
+}
+.disapearPreviousPressAndZoom{
+   	animation:disapearPreviousPressAndZoom 1s ease-in-out forwards;
+}
+@-webkit-keyframes disapearPreviousPressAndZoom{
+	to{transform: translateX(100%); opacity: 0;}
+	from{ transform: translateX(0); opacity: 1;}	
+}
+.apearPreviousPressAndZoom{
+	animation: apearPreviousPressAndZoom 1s ease-in-out forwards;
+}
+@-webkit-keyframes apearPreviousPressAndZoom{
+	to{transform: scale(1); opacity: 1;}	
+	from{ transform: scale(0.8); opacity: 0;}
+}
+
+/* xử lý hiệu ứng thứ 4: Side Swing (lùi về và dịch sang phải) */
+.disapearNextSideSwing{
+	animation: disapearNextSideSwing 1s ease-in-out forwards;
+}
+@-webkit-keyframes disapearNextSideSwing{
+	0%{transform: translateX(0);}	
+	40%{ transform: translateX(-10%);}
+	100%{transform: translateX(100%);}
+}
+.apearNextSideSwing{
+	animation:  apearNextSideSwing .6s ease-in-out forwards;
+	animation-delay: 0.4s;
+}
+@-webkit-keyframes apearNextSideSwing{
+	from{transform: translateX(-100%); opacity: 1;}
+	to{ transform: translateX(0); opacity: 1;}	
+}
+.disapearPreviousSideSwing{
+   	animation: disapearPreviousSideSwing .6s ease-in-out forwards;
+	   animation-delay: 0.4s;
+}
+@-webkit-keyframes disapearPreviousSideSwing{
+	0%{transform: translateX(0);}	
+	40%{ transform: translateX(10%);}
+	100%{transform: translateX(-100%);}
+}
+.apearPreviousSideSwing{
+	animation: apearPreviousSideSwing 1s ease-in-out forwards;
+}
+@-webkit-keyframes apearPreviousSideSwing{
+	from{transform: translateX(100%); opacity: 1;}
+	to{ transform: translateX(0); opacity: 1;}	
+}
+
+/* xử lý hiệu ứng thứ 5: Fortune wheel (quay vòng 3D) */
+.WrapperSlidesPageDemo3 .slidesPageDemo3 {
+	perspective: 800px;	/*thuộc tính lấy bỗi cảnh cho css 3d hiệu ứng 5*/
+}
+.disapearNextFortuneWheel{
+	animation: disapearNextFortuneWheel 1s ease-in-out forwards;
+}
+@-webkit-keyframes disapearNextFortuneWheel{
+	from{transform: translateX(0) scale(1); opacity: 1;}
+	to{ transform: translateX(100%) scale(0.9); opacity: 0;}	
+}
+.apearNextFortuneWheel{
+	animation:  apearNextFortuneWheel 1s ease-in-out forwards;
+}
+@-webkit-keyframes apearNextFortuneWheel{
+	from{transform: translateX(-100%) rotateY(-65deg); opacity: 0;}
+	to{ transform: translateX(0) rotateY(0); opacity: 1;}
+}
+.disapearPreviousFortuneWheel{
+   	animation: disapearPreviousFortuneWheel 1s ease-in-out forwards;
+}
+@-webkit-keyframes disapearPreviousFortuneWheel{
+	to{transform: translateX(-100%) rotateY(-65deg); opacity: 0;}
+	from{ transform: translateX(0) rotateY(0); opacity: 1;}
+}
+.apearPreviousFortuneWheel{
+	animation: apearPreviousFortuneWheel 1s ease-in-out forwards;
+}
+@-webkit-keyframes apearPreviousFortuneWheel{
+	to{transform: translateX(0) scale(1); opacity: 1;}
+	from{ transform: translateX(100%) scale(0.9); opacity: 0;}
+}
+
+/* xử lý hiệu ứng thứ 6: Swipe (vuốt lên) */
+.disapearNextSwipe{
+	animation: disapearNextSwipe 1s ease-in-out forwards;
+}
+@-webkit-keyframes disapearNextSwipe{
+	from{transform: translateY(0); z-index: 2; opacity: 1;}
+	to{ transform: translateY(-100%); z-index: 2;opacity: 1;}	
+}
+.apearNextSwipe{
+	animation:  apearNextSwipe 1s ease-in-out forwards;
+}
+@-webkit-keyframes apearNextSwipe{
+	from{opacity: 1;}
+	to{ opacity: 1;}
+}
+.disapearPreviousSwipe{
+   	animation: disapearPreviousSwipe 1s ease-in-out forwards;
+}
+@-webkit-keyframes disapearPreviousSwipe{
+	from{transform: translateY(0);z-index: 2;opacity: 1;}
+	to{ transform: translateY(100%);z-index: 2;opacity: 1;}	
+}
+.apearPreviousSwipe{
+	animation: apearPreviousSwipe 1s ease-in-out forwards;
+}
+@-webkit-keyframes apearPreviousSwipe{
+	from{opacity: 1;}
+	to{ opacity: 1;}
+}
+
+/* xử lý hiệu ứng thứ 7: Push reveal (vuốt xuống) */
+.disapearNextPushReveal{
+	animation: disapearNextPushReveal 1s ease-in-out forwards;
+}
+@-webkit-keyframes disapearNextPushReveal{
+	from{transform: translateY(0); z-index: 2; opacity: 1;}
+	to{ transform: translateY(100%); z-index: 2;opacity: 1;}	
+}
+.apearNextPushReveal{
+	animation:  apearNextPushReveal 1s ease-in-out forwards;
+}
+@-webkit-keyframes apearNextPushReveal{
+	from{transform: translateY(-40%); opacity: 1;}
+	to{transform: translateY(0); opacity: 1;}
+}
+.disapearPreviousPushReveal{
+   	animation: disapearPreviousPushReveal 1s ease-in-out forwards;
+}
+@-webkit-keyframes disapearPreviousPushReveal{
+	to{transform: translateY(-40%); opacity: 1;}
+	from{transform: translateY(0); opacity: 1;}
+}
+.apearPreviousPushReveal{
+	animation: apearPreviousPushReveal 1s ease-in-out forwards;
+}
+@-webkit-keyframes apearPreviousPushReveal{
+	to{transform: translateY(0); z-index: 2; opacity: 1;}
+	from{ transform: translateY(100%); z-index: 2;opacity: 1;}
+}
+
+/* xử lý hiệu ứng thứ 7: Snap in */
+.disapearNextSnapIn{
+	animation: disapearNextSnapIn 1s ease-in-out forwards;
+}
+@-webkit-keyframes disapearNextSnapIn{
+	from{transform: translateX(0%); opacity: 1;}
+	to{ transform: translateX(-10%); opacity: .8;}	
+}
+.apearNextSnapIn{
+	animation:  apearNextSnapIn .6s ease-in-out forwards;
+	animation-delay: .4s;
+}
+@-webkit-keyframes apearNextSnapIn{
+	from{transform: translateX(100%); opacity: 1;}
+	to{transform: translateY(0); opacity: 1;}
+}
+.disapearPreviousSnapIn{
+   	animation: disapearPreviousSnapIn 1s ease-in-out forwards;
+}
+@-webkit-keyframes disapearPreviousSnapIn{
+	to{transform: translateX(10%); opacity: 1;}
+	from{ transform: translateX(0%); opacity: .8;}		
+}
+.apearPreviousSnapIn{
+	animation: apearPreviousSnapIn .6s ease-in-out forwards;
+	animation-delay: .4s;
+}
+@-webkit-keyframes apearPreviousSnapIn{
+	from{transform: translateX(-100%); opacity: 1; z-index: 2;}
+	to{transform: translateY(0); opacity: 1; z-index: 2;}
+}
+
+/* xử lý hiệu ứng thứ 7: Let me in (cần có perspective ở div cha)*/
+.WrapperSlidesPageDemo3 .slidesPageDemo3 ul li.activeSlidePageDemo3{
+	transform-origin: 0 0; 	/* cần có tâm quay (bên trái) => 0 0 */
+}
+.disapearNextLetMeIn{
+	animation: disapearNextLetMeIn 1s ease-in-out forwards;
+}
+@-webkit-keyframes disapearNextLetMeIn{
+	from{transform: rotateY(0deg); opacity: 1;}
+	to{ transform: rotateY(45deg); opacity: .8;}	
+}
+.apearNextLetMeIn{
+	animation:  apearNextLetMeIn 1s ease-in-out forwards;
+}
+@-webkit-keyframes apearNextLetMeIn{
+	from{transform: translateX(100%); opacity: 1; z-index: 2;}
+	to{transform: translateY(0); opacity: 1; z-index: 2;}
+}
+.disapearPreviousLetMeIn{
+   	animation: disapearPreviousLetMeIn 1s ease-in-out forwards;
+}
+@-webkit-keyframes disapearPreviousLetMeIn{
+	from{transform-origin: 100% 100%; transform: rotateY(0deg); opacity: 1;}
+	to{ transform-origin: 100% 100%; transform: rotateY(-45deg); opacity: 1;}
+}
+.apearPreviousLetMeIn{
+	animation: apearPreviousLetMeIn 1s ease-in-out forwards;
+}
+@-webkit-keyframes apearPreviousLetMeIn{
+	from{transform: translateX(-100%); opacity: 1; z-index: 2;}
+	to{transform: translateY(0); opacity: 1; z-index: 2;}
+}
+
+/* xử lý khi xổ nút chọn hiệu ứng xuống */
+.effectPageDemo3{
+	position: absolute;
+    top: -20px;
+    left: 50%;
+    z-index: 8;
+}
+.choiceEffectPageDemo3{
+	position: relative;
+	float: right;
+	margin-right: 10px;
+	margin-top: 15px;
+	transition: 0.4s;	/*có chuyển động cho 0.4s*/
+	perspective: 500px;
+}
+.moreSettingIconPageDemo3{
+	color: white;
+	font-size: 30px;
+	transition: 0.4s;
+	color: black;
+	margin-top: -15px;
+	cursor: pointer;	/*set chuột khi di chuyển vào có hình bàn tay*/
+	padding: 0px 0px;
+}
+.moreSettingListPageDemo3{
+	position: absolute;
+	top: 50%;
+    right: -600%;
+    width: 200px;
+	transition: 0.4s;
+	opacity: 0;			/*ẩn danh sách đi*/
+	visibility: hidden;	/*ẩn danh sách đi*/
+}
+
+.WrapperSlidesPageDemo3 .effectPageDemo3 .choiceEffectPageDemo3 .moreSettingListPageDemo3 ul li.list-group-item{
+	border: none;
+}
+
+/* when click */
+.moreSettingIconGray{	/*nút tam zác xuất hiện màu xám*/
+	color: gray;
+}
+.moreSettingListDisplayPageDemo3{	/*và danh sách hiện ra*/
+	opacity: 1;
+	visibility: visible;
+	animation: openUp 0.4s forwards;
+	z-index: 9;
+}
+@-webkit-keyframes openUp{	/*hiệu ứng quay*/
+	from{ 	
+		transform: rotateY(-90deg); 	
+		opacity: 0; 
+		transform-origin: 100% 100%;
+	}
+	to{		
+		transform: rotateY(0deg); 	
+		opacity: 1;
+		transform-origin: 100% 100%;
+	}
+}
+
+
+
+
+
+
+
+
+
+
+/* Facebook 2 */
+.menuFacebook{
+	position: fixed;
+    top: 0;
+    text-align: center;
+    width: 100%;
+}
+.mainContentFacebook{
+    margin-top: 47px;
+    width: 100%;
+    height: 100%;
+}
+.mainContentFacebook .leftMainContentFacebook{
+    float: left;
+    width: 25%;
+}
+.mainContentFacebook .leftMainContentFacebook img{
+	width: 25%;
+    height: auto;
+    position: fixed;
+    top: 240px;
+    left: 0;
+	z-index: -1;
+}
+.mainContentFacebook .middleMainContentsFacebook{
+    float: left;
+    width: 40%;
+	text-align: center;
+    margin-left: 25%;
+}
+.mainContentFacebook .middleMainContentsFacebook .middleMainContentFacebook{
+    width: 100%;
+	margin: 20px 0px;
+    border: 1px solid #c7c7c7;
+}
+.mainContentFacebook .middleMainContentsFacebook .middleMainContentFacebook .avatarFacebook{
+    height: 100px;
+}
+.mainContentFacebook .middleMainContentsFacebook .middleMainContentFacebook .avatarFacebook{
+    padding-top: 10px;
+    padding-bottom: 15px;
+}
+.mainContentFacebook .middleMainContentsFacebook .middleMainContentFacebook .avatarFacebook .avatar{
+    float: left;
+    width: 14%;
+    margin-left: 2%;
+    margin-right: 2%;
+}
+.mainContentFacebook .middleMainContentsFacebook .middleMainContentFacebook .avatarFacebook .avatar img{
+    width: 70px;
+    height: 60px;
+    border-radius: 50%;
+}
+.mainContentFacebook .middleMainContentsFacebook .middleMainContentFacebook .avatarFacebook .thinking{
+    width: 80%;
+    text-align: left;
+    float: left;
+    padding-top: 10px;
+    font-family: segoe ui-monospace;
+    color: gray;
+    font-size: 16px;
+}
+.mainContentFacebook .middleMainContentsFacebook .middleMainContentFacebook .avatarFacebook .thinking b{
+    color: royalblue;
+    font-family: segoe ui-monospace;
+    font-size: 17px;
+}
+.mainContentFacebook .middleMainContentsFacebook .middleMainContentFacebook .avatarFacebook .thinking span{
+}
+.mainContentFacebook .middleMainContentsFacebook .middleMainContentFacebook .avatarFacebook .thinking .dateTimeFacebook{
+    color: #b8b8b8;
+}
+.mainContentFacebook .middleMainContentsFacebook .middleMainContentFacebook .imagesContentFacebook{}
+.mainContentFacebook .middleMainContentsFacebook .middleMainContentFacebook .imagesContentFacebook img.imagesMainFacebook{
+    width: 100%;
+    height: auto;
+	cursor: pointer;
+}
+.mainContentFacebook .middleMainContentsFacebook .middleMainContentFacebook .imagesContentFacebook .imagesFacebook{
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+.mainContentFacebook .middleMainContentsFacebook .middleMainContentFacebook .imagesContentFacebook .imagesFacebook img,
+.mainContentFacebook .middleMainContentsFacebook .middleMainContentFacebook .imagesContentFacebook .imagesFacebook .lastImageFb2{
+	width: 32%;
+	cursor: pointer;
+	height: 100%;
+	position: relative;
+}
+.mainContentFacebook .middleMainContentsFacebook .middleMainContentFacebook .imagesContentFacebook .imagesFacebook .lastImageFb2 img {
+    width: 100%;
+}
+.mainContentFacebook .middleMainContentsFacebook .middleMainContentFacebook .imagesContentFacebook .imagesFacebook .lastImageFb2 .numberOfImage {
+	background: rgba(0, 0, 0, 0.6);
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    color: white;
+    font-size: 30px;
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+}
+.mainContentFacebook .middleMainContentsFacebook .middleMainContentFacebook .imagesContentFacebook .imagesFacebook img{}
+.mainContentFacebook .rightMainContentFacebook{
+    float: left;
+    width: 35%;
+}
+.mainContentFacebook .rightMainContentFacebook img{
+    width: 35%;
+    height: auto;
+    position: fixed;
+    top: 240px;
+    right: 0;
+	z-index: -1;
+}
+
+.popUp{}
+.popUp .blackBackground{
+	transition: 0.4s;
+	background: rgba(0, 0, 0, 0.6);
+	width: 100%;
+	height: 100%;
+	position: fixed;
+	top: 0px;
+	left: 0px;
+	opacity: 0;
+	visibility: hidden;
+	z-index: 3;
+}
+.popUp .blackBackground .closeBlackBgrd{
+	background-image: url(https://static.xx.fbcdn.net/rsrc.php/v3/yH/r/JC2ydLznO_3.png);
+    background-position: 3px -470px;
+    background-size: 34px 956px;
+    width: 25px;
+    height: 25px;
+    background-repeat: no-repeat;
+    display: inline-block;
+    float: right;
+    margin: 20px 20px 0 0;
+    cursor: pointer;
+    opacity: 0.6;
+    background-color: white;
+    border-radius: 50%;
+}
+.popUp .blackBackground .closeBlackBgrd:hover{
+	opacity: 1;
+}
+.popUp .informationImage{
+    position: fixed;
+    width: 70%;
+    height: 90%;
+    background: #272727;
+    z-index: 4;
+    top: 50%;	/*thủ thuật để gán khối black vào zữa màn hình*/
+    left: 50%;	/*bao gồm top50%, left50% và transformX,y -50%*/
+    transform: translateX(-50%) translateY(-50%);
+	opacity: 0;
+	visibility: hidden;
+	transition: 0.4s;
+}
+.popUp  .infoImage{
+    float: left;
+    width: 60%;
+    height: 100%;
+    background: black;
+	position: relative;
+}
+.popUp  .inforImageDetails{
+    float: left;
+    width: 40%;
+    height: 100%;
+    background: url(image/1.png);
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+/* click vào ảnh thì hiển thị nền đen lên và hiển thị informationImage lên*/
+.popUp .informationDisplay{
+	visibility: visible !important; /*!important: ưu tiên tất cả các case*/
+	opacity: 1 !important;
+}
+
+
+.popUp  .informationImage .infoImage .imageBlockFb{
+    width: 100%;
+}
+.popUp  .informationImage .infoImage .imageBlockFb ul{
+    width: 100%;
+    list-style: none;
+    padding: 0;
+}
+.popUp  .informationImage .infoImage .imageBlockFb ul li{
+    text-align: center;
+    overflow: hidden;
+    top: 0px;
+    position: absolute;
+    width: 100%;
+	top: 50%;	/*thủ thuật để gán khối black vào zữa màn hình*/
+    left: 50%;	/*bao gồm top50%, left50% và transformX,y -50%*/
+    transform: translateX(-50%) translateY(-50%);
+	opacity: 0;
+	visibility: hidden;
+}
+.popUp  .informationImage .infoImage .imageBlockFb ul li img{
+	max-width: 100%;
+	max-height: 100%;
+}
+.popUp  .informationImage .infoImage .buttonImageFb{
+}
+.popUp  .informationImage .infoImage .buttonImageFb b{
+}
+.popUp  .informationImage .infoImage .buttonImageFb b.buttonImagePreviousFb,
+.popUp  .informationImage .infoImage .buttonImageFb b.buttonImageNextFb{
+    background-image: url(https://static.xx.fbcdn.net/rsrc.php/v3/ym/r/GjY5_5gntbc.png);
+    background-position: -26px -74px;
+    background-size: 74px 378px;
+    width: 25px;
+    height: 25px;
+    background-repeat: no-repeat;
+    display: inline-block;
+    margin: 20px 20px 0 0;
+    cursor: pointer;
+    opacity: 0.6;
+    background-color: white;
+    border-radius: 50%;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    text-indent: -99999px;
+    left: 1%;
+    z-index: 5;
+}
+
+.popUp  .informationImage .infoImage .buttonImageFb b.buttonImageNextFb{
+    background-position: -26px -100px;
+    left: 94%;
+}
+
+.popUp .informationImage .infoImage .imageBlockFb ul li.activeImgFbDisplay{
+	opacity: 1 !important;
+	visibility: visible !important;
+}
+.lastImageFb2{
+
+}

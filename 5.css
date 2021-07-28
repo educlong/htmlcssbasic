@@ -1,0 +1,86 @@
+body{
+    margin-left: 5em;
+    margin-right: 5em;
+    margin-bottom: 5em;
+    margin-top: 0.5em;
+}
+/* menu */
+.menu{
+    width: 100%;
+    height: 30px;
+    background-color: lightblue;
+}
+.menu .listMenu{
+    list-style: none;
+    margin: auto;
+    text-align: center;
+}
+.menu .listMenu li{
+    display: inline;
+}
+.menu .listMenu a{
+    text-decoration: none;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-top: 5px;
+    display: inline-block;
+}
+.menu .listMenu a:hover{
+
+}
+/* main page */
+.mainPage{
+    margin: auto;
+    background-color: whitesmoke;
+    display: flex;
+}
+/* main page left */
+.mainPage .leftHandSide{
+    width: 170px;
+    margin-left: auto;
+    justify-content: space-between;
+    background-color: blueviolet;
+}
+.mainPage .leftHandSide .oneRowLeftSide{
+    display: flex;
+    height: 30px;
+    width: 100%;
+}
+.mainPage .leftHandSide .oneRowLeftSide img{
+    width: 20px;
+    height: 100%;
+    margin-left: 5px;
+    margin-right: 10px;
+}
+/* main page middle */
+.mainPage .mainLayout{
+    
+}
+.mainPage .mainLayout .slide{
+
+}
+/* main page right */
+.mainPage .rightHandSide{
+
+}
+.mainPage .rightHandSide .oneRowRightSide{
+
+}
+.mainPage .rightHandSide .oneRowRightSide .detailsRightSide{
+
+}
+.mainPage .rightHandSide .oneRowRightSide .detailsRightSide .rightNews{
+    
+}
+.mainPage .rightHandSide .oneRowRightSide .detailsRightSide .reference{
+
+}
+.mainPage .rightHandSide .oneRowRightSide .detailsRightSide .reference .zing{
+
+}
+.mainPage .rightHandSide .oneRowRightSide .detailsRightSide .reference .minutes{
+
+}
+.mainPage .rightHandSide .oneRowRightSide .detailsRightSide .reference .relativeNews{
+
+}

@@ -1,0 +1,40 @@
+.cssForDiv{
+    display: flex;   /*chuyển về 3 cột*/
+    width: 750px;
+    margin: auto;   /*điều chỉnh ở zữa*/
+    margin-bottom: 20px;/*từ viễn đến top đoạn kế*/
+    padding-bottom: 20px;/*viền cách đáy 1 đoạn 20*/
+    border-bottom: 3px solid greenyellow; /*viền*/
+    justify-content: space-between; /*k/c zữa cộts*/
+}
+/*sử dụng 2 class cho 1 thẻ*/
+        img.css1_width{
+            width: 290px;
+            /*margin-left: 300px;*/
+        }
+        img.css1_height{
+            height: 250px;
+            margin-right: 10px;
+        }
+img.cssForImage2{
+    width: 200px;
+    height: 250px;
+}
+div.fa-arrow-right{    /*chỉnh sửa font awesome*/
+    font-size: 100px;
+    margin-top: 100px;
+    margin-right: 40px;
+}
+img.cssForImageAndroid{
+    width: 150px; /*150px = 20% của 750px (cha nó)*/
+}
+/*div trong p và h5 ko cần đặt class, code như dưới hiểu là:        h5 và p là con của thẻ có class cssForDiv mà không cần phải đặt thêm class*/
+.cssForDiv p{
+    width: 49%;      /*dùng % thay vì dùng px*/
+    display:flex;  /*chia cột tiếp trong cột nhánh*/
+}
+.cssForDiv h5{     
+    margin-right: 10px; /*31%(h4)+49%(p)+20%(img)=100% Chỗ này ko cần tính % => css tự tính*/
+    /*margin-left: 300px;*/
+}
+.cssForDiv p h6{width: 15%;} /*15% x 3cột ~ 49%*/

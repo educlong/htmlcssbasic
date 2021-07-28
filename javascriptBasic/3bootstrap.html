@@ -1,0 +1,2433 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+   
+    <!-- my css -->
+    <link rel="stylesheet" href="3bootstrap.css">    
+    
+
+    <!-- BOOTSTRAP4 (ko đc dùng chung vs thư viện fancy box)-->
+    <!-- css -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+    <!-- js -->
+    <!-- <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.min.js" integrity="sha384-w1Q4orYjBQndcko6MimVbzY0tgp4pWB4lZ7lr30WKz0vr/aWKhXdBNmNb5D92v7s" crossorigin="anonymous"></script> -->
+
+
+    <!-- Bootstrap5 core CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/css/bootstrap.min.css"
+        integrity="sha384-r4NyP46KrjDleawBgD5tp8Y7UzmLA05oM1iAEQ17CSuDqnUK2+k9luXQOfXJCJ4I" crossorigin="anonymous">
+        <!-- <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/js/bootstrap.min.js"
+        integrity="sha384-oesi62hOLfzrys4LxRF63OJCXdXDipiYWBnvTl9Y9/TRlw5xlKIEHpNyvvDShgf/"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+        crossorigin="anonymous"></script> -->
+    
+
+    <!-- thư viện boostrap và font-awesome -->
+    <script type="text/javascript" src="vendor/bootstrap.js"></script>
+    <link rel="stylesheet" href="vendor/bootstrap.css">
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.1/css/all.css">
+
+    <!-- my js -->
+	<script type="text/javascript" src="3bootstrap.js"></script>
+
+</head>
+<body>
+    <header>    <!--thanh menu: gõ navbar -> tab-->
+        <nav class="navbar navbar-expand-md navbar-dark navbar-fixed-top bg-dark"> <!--navbar-dark: màu nền-->
+            <div class="container-fluid">           <!--navbar-fixed-top: set cứng menu trên top của page-->
+                <img src="image/3.JPG" style="width: 5%;" alt="">
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse"
+                aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarCollapse">
+                <ul class="navbar-nav mr-auto mb-2 mb-md-0">
+                    <li class="nav-item active">
+                    <a class="nav-link" aria-current="page" href="#">Home</a>
+                    </li>
+                    <li class="nav-item dropdown">   <!--add thêm dropdown để xổ xuống-->
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Link</a><!--dropdown-toggle: tam zác xổ xuống-->
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdown"><!--các item xổ xuống-->
+                            <a class="dropdown-item" href="#">Action</a>
+                            <a class="dropdown-item" href="#">Another action</a>
+                            <div class="dropdown-divider"></div>
+                            <a class="dropdown-item" href="#">Something else here</a>
+                        </div>
+                    </li>
+                    <li class="nav-item">
+                    <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
+                    </li>
+                </ul>
+                <form class="d-flex">
+                    <input class="form-control mr-2" type="search" placeholder="Search" aria-label="Search">
+                    <button class="btn btn-outline-success" type="submit">Search</button>
+                </form>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+
+    
+    <!--nếu đổi thành container-fluid ---=> tràn màn hình -->
+    <!-- mt-3: căn zãn khoảng cách -->
+    <div class="container mt-3"> <!--để chia cột cần có container (chuẩn 12 cột)-->
+        <!--class:  mt-1 --=> m: margin, t: top, 1: 1*1rem = 1*16px=16px
+                    mb-2 --=> m:margin, b: bottom, 2: 2*2rem,...-->
+
+        <!--Grid và responsive tùy thuộc vào từng màn hình -->
+
+        <div class="row"><!--để lấy hàng cần có row,tổngCộng 1 hàng có 12 phần-->
+            <div class="col-sm-4 col-md-3 col-lg-2">
+                <!--col:cột, sm:small, 4: 1cột chiếm 4 phần (tổng 12phần=nhau)-->
+                
+                <!--ZẢI THÍCH CỠ MÀN HÌNH VÀ CỘT
+                        cỡ màn hình bootstrap4 có 5 cỡ (sắp xếp từ thấp -> cao)
+                        xs: di động, sm:ipad, md: laptop, lg: rộng, xl:full Hd
+                    
+                    col-sm-4:tức là từ màn hình sm (md,lg,xl) đều chia 1cột 4phần
+                             còn dưới màn hình sm 1cột đều 12 phần (full screen)
+                            Nếu cần config cho màn hình md thì add thêm class md vào, VD: col-md-3, tức là từ màn hình md trở lên (lg,xl), screen đc chia 4. Còn nếu config cho màn hình lg thì add thêm class vào (col-lg-2: tức là từ màn hình lg trởlên(lg, xl) -> chia 6screen) -->
+                
+                <img src="image/1.png" alt="" style="width: 100%;">
+                <h1>Tiêu đề</h1>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iusto ipsa laboriosam architecto facere laborum quasi saepe officiis quidem debitis eum, magni obcaecati necessitatibus assumenda voluptatibus voluptas corrupti maxime deleniti est.</p>
+            </div>
+            <div class="col-sm-4 col-md-3 col-lg-2">
+                <img src="image/2.JPG" alt="" style="width: 100%;">
+                <h1>Tiêu đề</h1>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iusto ipsa laboriosam architecto facere laborum quasi saepe officiis quidem debitis eum, magni obcaecati necessitatibus assumenda voluptatibus voluptas corrupti maxime deleniti est.</p>
+            </div>
+            <div class="col-sm-4 col-md-3 col-lg-2">
+                <img src="image/3.JPG" alt="" style="width: 100%;">
+                <h1>Tiêu đề</h1>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iusto ipsa laboriosam architecto facere laborum quasi saepe officiis quidem debitis eum, magni obcaecati necessitatibus assumenda voluptatibus voluptas corrupti maxime deleniti est.</p>
+            </div>
+            <div class="col-sm-4 col-md-3 col-lg-2">
+                <img src="image/4.JPG"alt=""style="width: 100%;">
+                <h1>Tiêu đề</h1>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iusto ipsa laboriosam architecto facere laborum quasi saepe officiis quidem debitis eum, magni obcaecati necessitatibus assumenda voluptatibus voluptas corrupti maxime deleniti est.</p>
+            </div>
+            <div class="col-sm-4 col-md-3 col-lg-2">
+                <img src="image/5.JPG"alt=""style="width: 100%;">
+                <h1>Tiêu đề</h1>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iusto ipsa laboriosam architecto facere laborum quasi saepe officiis quidem debitis eum, magni obcaecati necessitatibus assumenda voluptatibus voluptas corrupti maxime deleniti est.</p>
+            </div>
+            <div class="col-sm-4 col-md-3 col-lg-2">
+                <img src="image/6.JPG"alt=""style="width: 100%;">
+                <h1>Tiêu đề</h1>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iusto ipsa laboriosam architecto facere laborum quasi saepe officiis quidem debitis eum, magni obcaecati necessitatibus assumenda voluptatibus voluptas corrupti maxime deleniti est.</p>
+            </div>
+        </div>  <!--end row-->
+    </div>      <!--end container-->
+    <hr>
+
+
+
+
+
+
+    <!-- alert  -->
+    
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-3">  <!--tạo alert, loại success-->
+                <div class="alert alert-success"><!--gõ: alert:success -> tab-->
+                    <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+                    <strong>Title!</strong> Nội dung alert (loại success)
+                </div>
+            </div>
+            <div class="col-sm-3">  <!--tạo alert, loại info-->
+                <div class="alert alert-info">  <!--gõ: alert:info -> tab-->
+                    <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+                    <strong>Title!</strong> Nội dung alert (loại info)
+                </div>
+                
+            </div>
+            <div class="col-sm-3">  <!--tạo alert, loại warning-->
+            <div class="alert alert-warning">   <!--gõ: alert:warning -> tab-->
+                <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+                <strong>Title!</strong> Nội dung alert (loại warning)
+            </div>
+            
+            </div>
+            <div class="col-sm-3">  <!--tạo alert, loại danger-->
+            <div class="alert alert-danger">    <!--gõ: alert:danger -> tab-->
+                <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+                <strong>Title!</strong> Nội dung alert (loại danger)
+            </div>
+            
+            </div>
+        </div>  <!--end row-->
+    </div>      <!--end container-->
+    <hr>
+
+
+
+
+
+
+    <!-- breadcrumb: làm menu link -->
+    <div class="container">
+        <div class="row">   <!--gõ b4-breadcrumb-list -> tab-->
+            <div class="col-sm-12">
+                <ol class="breadcrumb" style="margin-bottom: 5px;">
+                    <li class="breadcrumb-item"><a href="#">Home</a></li>
+                    <li class="breadcrumb-item"><a href="#">Library</a></li>
+                    <li class="breadcrumb-item"><a href="#">Images</a></li>
+                    <li class="breadcrumb-item"><a href="#">About</a></li>
+                    <li class="breadcrumb-item active">Data</li>
+                </ol>
+            </div>
+        </div>  <!--end row-->
+    </div>      <!--end container-->
+    <hr>
+
+
+
+
+
+
+
+    <!-- Button -->
+    <div class="container">
+        <div class="row">   <!--button ko có outline => tô background-->
+            <div class="col-sm-1 push-sm-1"><!--push: dịch sang phải 1 cột-->
+                <div class="btn btn-primary">Primary</div>
+            </div>  
+            <div class="col-sm-1 push-sm-1"><div class="btn btn-secondary">Secondary</div></div>
+            <div class="col-sm-1 push-sm-2"><div class="btn btn-success">Success</div></div>
+            <div class="col-sm-1 push-sm-2"><div class="btn btn-info">Info</div></div>
+            <div class="col-sm-1 push-sm-2"><div class="btn btn-link">Link</div></div>
+            <div class="col-sm-1 push-sm-2"><div class="btn btn-warning">Warning</div></div>
+            <div class="col-sm-1 push-sm-2"><div class="btn btn-danger">Danger</div></div>
+        </div>  <!--end row-->
+
+
+        <div class="row">   <!--background có outline => tô viền-->
+            <div class="col-sm-2"><div class="btn btn-outline-primary btn-block">Primary</div>  <!--sm-2: độ dài cột =2-->
+            </div>          <!--btn-block: dài full theo độ dài cột-->
+            <div class="col-sm-2"><div class="btn btn-outline-secondary btn-block active">Secondary</div></div><!--active:trạngThái active-->
+            <div class="col-sm-2"><div class="btn btn-outline-success btn-block">Success</div></div>
+            <div class="col-sm-2"><div class="btn btn-outline-info btn-block">Info</div></div>
+            <div class="col-sm-2"><div class="btn btn-outline-warning btn-block">Warning</div></div>
+            <div class="col-sm-2"><div class="btn btn-outline-danger btn-block">Danger</div></div>
+        </div>  <!--end row-->
+        
+    </div>      <!--end container-->
+    <hr>
+
+
+
+
+    
+
+
+    <!-- Checkbox và radio -->
+    <div class="container">
+        <div class="row">
+            <!--checkbox-->
+            <div class="col-sm-6"><!--data-toggle="buttons": tự động làm biến-->
+                <div class="listYourFavourites"> <!--mất-->
+                    <h2>Your favourites?</h2>   <!--các dấu tích trên checkbox-->
+                    <label for="" class="nameYourFavourites btn btn-outline-success">   <!--ngoài là 1 button, trong là -->
+                        <input type="checkbox">Music            <!-- checkbox-->
+                    </label>
+                    <label for="" class="nameYourFavourites btn btn-outline-success"> <input type="checkbox">Dance </label>
+                    <label for="" class="nameYourFavourites btn btn-outline-success"><input type="checkbox">Movies </label>
+                </div>
+            </div>
+            <!--radio (radio cần có name để gom nhóm các radio)-->
+            <div class="col-sm-6">
+                <div class="listYourGender">
+                    <h2>Zới tính?</h2>
+                    <label for="" class="nameYourGender btn btn-outline-success">   <!--ngoài là 1 button, trong là -->
+                        <input type="radio"name="radioGender">Male <!--radio-->
+                    </label>
+                    <label for="" class="nameYourGender btn btn-outline-success"> <input type="radio" name="radioGender">Female</label> <!--zới tính cần có name-->
+                </div>
+            </div>
+        </div>  <!--end row-->
+    </div>      <!--end container-->
+    <hr>
+
+
+
+
+
+    
+    <div class="container">
+        <div class="row">
+            <!-- Button group: để nhóm các button lại vs nhau -->
+            <div class="col-sm-6">
+                <div class="btn-group">
+                    <div class="btn btn-info">Iphone</div>
+                    <div class="btn btn-info">samsung</div>
+                    <div class="btn btn-info">Nokia</div>
+                </div>
+            </div>
+
+
+            <!-- dropdown menu: click vào button thì xổ ra lựa chọn -->
+            <div class="col-sm-6">
+                <div class="btn-group"> <!--nhóm all button tổng thành 1 group-->
+                    <div class="iphones btn-group"><!--nhóm các lựa chọn xổ ra-->
+
+                        <a class="btn btn-secondary dropdown-toggle" href="#" role="button" id="dropdownMenuIphone" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Iphone</a>
+                        <!--cần đặt class: dropdown-toggle, và add thêm dòng:
+                            href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"  
+                        
+                            thuộc tính data-toggle="dropdown": click vào xổ ra
+                            class dropdown-toggle: nút tam zác để hiểu xổ ra-->
+
+                        <div class="typeOfIphone dropdown-menu" aria-labelledby="dropdownMenuIphone">
+                            <!--dropdown-menu: để ẩn nộidung bêntrong các item-->
+                            <a href="" class="btn btn-outline-secondary dropdown-item">Iphone7</a>
+                            <!--dropdown-item: class để chèn cho từng item vào-->
+                            <a href="" class="btn btn-outline-secondary dropdown-item">Iphone8</a>
+                            <a href="" class="btn btn-outline-secondary dropdown-item">Iphone9</a>
+                            <div class="dropdown-divider"></div>
+                            <!--dropdown-divider: dấu gạch phân chia-->
+                            <a href="" class="btn btn-outline-secondary dropdown-item">Iphone12</a>
+                        </div>
+                    </div>
+                    
+
+                    <div class="samsungs btn-group">
+                        <a href="" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" class="btn btn-danger dropdown-toggle" id="dropdownMenuSamsung" >Samsungs</a>
+                        <div class="typeOfSamsung dropdown-menu" aria-labelledby="dropdownMenuSamsung">
+                            <a href="" class="btn btn-success dropdown-item">galaxy10</a>
+                            <a href="" class="btn btn-success dropdown-item">galaxy12</a>
+                            <a href="" class="btn btn-success dropdown-item">galaxy13</a>
+                            <a href="" class="btn btn-success dropdown-item">galaxy14</a>
+                        </div>
+                    </div>
+                    
+                    
+
+                </div>
+            </div>
+        </div>  <!--end row-->
+    </div>      <!--end container-->
+    <hr>
+
+
+    
+
+
+
+
+
+    <!-- card layout: bao gồm ảnh, tiêu đề, nội dung phần text và button -->
+    <div class="container">
+        <div class="row">   <!--gõ: b-card -> tab-->
+            <div class="col-sm-3">  
+                <div class="card" style="width: 18rem;">
+                    <!--tips: add .text-center,.text-right to the .card to change card text alignment-->
+                    <img src="image/1.png" class="card-img-top" alt="..." style="width: 100%;"> <!--card-success: add background body-->
+                    <div class="card-body card-success">
+                        <h5 class="card-title">Card title</h5>
+                        <h6 class="card-subtitle mb-2 text-muted">Card subtitle</h6>
+                        <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                        <a href="#" class="card-link">Card link</a>
+                        <a href="#" class="btn btn-primary">Card button</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-3">  <!--gõ: card -> tab-->
+                <div class="card" style="width: 18rem;">
+                    <!--tips: add .text-center,.text-right to the .card to change card text alignment-->
+                    <img src="image/2.JPG" class="card-img-top" alt="..." style="width: 100%;"> <!--card-info: add background body-->
+                    <div class="card-body card-info">   
+                        <h5 class="card-title">Card title</h5>
+                        <h6 class="card-subtitle mb-2 text-muted">Card subtitle</h6>
+                        <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                        <a href="#" class="card-link">Card link</a>
+                        <a href="#" class="btn btn-primary">Card button</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-3">  <!--gõ: card -> tab-->
+                <div class="card" style="width: 18rem;">
+                    <!--tips: add .text-center,.text-right to the .card to change card text alignment-->
+                    <img src="image/3.JPG" class="card-img-top" alt="..." style="width: 100%;"> <!--card-danger: add background body-->
+                    <div class="card-body card-danger">
+                        <h5 class="card-title">Card title</h5>
+                        <h6 class="card-subtitle mb-2 text-muted">Card subtitle</h6>
+                        <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                        <a href="#" class="card-link">Card link</a>
+                        <a href="#" class="btn btn-primary">Card button</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-3">  <!--gõ: card -> tab-->
+                <div class="card" style="width: 18rem;">
+                    <!--tips: add .text-center,.text-right to the .card to change card text alignment-->
+                    <img src="image/4.JPG" class="card-img-top" alt="..." style="width: 100%;"> <!--card-seconday: add background body-->
+                    <div class="card-body card-seconday">
+                        <h5 class="card-title">Card title</h5>
+                        <h6 class="card-subtitle mb-2 text-muted">Card subtitle</h6>
+                        <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                        <a href="#" class="card-link">Card link</a>
+                        <a href="#" class="btn btn-primary">Card button</a>
+                    </div>
+                </div>
+            </div>
+        </div>  <!--end row-->
+
+
+
+        <!--card-desks: các cột sẽ có chiều cao như nhau, cho dù 1 cột dài hơn
+            (tính năng: zữ cho các khối bên trong hiển thị chiều cao bằng nhau)-->
+        <div class="row">   <!--đầu tiên tạo 1 class card-deck-wrapper-->
+            <div class="card-deck-wrapper"> <!--sau đó gõ: b4-card-desks -> tab-->
+                <div class="card-deck">
+                    <div class="card"><!--có thể thêm bao nhiêu khối card vẫn đc-->
+                        <img class="card-img-top" src="image/6.JPG" style="width: 100%;" alt="">
+                        <div class="card-body"> <!--ko cần thuộc tính col-sm-..-->
+                            <h4 class="card-title">Title</h4>
+                            <p class="card-text">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Amet consectetur impedit rem sequi temporibus totam, ea placeat voluptatem officiis ipsam quam deserunt velit neque illo ex, fugiat dignissimos veniam optio?</p>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <img class="card-img-top" src="image/3.JPG" style="width: 100%;" alt="">
+                        <div class="card-body card-info"> <!--có thể thêm thuộc-->
+                            <h4 class="card-title">Title</h4><!--tính card-info-->
+                            <p class="card-text">Text</p>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <img class="card-img-top" src="image/2.JPG" style="width: 100%;" alt="">
+                        <div class="card-body">
+                            <h4 class="card-title">Title</h4>
+                            <p class="card-text">Text</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+
+
+
+        <!--card-group: nhóm các card vs nhau và loại bỏ margin, tự động chia cột sao cho các card có độ rộng bằng nhau-->
+        <div class="row">
+            <div class="col-sm-6">  <!--group card này nằm trong 6 cột đầu tiên-->
+                <div class="card-group">    <!--gõ: b-card-group -> tab-->
+                    <!--tips: replace .card-group by .card-deck to obtain cards that aren’t attached to one another-->
+                    <!--Card1-->
+                    <div class="card">
+                        <img src="image/5.JPG" style="width: 100%;" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title">Card1 title</h5>
+                            <h6 class="card-subtitle mb-2 text-muted">Card1 subtitle</h6>
+                            <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                            <a href="#" class="card-link">Card1 link</a>
+                            <a href="#" class="btn btn-primary">Card1 button</a>
+                        </div>
+                    </div>
+                    <!--Card2-->
+                    <div class="card">
+                        <img src="image/5.JPG" style="width: 100%;" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title">Card2 title</h5>
+                            <h6 class="card-subtitle mb-2 text-muted">Card2 subtitle</h6>
+                            <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                            <a href="#" class="card-link">Card2 link</a>
+                            <a href="#" class="btn btn-primary">Card2 button</a>
+                        </div>
+                    </div>
+                    <!--Card3-->
+                    <div class="card">
+                        <img src="image/1.png" style="width: 100%;" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title">Card3 title</h5>
+                            <h6 class="card-subtitle mb-2 text-muted">Card3 subtitle</h6>
+                            <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                            <a href="#" class="card-link">Card3 link</a>
+                            <a href="#" class="btn btn-primary">Card3 button</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+
+
+
+
+        <!-- card-column:  tạo zao diện dạng masonry.desandro.com-->
+        <div class="row">   <!--gõ b-card-group-masonry -> tab-->
+            <div class="col-sm-9">  <!--zả sử col-sm-9 là phần nội dung-->
+                <div class="card-columns"><!--và col-sm-3 là phần quảngcáo(dưới)-->
+                    <div class="card">
+                        <img src="image/1.png" style="width: 100%;" class="card-img-top" alt="..."> <!--add hình ảnh vào-->
+                        <div class="card-body">
+                            <h5 class="card-title">Card title that wraps to a new line</h5>
+                            <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                        </div>
+                    </div>
+                
+                    <div class="card p-3">
+                        <blockquote class="blockquote mb-0 card-body">
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.</p>
+                            <footer class="blockquote-footer">
+                                <small class="text-muted">
+                                    Someone famous in <cite title="Source Title">Source Title</cite>
+                                </small>
+                            </footer>
+                        </blockquote>
+                    </div>
+                
+                    <div class="card">
+                        <img src="image/2.JPG" style="width: 100%;"  class="card-img-top" alt="...">    <!--add hình ảnh vào-->
+                        <div class="card-body">
+                            <h5 class="card-title">Card title</h5>
+                            <p class="card-text">This card has supporting text below as a natural lead-in to additional content.</p>
+                            <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+                        </div>
+                    </div>
+                
+                    <div class="card bg-primary text-white text-center p-3">
+                        <blockquote class="blockquote mb-0">
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat.</p>
+                            <footer class="blockquote-footer text-white">
+                                <small>
+                                    Someone famous in <cite title="Source Title">Source Title</cite>
+                                </small>
+                            </footer>
+                        </blockquote>
+                    </div>
+                
+                    <div class="card text-center">
+                        <div class="card-body">
+                            <h5 class="card-title">Card title</h5>
+                            <p class="card-text">This card has a regular title and short paragraphy of text below it.</p>
+                            <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+                        </div>
+                    </div>
+                
+                    <div class="card">
+                        <img src="image/3.JPG" style="width: 100%;"  class="card-img-top" alt="...">    <!--add hình ảnh vào-->
+                    </div>
+                
+                    <div class="card p-3 text-right">
+                        <blockquote class="blockquote mb-0">
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.</p>
+                            <footer class="blockquote-footer">
+                                <small class="text-muted">
+                                    Someone famous in <cite title="Source Title">Source Title</cite>
+                                </small>
+                            </footer>
+                        </blockquote>
+                    </div>
+                
+                    <div class="card">
+                        <div class="card-body">
+                            <h5 class="card-title">Card title</h5>
+                            <p class="card-text">This is another card with title and supporting text below. This card has some additional content to make it slightly taller overall.</p>
+                            <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+                        </div>
+                    </div>
+
+                    <!--zả sử add thêm 1 khối card vào thì nội dung các khối sẽ-->
+                    <div class="card">  <!--tự động chia làm sao cho phù hợp-->
+                        <img src="image/4.JPG" style="width: 100%;"  class="card-img-top" alt="...">    <!--add hình ảnh vào-->
+                        <div class="card-body card-success"><!--add background-->
+                            <h5 class="card-title">Card title</h5>
+                            <p class="card-text">This card has supporting text below as a natural lead-in to additional content.</p>
+                            <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+                        </div>
+                    </div>
+                    <div class="card"><!--thêm khối nữa,cardcolumn sẽ tựđộng sắp-->
+                        <div class="card-body"><!--xếp sao cho chỗ thiếu sẽ tự-->
+                            <h5 class="card-title">Title</h5><!--động tràn lên-->
+                            <p class="card-text">This is another card with title and supporting text below. This card has some additional content to make it slightly taller overall.</p>
+                            <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+                        </div>
+                    </div>
+                </div>  <!--end card-column-->
+            </div>  <!--end col-sm-9-->
+            
+            <div class="col-sm-3">  <!--zả sử col-sm-3 này là phần quảng cáo-->
+                <div class="card" style="width: 18rem;">    <!--gõ b-card-> tab-->
+                    <!--tips: add .text-center,.text-right to the .card to change card text alignment-->
+                    <img src="image/4.JPG" style="width: 100%;" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">Card title</h5>
+                        <h6 class="card-subtitle mb-2 text-muted">Card subtitle</h6>
+                        <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eveniet accusantium nemo amet doloremque, minus, debitis cum quia repellat assumenda vero nihil autem atque blanditiis itaque quasi voluptas veniam optio maiores?Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eveniet accusantium nemo amet doloremque, minus, debitis cum quia repellat assumenda vero nihil autem atque blanditiis itaque quasi voluptas veniam optio maiores?Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eveniet accusantium nemo amet doloremque, minus, debitis cum quia repellat assumenda vero nihil autem atque blanditiis itaque quasi voluptas veniam optio maiores?Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eveniet accusantium nemo amet doloremque, minus, debitis cum quia repellat assumenda vero nihil autem atque blanditiis itaque quasi voluptas veniam optio maiores?</p>
+                        <a href="#" class="card-link">Card link</a>
+                        <a href="#" class="btn btn-primary">Card button</a>
+                    </div>
+                </div>
+            </div>
+        </div>      <!--end row-->
+    </div>      <!--end container-->
+    <hr>
+    
+
+    
+
+
+
+
+
+
+
+
+
+
+
+    <!-- carousel: tạo slide -->
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-6">
+                <!-- Cần tạo file mới, sau đó gõ !CarouselTemplate -> tab
+                    cuối cùng chỉnh sửa lại caroulse vào file này, đây là carousel bs5-->
+                <div id="myCarousel" class="carousel slide" data-ride="carousel">
+                    <ol class="carousel-indicators">
+                        <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+                        <li data-target="#myCarousel" data-slide-to="1"></li>
+                        <li data-target="#myCarousel" data-slide-to="2"></li>
+                    </ol>
+                    <div class="carousel-inner">
+                        <div class="carousel-item active">
+                        <svg class="bd-placeholder-img" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg"
+                            preserveAspectRatio="xMidYMid slice" role="img" focusable="false">
+                            <rect width="100%" height="100%" fill="#777" /></svg>
+                        <img src="image/1.png" style="width: 100%; height: auto;" alt=""> <!--add thêm hình ảnh vào-->
+                
+                        <div class="container">
+                            <div class="carousel-caption text-left">
+                            <h1>Example headline.</h1>
+                            <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget
+                                metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
+                            <p><a class="btn btn-lg btn-primary" href="#" role="button">Sign up today</a></p>
+                            </div>
+                        </div>
+                        </div>
+                        <div class="carousel-item">
+                        <svg class="bd-placeholder-img" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg"
+                            preserveAspectRatio="xMidYMid slice" role="img" focusable="false">
+                            <rect width="100%" height="100%" fill="#777" /></svg>
+                            <img src="image/2.JPG" style="width: 100%; height: auto;" alt=""> <!--add thêm hình ảnh vào-->
+                
+                        <div class="container">
+                            <div class="carousel-caption">
+                            <h1>Another example headline.</h1>
+                            <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget
+                                metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
+                            <p><a class="btn btn-lg btn-primary" href="#" role="button">Learn more</a></p>
+                            </div>
+                        </div>
+                        </div>
+                        <div class="carousel-item">
+                        <svg class="bd-placeholder-img" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg"
+                            preserveAspectRatio="xMidYMid slice" role="img" focusable="false">
+                            <rect width="100%" height="100%" fill="#777" /></svg>
+                            <img src="image/3.JPG" style="width: 100%; height: auto;" alt=""> <!--add thêm hình ảnh vào-->
+                
+                        <div class="container">
+                            <div class="carousel-caption text-right">
+                            <h1>One more for good measure.</h1>
+                            <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget
+                                metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
+                            <p><a class="btn btn-lg btn-primary" href="#" role="button">Browse gallery</a></p>
+                            </div>
+                        </div>
+                        </div>
+                    </div>
+                    <a class="carousel-control-prev" href="#myCarousel" role="button" data-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="sr-only">Previous</span>
+                    </a>
+                    <a class="carousel-control-next" href="#myCarousel" role="button" data-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="sr-only">Next</span>
+                    </a>
+                </div>
+            </div>  <!--end col-sm-6-->
+
+            
+            
+
+
+            <div class="col-sm-6">
+                <!-- Nếu có 2 slide cần đặt tên lại id 
+                (tránh thao tác slide này nhưng slide khác thực hiện) 
+                --=> Đổi tên id myCarousel thành tên khác (VD: myCarousel01)-->
+                <div id="myCarousel01" class="carousel slide" data-ride="carousel">
+                    <ol class="carousel-indicators">
+                        <li data-target="#myCarousel01" data-slide-to="0" class="active"></li>
+                        <li data-target="#myCarousel01" data-slide-to="1"></li>
+                        <li data-target="#myCarousel01" data-slide-to="2"></li>
+                    </ol>
+                    <div class="carousel-inner">
+                        <div class="carousel-item active">
+                        <svg class="bd-placeholder-img" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg"
+                            preserveAspectRatio="xMidYMid slice" role="img" focusable="false">
+                            <rect width="100%" height="100%" fill="#777" /></svg>
+                        <img src="image/1.png" style="width: 100%; height: auto;" alt=""> <!--add thêm hình ảnh vào-->
+                
+                        <div class="container">
+                            <div class="carousel-caption text-left">
+                            <h1>Example headline.</h1>
+                            <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget
+                                metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
+                            <p><a class="btn btn-lg btn-primary" href="#" role="button">Sign up today</a></p>
+                            </div>
+                        </div>
+                        </div>
+                        <div class="carousel-item">
+                        <svg class="bd-placeholder-img" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg"
+                            preserveAspectRatio="xMidYMid slice" role="img" focusable="false">
+                            <rect width="100%" height="100%" fill="#777" /></svg>
+                            <img src="image/2.JPG" style="width: 100%; height: auto;" alt=""> <!--add thêm hình ảnh vào-->
+                
+                        <div class="container">
+                            <div class="carousel-caption">
+                            <h1>Another example headline.</h1>
+                            <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget
+                                metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
+                            <p><a class="btn btn-lg btn-primary" href="#" role="button">Learn more</a></p>
+                            </div>
+                        </div>
+                        </div>
+                        <div class="carousel-item">
+                        <svg class="bd-placeholder-img" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg"
+                            preserveAspectRatio="xMidYMid slice" role="img" focusable="false">
+                            <rect width="100%" height="100%" fill="#777" /></svg>
+                            <img src="image/3.JPG" style="width: 100%; height: auto;" alt=""> <!--add thêm hình ảnh vào-->
+                
+                        <div class="container">
+                            <div class="carousel-caption text-right">
+                            <h1>One more for good measure.</h1>
+                            <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget
+                                metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
+                            <p><a class="btn btn-lg btn-primary" href="#" role="button">Browse gallery</a></p>
+                            </div>
+                        </div>
+                        </div>
+                    </div>
+                    <a class="carousel-control-prev" href="#myCarousel01" role="button" data-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="sr-only">Previous</span>
+                    </a>
+                    <a class="carousel-control-next" href="#myCarousel01" role="button" data-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="sr-only">Next</span>
+                    </a>
+                </div>
+            </div>  <!--end col-sm-6-->
+        </div>  <!--end row-->
+    </div>      <!--end container-->
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <!-- Collapse: dùng để ẩn nội dung khi click vào thì nội dung hiện lên -->
+    <!-- b-collapse -> tab -->
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-6">
+                <p>
+                    <a class="btn btn-primary btn-block" data-toggle="collapse" href="#myCollapse" role="button" aria-expanded="false" aria-controls="myCollapse"><!--button để click-->
+                        Link
+                    </a>
+                </p>
+                <div class="collapse" id="myCollapse">  <!--nội dung xổ ra, mỗi cặp button và xổ ra có-->
+                    <div class="card card-body">    <!--id zống nhau, do đó nếu có nhiều cặp cần đổi id-->
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-6">
+                <p>
+                    <a class="btn btn-primary btn-block" data-toggle="collapse" href="#myCollapse1" role="button" aria-expanded="false" aria-controls="myCollapse"><!--button để click-->
+                        Link
+                    </a>
+                </p>
+                <div class="collapse" id="myCollapse1">  <!--nội dung xổ ra, đổi id lại = myCollapse1-->
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                    </div>
+                </div>
+            </div>
+            
+        </div>
+    </div>
+
+
+
+    
+    <!-- collapse-accordion hoặc b-accordion -->
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-6">
+                <div class="accordion" id="myAccordion">
+                    <div class="card">
+                        <div class="card-header">
+                            <h2 class="mb-0">
+                                <button class="btn btn-outline-success btn-block" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                                    Item #1
+                                </button>
+                            </h2>
+                        </div>
+                        <div id="collapseOne" class="collapse show" aria-labelledby="Item #1" data-parent="#myAccordion">
+                            <div class="card-body">
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="card-header">
+                            <h2 class="mb-0">
+                                <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                                    Item #2
+                                </button>
+                            </h2>
+                        </div>
+                        <div id="collapseTwo" class="collapse" aria-labelledby="Item #2" data-parent="#myAccordion">
+                            <div class="card-body">
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <!-- form -->
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-2">
+                <div class="form-group">    <!-- form-group -> tab -->
+                  <label for=""></label>
+                  <input type="text" name="" id="" class="form-control" placeholder="" aria-describedby="helpId">
+                  <small id="helpId" class="text-muted">Help text</small>
+                </div>
+            </div>
+            <div class="col-sm-2">
+                <div class="form-group">    <!-- form-group -> tab -->
+                  <label for=""></label>
+                  <input type="password" name="" id="" class="form-control" placeholder="" aria-describedby="helpId">   <!--trường password-->
+                  <small id="helpId" class="text-muted">Help text</small>
+                </div>
+            </div>
+            <div class="col-sm-2">
+                <div class="form-group">    <!-- form-group -> tab -->
+                  <label for=""></label>    
+                  <textarea name="" id="" class="form-control" placeholder="" aria-describedby="helpId"></textarea> <!-- textarea, class form-control hỗ trợ zao diện đẹp hơn -->
+                  <small id="helpId" class="text-muted">Help text</small>
+                </div>
+            </div>
+            <div class="col-sm-2">
+                <div class="form-group">    <!--b4-form-select-custom -> tab-->
+                    <label for=""></label>  <!-- trường xổ thông tin xuống -->
+                    <select class="custom-select" name="" id="">
+                        <option selected>Select one</option>
+                        <option value="1">one</option>  <!--add option vào-->
+                        <option value="2">two</option>
+                        <option value="3">three</option>
+                    </select>
+                    <small id="helpId" class="text-muted">Help text</small>
+                </div>
+            </div>
+            <div class="col-sm-2">  <!--b-form-file -> tab: file-browser-->
+                    <div class="form-group">
+                        <label for="my-input">Text</label>
+                        <input id="my-input" class="form-control-file" type="file" name="">
+                    </div>
+            </div>
+            <div class="col-sm-2">  <!--b-form-custom-radio -> tab: file-browser-->
+                <div class="custom-control custom-radio">
+                    <input class="custom-control-input" type="radio" name="exampleRadios" id="exampleRadio1" value="option1" checked>
+                    <label class="custom-control-label" for="exampleRadio1">
+                        Example label1
+                    </label>
+                </div>
+                <div class="custom-control custom-radio">
+                    <input class="custom-control-input" type="radio" name="exampleRadios" id="exampleRadio2" value="option2">
+                    <label class="custom-control-label" for="exampleRadio2">
+                        Example label2
+                    </label>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <!-- Demo 1 -->
+    <hr>
+    <div class="container">
+        <div class="row">
+            <div class="col-12 text-center"><h4>DEMO 1</h4></div>
+        </div>
+        <div class="row">
+            <div class="col-sm-8">  <!--class="img-fluid" -> thay thế cho img width =100%-->
+                <img src="image/4.JPG" class="img-fluid" alt="">
+            </div>
+            <div class="col-sm-4">
+                <h2>Lorem ipsum dolor sit amet consectetur, adipisicing </h2>
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Saepe dolorem praesentium vitae. Iste, dolorem perferendis fugiat cupiditate voluptatem adipisci nam illum cum sunt qui voluptates omnis eum asperiores animi aut.</p>
+                <a href="" class="btn btn-primary btn-lg">Call action</a>
+            </div>
+        </div>  <!--end row-->
+        <div class="row">
+            <div class="col-sm-12">
+                <hr>        <!--text-center: tức là tất cả các màn hình đều căn zữa-->
+                <div class="alert alert-warning text-center">
+                    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Soluta natus quidem quia quod, animi dolor molestias illum velit omnis nisi architecto nesciunt eligendi repellat autem hic non, amet suscipit eius?
+                </div>
+            </div>
+        </div>  <!--end row-->
+        <div class="row">
+            <div class="col-sm-4">
+                <div class="card">
+                    <!--tips: add .text-center,.text-right to the .card to change card text alignment-->
+                    <img src="image/5.JPG" class="card-img-top img-fluid" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">Card title</h5>
+                        <h6 class="card-subtitle mb-2 text-muted">Card subtitle</h6>
+                        <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                        <a href="#" class="card-link">Card link</a>
+                        <a href="#" class="btn btn-primary">Card button</a>
+                    </div>
+                </div>
+            </div>  <!--end col-->
+            <div class="col-sm-4">
+                <div class="card">
+                    <!--tips: add .text-center,.text-right to the .card to change card text alignment-->
+                    <img src="image/6.JPG" class="card-img-top img-fluid" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">Card title</h5>
+                        <h6 class="card-subtitle mb-2 text-muted">Card subtitle</h6>
+                        <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                        <a href="#" class="card-link">Card link</a>
+                        <a href="#" class="btn btn-primary">Card button</a>
+                    </div>
+                </div>
+            </div>  <!--end col-->
+            <div class="col-sm-4">
+                <div class="card">
+                    <!--tips: add .text-center,.text-right to the .card to change card text alignment-->
+                    <img src="image/4.JPG" class="card-img-top img-fluid"  alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">Card title</h5>
+                        <h6 class="card-subtitle mb-2 text-muted">Card subtitle</h6>
+                        <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                        <a href="#" class="card-link">Card link</a>
+                        <a href="#" class="btn btn-primary">Card button</a>
+                    </div>
+                </div>
+            </div>  <!--end col-->
+        </div>  <!--end row-->
+    </div>      <!--end container-->
+    <div class="footer mt-2">
+        <div class="container">
+            <div class="row">
+                <div class="col-12 text-center">
+                    <small>Copyright</small>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <!-- Demo 2 -->
+    <hr>
+    <div class="container">
+        <div class="row">
+            <div class="col-12 text-center"><h4>DEMO 2</h4></div>
+        </div>        
+    </div>      <!--end container-->
+    <!--cái này tự viết, p-a: padding auto-->
+    <div class="collapse bg-light p-a" id="navbarContentDemo2" style="background: rgb(202, 200, 200)!important; padding-bottom: 20px; padding-top: 10px;">   
+        <div class="container">     
+            <div class="row">
+                <div class="col-sm-4">
+                    <h4>Thời sự</h4>
+                    <span class="text-muted">Lorem ipsum dolor sit amet consectetur adipisicing elit.</span>
+                    <ul class="list-group">     <!--bs3-list-group -> tab-->
+                        <li class="list-group-item">Item 1</li>
+                        <li class="list-group-item">Item 2</li>
+                        <li class="list-group-item">Item 3</li>
+                    </ul>
+                </div>
+                <div class="col-sm-4">
+                    <h4>Text</h4>
+                    <span class="text-muted">Lorem ipsum dolor sit amet consectetur adipisicing elit.</span>
+                    <ul class="list-group">     <!--bs3-list-group -> tab-->
+                        <li class="list-group-item">Item 1</li>
+                        <li class="list-group-item">Item 2</li>
+                        <li class="list-group-item">Item 3</li>
+                </div>
+                <div class="col-sm-4">
+                    <h4>Text</h4>
+                    <span class="text-muted">Lorem ipsum dolor sit amet consectetur adipisicing elit.</span>
+                    <ul class="list-group">     <!--bs3-list-group -> tab-->
+                        <li class="list-group-item">Item 1</li>
+                        <li class="list-group-item">Item 2</li>
+                        <li class="list-group-item">Item 3</li>
+                </div>
+            </div>   
+        </div>
+    </div>
+    <nav class="navbar navbar-light bg-faded"> <!--b-navbar -> tab (bỏ navbar-expand-lg) (tự viết)-->
+        <div class="container">
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarContentDemo2">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+        </div>
+    </nav>
+
+
+
+
+    <!-- jumbotron -->
+    <div class="jumbotron"> <!--b4-jumbotron-default -> tab: khối thông tin nhỏ zữa screen-->
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-6 push-sm-3">
+                    <div class="text-center">
+                        <h3 class="display-4">Album example</h3>   <!--display-3: kiểu hiển thị -->
+                        <p class="lead">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Odio, doloribus quia quibusdam neque rem dignissimos fugiat ut aspernatur corporis ratione recusandae nemo eius accusamus excepturi mollitia. Nesciunt facere inventore consequatur!</p>
+                        <hr class="my-2">
+                        <p>More info</p>
+                        <p class="lead">
+                            <a class="btn btn-primary btn-lg" href="Jumbo action link" role="button">Jumbo action name</a>
+                        <a href="" class="btn btn-primary">Sign in</a>
+                        <a href="" class="btn btn-secondary">More detail</a>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+    <!-- card-layout -->
+    <div class="container" style="background: rgb(223, 223, 223); padding-top: 30px; padding-bottom: 30px;">
+        <div class="row">
+            <div class="card-deck" style="padding-bottom: 15px;">
+                <div class="card">
+                    <img class="card-img-top" src="image/1.png" alt="">
+                    <div class="card-body">
+                        <h4 class="card-title">Title</h4>
+                        <p class="card-text">Text</p>
+                    </div>
+                </div>
+                <div class="card">
+                    <img class="card-img-top" src="image/2.JPG" alt="">
+                    <div class="card-body">
+                        <h4 class="card-title">Title</h4>
+                        <p class="card-text">Text</p>
+                    </div>
+                </div>
+                <div class="card">
+                    <img class="card-img-top" src="image/2.JPG" alt="">
+                    <div class="card-body">
+                        <h4 class="card-title">Title</h4>
+                        <p class="card-text">Text</p>
+                    </div>
+                </div>
+            </div>
+        </div>  <!--end row-->
+        <div class="row">
+            <div class="card-deck" style="padding-bottom: 15px;">
+                <div class="card">
+                    <img class="card-img-top" src="image/1.png" alt="">
+                    <div class="card-body">
+                        <h4 class="card-title">Title</h4>
+                        <p class="card-text">Text</p>
+                    </div>
+                </div>
+                <div class="card">
+                    <img class="card-img-top" src="image/2.JPG" alt="">
+                    <div class="card-body">
+                        <h4 class="card-title">Title</h4>
+                        <p class="card-text">Text</p>
+                    </div>
+                </div>
+                <div class="card">
+                    <img class="card-img-top" src="image/2.JPG" alt="">
+                    <div class="card-body">
+                        <h4 class="card-title">Title</h4>
+                        <p class="card-text">Text</p>
+                    </div>
+                </div>
+            </div>
+        </div>  <!--end row-->
+        <div class="row">
+            <div class="card-deck" style="padding-bottom: 15px;">
+                <div class="card">
+                    <img class="card-img-top" src="image/1.png" alt="">
+                    <div class="card-body">
+                        <h4 class="card-title">Title</h4>
+                        <p class="card-text">Text</p>
+                    </div>
+                </div>
+                <div class="card">
+                    <img class="card-img-top" src="image/2.JPG" alt="">
+                    <div class="card-body">
+                        <h4 class="card-title">Title</h4>
+                        <p class="card-text">Text</p>
+                    </div>
+                </div>
+                <div class="card">
+                    <img class="card-img-top" src="image/2.JPG" alt="">
+                    <div class="card-body">
+                        <h4 class="card-title">Title</h4>
+                        <p class="card-text">Text</p>
+                    </div>
+                </div>
+            </div>
+        </div>  <!--end row-->
+    </div>      <!--end container-->
+
+
+
+    <div class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">    <!--float-right: căn phải-->
+                    <p class="float-right"><a href="" class="footerGoUpDemo2">Back to top</a></p>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. </p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <!-- demo 3 -->
+    
+    <div class="container">
+        <div class="row">
+            <nav class="navbar navbar-expand-lg navbar-light bg-light"> <!--navbar -> tab-->
+                <!--tips: to change the nav placement use .fixed-top,.fixed-bottom,.sticky-top-->
+                <a class="navbar-brand" href="#">Demo 3</a>
+                <!--<a class="navbar-brand" href="#">
+                    <img src="..." class="d-inline-block align-top" width="30" height="30" alt="...">My Brand
+                </a>-->
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarContentDemo3" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+            
+                <div class="collapse navbar-collapse" id="navbarContentDemo3">
+                    <ul class="navbar-nav mr-auto">
+                        <li class="nav-item active">
+                            <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+                        </li>
+            
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Link</a>
+                        </li>
+            
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                Dropdown
+                            </a>
+                            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                <a class="dropdown-item" href="#">Action</a>
+                                <a class="dropdown-item" href="#">Another action</a>
+                                <div class="dropdown-divider"></div>
+                                <a class="dropdown-item" href="#">Something else here</a>
+                            </div>
+                        </li>
+            
+                        <li class="nav-item">
+                            <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
+                        </li>
+                    </ul>
+            
+                    <span class="navbar-text">
+                        Some text
+                    </span>
+                    <form class="form-inline my-2 my-lg-0">
+                        <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+                        <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+                    </form>
+                </div>
+            </nav>
+        </div>  <!--row-->
+    </div>      <!--container-->
+
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-12">
+                <!-- Cần tạo file mới, sau đó gõ !CarouselTemplate -> tab
+                    cuối cùng chỉnh sửa lại caroulse vào file này, đây là carousel bs5-->
+                <div id="myCarouselDemo3" class="carousel slide" data-ride="carousel">
+                    <ol class="carousel-indicators positionDirectorDemo3">
+                        <li data-target="#myCarouselDemo3" data-slide-to="0" class="active"></li>
+                        <li data-target="#myCarouselDemo3" data-slide-to="1"></li>
+                        <li data-target="#myCarouselDemo3" data-slide-to="2"></li>
+                    </ol>
+                    <div class="carousel-inner">
+                        <div class="carousel-item active">
+                        <img src="image/1.png" style="width: 100%; height: auto;" alt=""> <!--add thêm hình ảnh vào-->
+                
+                        <div class="container">
+                            <div class="carousel-caption text-left">
+                            <h1>Example headline.</h1>
+                            <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget
+                                metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
+                            <p><a class="btn btn-lg btn-primary" href="#" role="button">Sign up today</a></p>
+                            </div>
+                        </div>
+                        </div>
+                        <div class="carousel-item">
+                            <img src="image/2.JPG" style="width: 100%; height: auto;" alt=""> <!--add thêm hình ảnh vào-->
+                
+                        <div class="container">
+                            <div class="carousel-caption">
+                            <h1>Another example headline.</h1>
+                            <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget
+                                metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
+                            <p><a class="btn btn-lg btn-primary" href="#" role="button">Learn more</a></p>
+                            </div>
+                        </div>
+                        </div>
+                        <div class="carousel-item">
+                            <img src="image/3.JPG" style="width: 100%; height: auto;" alt=""> <!--add thêm hình ảnh vào-->
+                
+                        <div class="container">
+                            <div class="carousel-caption text-right">
+                            <h1>One more for good measure.</h1>
+                            <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget
+                                metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
+                            <p><a class="btn btn-lg btn-primary" href="#" role="button">Browse gallery</a></p>
+                            </div>
+                        </div>
+                        </div>
+                    </div>
+                    <a class="carousel-control-prev" href="#myCarouselDemo3" role="button" data-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="sr-only">Previous</span>
+                    </a>
+                    <a class="carousel-control-next" href="#myCarouselDemo3" role="button" data-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="sr-only">Next</span>
+                    </a>
+                </div>
+            </div>  <!--end col-sm-6-->
+        </div>
+    </div>
+
+    <div class="container mt-2">
+        <div class="row">
+            <div class="col-sm-4 text-center">
+                <img src="image/5.JPG" style="width: 100%;" alt="">
+                <h3 class="display-4">Heading</h3>
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Est, ipsa, distinctio officia inventore vel, dolore unde in dignissimos ut odio aliquid qui natus incidunt sint tempora. Ipsam incidunt corrupti mollitia.</p>
+                <a href="" class="btn-btn-secondary">Sign</a>
+            </div>
+            <div class="col-sm-4 text-center">
+                <img src="image/5.JPG" style="width: 100%;" alt="">
+                <h3 class="display-4">Heading</h3>
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Est, ipsa, distinctio officia inventore vel, dolore unde in dignissimos ut odio aliquid qui natus incidunt sint tempora. Ipsam incidunt corrupti mollitia.</p>
+                <a href="" class="btn-btn-secondary">Sign</a>
+            </div>
+            <div class="col-sm-4 text-center">
+                <img src="image/5.JPG" style="width: 100%;" alt="">
+                <h3 class="display-4">Heading</h3>
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Est, ipsa, distinctio officia inventore vel, dolore unde in dignissimos ut odio aliquid qui natus incidunt sint tempora. Ipsam incidunt corrupti mollitia.</p>
+                <a href="" class="btn-btn-secondary">Sign</a>
+            </div>
+        </div>
+    </div>
+
+    
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <hr class="mb-3 mt-3">
+            </div>
+            <div class="col-7"> <!--pt-3 padding top-->
+                <h5 class="display-4 pt-3 mt-3">Lorem ipsum dolor sit amet consectetur </h5>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima odit provident earum asperiores. Nulla consequuntur voluptas veritatis ea quae deserunt vel optio. Rerum tempora ea reiciendis consequatur ipsam asperiores est?</p>
+            </div>
+            <div class="col-5">
+                <img src="image/6.JPG" style="width: 100%;" alt="" class="img-fluid">
+            </div>
+        </div>  <!--row-->
+    </div>      <!--container-->
+    <div class="container"> <!--copy khối ở trên và đảo vị trí của nó-->
+        <div class="row">
+            <div class="col-12">
+                <hr class="mb-3 mt-3">
+            </div>
+            <div class="col-5">
+                <img src="image/6.JPG" style="width: 100%;" alt="" class="img-fluid">
+            </div>
+            <div class="col-7"> <!--pt-3 padding top-->
+                <h5 class="display-4 pt-3 mt-3">Lorem ipsum dolor sit amet consectetur </h5>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima odit provident earum asperiores. Nulla consequuntur voluptas veritatis ea quae deserunt vel optio. Rerum tempora ea reiciendis consequatur ipsam asperiores est?</p>
+            </div>
+        </div>  <!--row-->
+    </div>      <!--container-->
+
+
+    <div class="container">     <!--tương tự như trên-->
+        <div class="row">
+            <div class="col-12">
+                <hr class="mb-3 mt-3">
+            </div>
+            <div class="col-7"> <!--pt-3 padding top-->
+                <h5 class="display-4 pt-3 mt-3">Lorem ipsum dolor sit amet consectetur </h5>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima odit provident earum asperiores. Nulla consequuntur voluptas veritatis ea quae deserunt vel optio. Rerum tempora ea reiciendis consequatur ipsam asperiores est?</p>
+            </div>
+            <div class="col-5">
+                <img src="image/6.JPG" style="width: 100%;" alt="" class="img-fluid">
+            </div>
+        </div>  <!--row-->
+    </div>      <!--container-->
+    <div class="container"> <!--copy khối ở trên và đảo vị trí của nó-->
+        <div class="row">
+            <div class="col-12">
+                <hr class="mb-3 mt-3">
+            </div>
+            <div class="col-5">
+                <img src="image/6.JPG" style="width: 100%;" alt="" class="img-fluid">
+            </div>
+            <div class="col-7"> <!--pt-3 padding top-->
+                <h5 class="display-4 pt-3 mt-3">Lorem ipsum dolor sit amet consectetur </h5>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima odit provident earum asperiores. Nulla consequuntur voluptas veritatis ea quae deserunt vel optio. Rerum tempora ea reiciendis consequatur ipsam asperiores est?</p>
+            </div>
+        </div>  <!--row-->
+    </div>      <!--container-->
+
+    <div class="footer">
+        <div class="container pb-3">    <!--pb-3 padding bottom-->
+            <div class="row">
+                <div class="col-12">
+                    <hr class="mt-3 mb-3">
+                </div>
+                <div class="col-8 text-muted">Copyright</div>
+                <div class="col-4 text-right"><p class="float-right"><a href="" class="footerGoUpDemo2">Back to top</a></p></div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <!-- demo 4 -->
+    
+    <div class="bannerDemo4">
+        <nav class="navbar navbar-expand-lg navbar-light bg-light"> <!--navbar -> tab-->
+            <!--tips: to change the nav placement use .fixed-top,.fixed-bottom,.sticky-top-->
+            
+            <!--<a class="navbar-brand" href="#">
+                <img src="..." class="d-inline-block align-top" width="30" height="30" alt="...">My Brand
+            </a>-->
+            <div class="container"> <!--add container, row và col-12 vào để khối menu này căn zữa-->
+                <div class="row">
+                    <div class="col-12">
+                        <button class="navbar-toggler ml-auto" type="button" data-toggle="collapse" data-target="#navbarContentDemo4" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">  <!--ml-auto: khối menu dịch phải-->
+                            <span class="navbar-toggler-icon"></span>
+                        </button>
+                    
+                        <div class="collapse navbar-collapse backgroundMenuDemo4 mt-1" id="navbarContentDemo4">
+                            <a href="" class="navbar-brand">
+                                <img src="image/1.png" alt="" class="ml-1 mt-3">  <!---->
+                            </a>
+                            
+                            <ul class="nav navbar-nav mr-3 mt-3 float-sm-right text-center text-sm-right"> 
+                                <!--ml-auto: khối menu dịch phải, 
+                                float-sm-right: bình thường thì căn phải, còn màn hình di động k làm zì
+                                text-center text-sm-right: màn hình di động thì chữ trên menu sẽ căn zữa, còn lại thì căn phải-->
+                                <li class="nav-item active ml-1">
+                                    <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+                                </li>
+                    
+                                <li class="nav-item ml-1">
+                                    <a class="nav-link" href="#">Link</a>
+                                </li>
+                    
+                                <li class="nav-item dropdown ml-1">
+                                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                        Dropdown
+                                    </a>
+                                    <div class="dropdown-menu ml-3" aria-labelledby="navbarDropdown">
+                                        <a class="dropdown-item" href="#">Action</a>
+                                        <a class="dropdown-item" href="#">Another action</a>
+                                        <div class="dropdown-divider"></div>
+                                        <a class="dropdown-item" href="#">Something else here</a>
+                                    </div>
+                                </li>
+                    
+                                <li class="nav-item ml-1">
+                                    <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
+                                </li>
+                            </ul>
+                    
+                            <span class="navbar-text mt-3 ml-3">
+                                Some text
+                            </span>
+                            <form class="form-inline my-2 my-lg-0 mr-2 mt-3">
+                                <input class="form-control mr-sm-2 mt-2" type="search" placeholder="Search" aria-label="Search">
+                                <button class="btn btn-outline-success my-2 my-sm-0 mt-3" type="submit">Search</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+                
+            </div>  <!--end container-->
+        </nav>
+        <div class="slideDemo4">
+            <!-- Cần tạo file mới, sau đó gõ !CarouselTemplate -> tab
+                cuối cùng chỉnh sửa lại caroulse vào file này, đây là carousel bs5-->
+            <div id="myCarouselDemo4" class="carousel slide" data-ride="carousel">
+                <ol class="carousel-indicators">
+                    <li data-target="#myCarouselDemo4" data-slide-to="0" class="active"></li>
+                    <li data-target="#myCarouselDemo4" data-slide-to="1"></li>
+                    <li data-target="#myCarouselDemo4" data-slide-to="2"></li>
+                </ol>
+                <div class="carousel-inner" role="listbox">
+                    <div class="carousel-item active">
+                        
+                        <img src="image/1.png" style="width: 100%; height: auto;" alt=""> <!--add thêm hình ảnh vào-->
+                
+                        <div class="container">
+                            <div class="carousel-caption text-left">
+                                <h3>Example headline.</h3>
+                                <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget
+                                    metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
+                                <p><a class="btn btn-outline-secondary" href="#" role="button">Sign up today</a></p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        
+                        <img src="image/2.JPG" style="width: 100%; height: auto;" alt=""> <!--add thêm hình ảnh vào-->
+                
+                        <div class="container">
+                            <div class="carousel-caption">
+                                <h3>Another example headline.</h3>
+                                <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget
+                                    metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
+                                <p><a class="btn btn-outline-secondary" href="#" role="button">Learn more</a></p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        
+                        <img src="image/3.JPG" style="width: 100%; height: auto;" alt=""> <!--add thêm hình ảnh vào-->
+                
+                        <div class="container">
+                            <div class="carousel-caption text-right">
+                                <h3>One more for good measure.</h3>
+                                <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget
+                                    metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
+                                <p><a class="btn btn-outline-secondary" href="#" role="button">Browse gallery</a></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <a class="carousel-control-prev" href="#myCarouselDemo4" role="button" data-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="sr-only">Previous</span>
+                </a>
+                <a class="carousel-control-next" href="#myCarouselDemo4" role="button" data-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="sr-only">Next</span>
+                </a>
+            </div>
+        </div>  <!--slideDemo4-->
+    </div> <!--banner demo 4-->
+
+    <div class="container"> <!-- Phần nội dung dưới slide -->
+        <div class="row">
+            <div class="col-sm-6 push-sm-3 text-center">
+                <h2 class="display-4">Lorem ipsum dolor sit amet conse</h2>
+                <small>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Molestiae aperiam eveniet maxime nihil officiis. Provident, cumq</small>
+            </div>
+        </div><!-- row -->
+        <hr>
+        <div class="row">
+            <div class="col-sm-4">  <!--no-gutter: ko có khoảng trống zữa các cột (class tự viết)-->
+                <div class="row no-gutter">
+                    <div class="media"> <!--media: cho 1 div bên dưới row mà k ảnh hưởng đến kích cỡ của nó-->
+                        <div class="col-sm-4">  <!--image-->
+                            <img src="image/1.png" style="width: 150%; transform: translateX(-11%)" alt="">
+                        </div>
+                        <div class="col-sm-8">  <!--text-->
+                            <h4>About</h4>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. </p>
+                        </div>
+                    </div> 
+                </div>
+            </div>
+            <div class="col-sm-4">
+                <div class="row no-gutter">
+                    <div class="media">
+                        <div class="col-sm-4">  <!--image-->
+                            <img src="image/2.JPG" style="width: 150%; transform: translateX(-11%)" alt="">
+                        </div>
+                        <div class="col-sm-8">  <!--text-->
+                            <h4>Portfolio</h4>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. </p>
+                        </div>
+                    </div> 
+                </div>
+            </div>
+            <div class="col-sm-4">
+                <div class="row no-gutter">
+                    <div class="media">
+                        <div class="col-sm-4">  <!--image-->
+                            <img src="image/3.JPG" style="width: 150%; transform: translateX(-11%)" alt="">
+                        </div>
+                        <div class="col-sm-8">  <!--text-->
+                            <h4>Contact</h4>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. </p>
+                        </div>
+                    </div> 
+                </div>
+            </div>
+        </div><!-- row -->
+    </div><!--container-->
+    <div class="container inforDemo4">     <!-- phần thông tin website -->
+        <div class="row">
+            <div class="col-sm-3 text-muted pt-3">
+                <small>Lorem ipsum dolor sit amet consecte</small>
+                <small>Lorem ipsum, dolor sit amet consectetur adipisicing elit. rendis.</small>
+                <br>
+                <iframe src="https://www.facebook.com/plugins/like.php?href=https%3A%2F%2Fwww.google.com%2F&width=230px&layout=standard&action=like&size=small&share=true&height=35&appId" width="256px" height="35" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"></iframe> <!--nút like facebook-->
+            </div>
+            <div class="col-sm-3 pt-3">
+                <img src="image/5.JPG" style="width: 100%;" alt="">
+            </div>
+            <div class="col-sm-4 text-muted pt-3">
+                <footer>
+                    blog <sup>Rd</sup>
+                </footer>
+                <a href="">Lorem, ipsum dolor sit amet </a>
+                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Deleniti et repudiandae culpa fugit quam. In cumque doloribus, minus excepturi id harum unde iure temporibus animi voluptate pariatur deserunt. Sapiente, corporis?<a href="">continuing...</a></p>
+            </div>
+            <div class="col-sm-2 pt-3">
+                <img src="image/6.JPG" class="img-fluid" style="width: 100%;" alt="">
+            </div>
+        </div><!-- row -->
+    </div><!--container-->
+    <footer>
+        <div class="container">
+            <div class="row"><div class="col-sm-12"><hr></div></div>
+            <div class="row">
+                <div class="col-sm-4">
+                    <a href=""><i class="fab fa-facebook"></i></a>
+                    <a href=""><i class="fab fa-twitter"></i></a>
+                    <a href=""><i class="fab fa-google-plus-square"></i></a>
+                    <a href=""><i class="fab fa-flickr"></i></a>
+                    <a href=""><i class="fab fa-instagram"></i> </a>                   
+                </div>
+                <small class="col-sm-4 text-center text-muted">English</small>
+                <small class="col-sm-4 text-right text-muted">Lorem ipsum dolor sit amet consectetur, adipisicing eli</small>
+            </div><!-- row -->
+        </div><!-- container -->
+    </footer>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+    <hr>
+    <!-- demo 5: search từ khóa: create start bootstrap -->
+    <div class="container">
+        <div class="row">
+            <div class="col-12 text-center"><h2>Demo 5</h2></div>
+        </div>
+    </div>
+    <!-- demo 5: search từ khóa: create start bootstrap -->
+    <div class="bannerDemo5">
+        <nav class="navbar navbar-expand-lg navbar-light bg-light"> <!--navbar -> tab-->
+            <!--tips: to change the nav placement use .fixed-top,.fixed-bottom,.sticky-top-->
+            
+            <!--<a class="navbar-brand" href="#">
+                <img src="..." class="d-inline-block align-top" width="30" height="30" alt="...">My Brand
+            </a>-->
+            <div class="container-fluid"> <!--add container, row và col-12 vào để khối menu này căn zữa-->
+                <div class="row">
+                    <div class="col-12">
+                        <button class="navbar-toggler ml-auto" type="button" data-toggle="collapse" data-target="#navbarContentDemo5" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">  <!--ml-auto: khối menu dịch phải-->
+                            <span class="navbar-toggler-icon"></span>
+                        </button>
+                    
+                        <div class="collapse navbar-collapse backgroundMenuDemo5 mt-1" id="navbarContentDemo5">
+                            <a href="" class="navbar-brand">
+                                <img src="image/2.JPG" alt="" class="ml-1 mt-3">  <!---->
+                            </a>
+                            
+                            <ul class="nav navbar-nav ml-3 mt-3 float-sm-right text-center text-sm-right"> 
+                                <!--ml-auto: khối menu dịch phải, 
+                                float-sm-right: bình thường thì căn phải, còn màn hình di động k làm zì
+                                text-center text-sm-right: màn hình di động thì chữ trên menu sẽ căn zữa, còn lại thì căn phải-->
+                                <li class="nav-item active ml-1">
+                                    <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+                                </li>
+                    
+                                <li class="nav-item ml-1">
+                                    <a class="nav-link" href="#">Link</a>
+                                </li>
+                    
+                                <li class="nav-item dropdown ml-1">
+                                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                        Dropdown
+                                    </a>
+                                    <div class="dropdown-menu ml-3" aria-labelledby="navbarDropdown">
+                                        <a class="dropdown-item" href="#">Action</a>
+                                        <a class="dropdown-item" href="#">Another action</a>
+                                        <div class="dropdown-divider"></div>
+                                        <a class="dropdown-item" href="#">Something else here</a>
+                                    </div>
+                                </li>
+                    
+                                <li class="nav-item ml-1">
+                                    <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
+                                </li>
+                            </ul>
+                    
+                            <span class="navbar-text mt-3 ml-3">
+                                Some text
+                            </span>
+                            <form class="form-inline my-2 my-lg-0 mr-2 mt-3">
+                                <input class="form-control mr-sm-2 mt-2" type="search" placeholder="Search" aria-label="Search">
+                                <button class="btn btn-outline-success my-2 my-sm-0 mt-3" type="submit">Search</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>  <!--end container-->
+        </nav>
+        
+        <div class="container jumbotronDemo5 mt-5"> <!--Khối jumbotron ở zữa-->
+            <div class="row mt-5">
+                <div class="col-sm-6 push-sm-3 mt-5">
+                    <div class="jumbotron text-center mt-5">
+                        <h1 class="display-4 mb-2">Jumbo heading</h1>
+                        
+                        <p class="lead">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Possimus nihil voluptas sequi earum ab inventore. Recusandae velit exercitationem totam aut? Autem atque quasi nulla cum optio tempora doloribus ad nisi?</p>
+                        
+                        <p class="lead">
+                            <a class="btn btn-danger btn-lg" href="Jumbo action link" role="button">Jumbo action name</a>
+                        </p>
+                    </div>
+                </div>
+            </div><!-- row -->
+        </div><!-- container -->
+
+
+        <div class="slideDemo5">
+            <!-- Cần tạo file mới, sau đó gõ !CarouselTemplate -> tab
+                cuối cùng chỉnh sửa lại caroulse vào file này, đây là carousel bs5-->
+            <div id="myCarouselDemo5" class="carousel slide" data-ride="carousel">
+                <ol class="carousel-indicators">
+                    <li data-target="#myCarouselDemo5" data-slide-to="0" class="active"></li>
+                    <li data-target="#myCarouselDemo5" data-slide-to="1"></li>
+                    <li data-target="#myCarouselDemo5" data-slide-to="2"></li>
+                </ol>
+                <div class="carousel-inner" role="listbox">
+                    <div class="carousel-item active">
+                        
+                        <img src="image/6.JPG" style="width: 100%; height: auto;" alt=""> <!--add thêm hình ảnh vào-->
+                
+                        <div class="container">
+                            <!-- <div class="carousel-caption text-left">
+                                <h3>Example headline.</h3>
+                                <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget
+                                    metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
+                                <p><a class="btn btn-outline-secondary" href="#" role="button">Sign up today</a></p>
+                            </div> -->
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        
+                        <img src="image/2.JPG" style="width: 100%; height: auto;" alt=""> <!--add thêm hình ảnh vào-->
+                
+                        <div class="container">
+                            <!-- <div class="carousel-caption">
+                                <h3>Another example headline.</h3>
+                                <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget
+                                    metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
+                                <p><a class="btn btn-outline-secondary" href="#" role="button">Learn more</a></p>
+                            </div> -->
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        
+                        <img src="image/3.JPG" style="width: 100%; height: auto;" alt=""> <!--add thêm hình ảnh vào-->
+                
+                        <div class="container">
+                            <!-- <div class="carousel-caption text-right">
+                                <h3>One more for good measure.</h3>
+                                <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget
+                                    metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
+                                <p><a class="btn btn-outline-secondary" href="#" role="button">Browse gallery</a></p>
+                            </div> -->
+                        </div>
+                    </div>
+                </div>
+                <a class="carousel-control-prev" href="#myCarouselDemo5" role="button" data-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="sr-only">Previous</span>
+                </a>
+                <a class="carousel-control-next" href="#myCarouselDemo5" role="button" data-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="sr-only">Next</span>
+                </a>
+            </div>
+        </div>  <!--slideDemo5-->
+    </div>
+    <div class="noidungDemo5">
+        <div class="container"> <!--phần nội dung-->
+            <div class="row">
+                <div class="col-sm-6 push-sm-3 text-center">
+                    <h3>Lorem ipsum dolor sit amet consectetur adipisicing elit. </h3>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident cum delectus ducimus totam saepe consequatur quae. Ea optio enim corporis nostrum, non natus fugiat tenetur fugit harum inventore, totam ipsum.</p>
+                    <div class="btn btn-secondary">GET STARTED!</div>
+                </div>
+            </div><!-- row -->
+        </div><!-- container -->
+    </div>
+    <div class="container noteDemo5">
+        <div class="row">
+            <h1 class="col-sm-12 text-center">At your service</h1>
+        </div>
+        <div class="row">
+            <div class="col-sm-2 push-sm-5">
+                <hr>
+            </div><!-- col-sm-12 -->
+        </div><!-- row -->
+        <div class="row text-center">
+            <div class="col-sm-3">
+                <i class="far fa-gem fa-5x"></i>
+                <h4>Sturdy Templates</h4>
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Vitae, officia? Cumque impedit dolorum magnam magni? Optio nesciunt saepe,</p>
+            </div><!-- .col-sm-3 -->
+            <div class="col-sm-3">
+                <i class="fas fa-paper-plane fa-5x"></i>
+                <h4>Sturdy Templates</h4>
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Vitae, officia? Cumque impedit dolorum magnam magni? Optio nesciunt saepe,</p>
+            </div><!-- .col-sm-3 -->
+            <div class="col-sm-3">
+                <i class="fal fa-newspaper fa-5x"></i>
+                <h4>Sturdy Templates</h4>
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Vitae, officia? Cumque impedit dolorum magnam magni? Optio nesciunt saepe,</p>
+            </div><!-- .col-sm-3 -->
+            <div class="col-sm-3">
+                <i class="far fa-gem fa-5x"></i>
+                <h4>Sturdy Templates</h4>
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Vitae, officia? Cumque impedit dolorum magnam magni? Optio nesciunt saepe,</p>
+            </div><!-- .col-sm-3 -->
+        </div><!-- row -->
+    </div><!-- container -->
+    <div class="slidesDemo5">
+        <div class="row">
+            <div class="col-sm-4">
+                <img src="image/2.JPG" style="width: 100%;" alt="">
+                <div class="detailOneSlideDemo5">
+                    <h4>Thiết kế</h4>
+                    <p>KFC Corporation!</p>
+                </div>
+            </div>
+            <div class="col-sm-4">
+                <img src="image/2.JPG" style="width: 100%;" alt="">
+                <div class="detailOneSlideDemo5">
+                    <h4>Thiết kế</h4>
+                    <p>KFC Corporation!</p>
+                </div>
+            </div>
+            <div class="col-sm-4">
+                <img src="image/2.JPG" style="width: 100%;" alt="">
+                <div class="detailOneSlideDemo5">
+                    <h4>Thiết kế</h4>
+                    <p>KFC Corporation!</p>
+                </div>
+            </div>
+            <div class="col-sm-4">
+                <img src="image/2.JPG" style="width: 100%;" alt="">
+                <div class="detailOneSlideDemo5">
+                    <h4>Thiết kế</h4>
+                    <p>KFC Corporation!</p>
+                </div>
+            </div>
+            <div class="col-sm-4">
+                <img src="image/2.JPG" style="width: 100%;" alt="">
+                <div class="detailOneSlideDemo5">
+                    <h4>Thiết kế</h4>
+                    <p>KFC Corporation!</p>
+                </div>
+            </div>
+            <div class="col-sm-4">
+                <img src="image/2.JPG" style="width: 100%;" alt="">
+                <div class="detailOneSlideDemo5">
+                    <h4>Thiết kế</h4>
+                    <p>KFC Corporation!</p>
+                </div>
+            </div>
+        </div><!-- row -->
+    </div><!-- slidesDemo5 -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <hr style="margin-top: 30px;">
+    <!-- demo 6: search từ khóa: create start bootstrap -->
+    <div class="container">
+        <div class="row">
+            <div class="col-12 text-center"><h2>Demo 6</h2></div>
+        </div>
+    </div>
+    <!-- demo 6: search từ khóa: create start bootstrap -->
+    <div class="bannerDemo6"> 
+        <div class="container-fluid" style="margin: -85px 0 0 0;">
+        <div class="row">
+        <div class="col-1"></div>
+        <div class="col-xs-8 push-xs-1 col-sm-10 push-sm-0 text-center" style="transform: translateY(86px);z-index: 3;">
+            <div class="container" style="overflow: hidden;">
+                <div class="row text-center">
+                    <a href="#" class="col-3">
+                        <img src="image/2.JPG" alt="" class="ml-1 mb-0">              
+                    </a>
+                    <div class="col-1"></div>
+                    <a class="col-4 btn-danger" href="#">Velocity</a>
+                </div>
+            </div>
+        </div>
+        <div class="col-2" style="opacity: 0; visibility: hidden;"></div>
+        <nav class="navbar navbar-expand-lg navbar-dark bg-inverse col-12"> <!--navbar -> tab-->
+            <!--tips: to change the nav placement use .fixed-top,.fixed-bottom,.sticky-top-->
+            <!--col-12: nút điều hướng ☰ full màn hình ngang nằm bên phải (xem float-sm-right ở button)-->
+            <!--<a class="navbar-brand" href="#">
+                <img src="..." class="d-inline-block align-top" width="30" height="30" alt="...">My Brand
+            </a>-->
+            <div class="container-fluid"> <!--add container, row và col-12 vào để khối menu này căn zữa-->
+                <div class="row">
+                    <div class="col-12">
+                        <button class="navbar-toggler ml-auto float-sm-right" type="button" data-toggle="collapse" data-target="#navbarContentDemo6" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">  <!--ml-auto: khối menu dịch phải-->
+                            &#9776;<!--float-sm-right: từ màn hình di động trở đi, nút điều hướng ☰ bên phải-->
+                            <span class="navbar-toggler-icon"></span>
+                        </button>
+                    
+                        <div class="collapse navbar-collapse backgroundMenuDemo6 mt-1 row mt-3" id="navbarContentDemo6">
+                            <div class="col-sm-4">
+                                <a href="" class="navbar-brand">
+                                    <div class="row">
+                                        <!-- <div > -->
+                                            <img src="image/2.JPG" style="padding: 0 0 0 0;" alt="" style="width: 100%;" class="col-sm-4 ml-1 mb-1">  
+                                        <!-- </div> -->
+                                        <div class="col-sm-8 btn btn-danger col-md-4 push-md-1">
+                                            Velocity 
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="col-lg-8 col-sm-8 text-center">
+                                <ul class="nav navbar-nav float-sm-right text-center"> 
+                                    <!--ml-auto: khối menu dịch phải, 
+                                    float-sm-right: bình thường thì căn phải, còn màn hình di động k làm zì
+                                    text-center text-sm-right: màn hình di động thì chữ trên menu sẽ căn zữa, còn lại thì căn phải-->
+                                    <li class="nav-item active pr-2 ml-1" >
+                                        <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+                                    </li>
+                        
+                                    <li class="nav-item pr-2">
+                                        <a class="nav-link" href="#">Link</a>
+                                    </li>
+                        
+                                    <li class="nav-item pr-2 dropdown" >
+                                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                            Dropdown
+                                        </a>
+                                        <div class="dropdown-menu ml-3" style="background: #000000d4; color: white;" aria-labelledby="navbarDropdown">
+                                            <a class="dropdown-item" href="#">Action</a>
+                                            <a class="dropdown-item" href="#">Another action</a>
+                                            <div class="dropdown-divider"></div>
+                                            <a class="dropdown-item" href="#">Something else here</a>
+                                        </div>
+                                    </li>
+                        
+                                    <li class="nav-item pr-2">
+                                        <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
+                                    </li>
+                                    <li class="nav-item pr-2">
+                                        <a class="nav-link btn btn-outline-danger" href="#" >Sign up free</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>  <!--end container-->
+        </nav>
+        </div>
+        </div>
+        <div class="container-fluid">
+        <div class="jumbotronDemo6 text-center" style="width: 100%"> <!--Khối jumbotron ở zữa-->
+            <div class="row">
+                <div class="col-lg-6 push-lg-3 col-md-10 push-md-1">
+                    <div class="jumbotron text-center" style="background: transparent;">
+                        <h3 class="display-6 pb-md-3" style="font-weight: bold;margin: 0;">Jumbo heading</h3>
+                        
+                        <p class="lead pb-md-4 mt-md-3 mt-1" style="margin: 0;font-size: 15px;">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Possimus nihil voluptas sequi earum ab inventore. Recusandae velit exercitationem totam aut? Autem atque quasi nulla cum optio tempora doloribus ad nisi?</p>
+                        
+                        <p class="lead mt-md-4 pb-md-4 mt-1" style="margin: 0;">
+                            <a class="btn btn-danger btn-lg" href="Jumbo action link" role="button">Jumbo action name</a>
+                        </p">
+                        <p class="mt-sm-3 mt-md-2 mt-1 mb-0"><i class="fab fa-youtube"></i> WATCH THE VIDEO</p>
+                    </div>
+                </div>
+            </div><!-- row -->
+        </div><!-- container -->
+        </div>
+
+
+        <div class="slideDemo6">
+            <!-- Cần tạo file mới, sau đó gõ !CarouselTemplate -> tab
+                cuối cùng chỉnh sửa lại caroulse vào file này, đây là carousel bs5-->
+            <div id="myCarouselDemo6" class="carousel slide" data-ride="carousel">
+                <ol class="carousel-indicators">
+                    <li data-target="#myCarouselDemo6" data-slide-to="0" class="active"></li>
+                    <li data-target="#myCarouselDemo6" data-slide-to="1"></li>
+                    <li data-target="#myCarouselDemo6" data-slide-to="2"></li>
+                </ol>
+                <div class="carousel-inner" role="listbox">
+                    <div class="carousel-item active">
+                        
+                        <img src="image/6.JPG" style="width: 100%; height: auto;" alt=""> <!--add thêm hình ảnh vào-->
+                
+                        <div class="container">
+                            <!-- <div class="carousel-caption text-left">
+                                <h3>Example headline.</h3>
+                                <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget
+                                    metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
+                                <p><a class="btn btn-outline-secondary" href="#" role="button">Sign up today</a></p>
+                            </div> -->
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        
+                        <img src="image/2.JPG" style="width: 100%; height: auto;" alt=""> <!--add thêm hình ảnh vào-->
+                
+                        <div class="container">
+                            <!-- <div class="carousel-caption">
+                                <h3>Another example headline.</h3>
+                                <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget
+                                    metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
+                                <p><a class="btn btn-outline-secondary" href="#" role="button">Learn more</a></p>
+                            </div> -->
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        
+                        <img src="image/3.JPG" style="width: 100%; height: auto;" alt=""> <!--add thêm hình ảnh vào-->
+                
+                        <div class="container">
+                            <!-- <div class="carousel-caption text-right">
+                                <h3>One more for good measure.</h3>
+                                <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget
+                                    metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
+                                <p><a class="btn btn-outline-secondary" href="#" role="button">Browse gallery</a></p>
+                            </div> -->
+                        </div>
+                    </div>
+                </div>
+                <a class="carousel-control-prev" href="#myCarouselDemo6" role="button" data-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="sr-only">Previous</span>
+                </a>
+                <a class="carousel-control-next" href="#myCarouselDemo6" role="button" data-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="sr-only">Next</span>
+                </a>
+            </div>
+        </div>  <!--slideDemo6-->
+    </div>
+    <div class="noidungDemo6">
+        <div class="container mt-3">
+            <div class="row">
+                <div class="col-sm-6 push-sm-3 text-center">
+                    <div class="jumbotron" style="background: transparent;">
+                        <h1 class="display-6">Jumbotron heading</h1>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                    </div>
+                </div><!-- col-sm-12 -->
+            </div><!-- row -->
+            <div class="row mb-3">
+                <div class="col-sm-4">
+                    <h3 class="mb-2">Lorem ipsum dolor sit amet consectetur adipisicing elit.</h3>
+                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Voluptates, beatae quia dolores ducimus, animi numquam dignissimos exercitationem quis dolorem</p>
+                    <p class="mb-3">  maxime doloribus magni enim qui harum excepturi molestias! Voluptatibus, explicabo quae!</p>
+                    <div class="container-fluid">
+                        <div class="row">
+                            <div class="col-sm-3"><img src="image/7.JPG" style="width: 100%; border-radius: 50%;" alt=""></div>
+                            <div class="col-sm-9">
+                                <blockquote class="blockquote text-right"> <!-- lấy 1 đoạn trích dẫn: gõ b4-typography-blockquote-reverse-->
+                                    <p class="mb-0">Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime ducim</p>
+                                    <br>
+                                    <footer class="blockquote-footer"> Lorem, ipsum dolor si<cite title="Source Title">Source Title</cite></footer>
+                                </blockquote>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-8 push-sm-1"> <img src="image/5.JPG" style="width: 100%;" alt=""></div>
+            </div>
+            <div class="row mb-1 mt-1"><div class="col-sm-12"><hr></div></div>
+            <div class="row mb-3">
+                <div class="col-sm-7"> <img src="image/5.JPG" style="width: 100%;" alt=""></div>
+                <div class="col-sm-5 push-sm-1">
+                    <h3 class="mb-2">Lorem ipsum dolor sit amet consectetur adipisicing elit.</h3>
+                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Voluptates, beatae quia dolores ducimus, animi numquam dignissimos exercitationem quis dolorem</p>
+                    <p class="mb-3">  maxime doloribus magni enim qui harum excepturi molestias! Voluptatibus, explicabo quae!</p>
+                    <div class="container-fluid">
+                        <div class="row">
+                            <div class="col-sm-3"><img src="image/7.JPG" style="width: 100%; border-radius: 50%;" alt=""></div>
+                            <div class="col-sm-9">
+                                <blockquote class="blockquote text-right"> <!-- lấy 1 đoạn trích dẫn: gõ b4-typography-blockquote-reverse-->
+                                    <p class="mb-0">Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime ducim</p>
+                                    <br>
+                                    <footer class="blockquote-footer"> Lorem, ipsum dolor si<cite title="Source Title">Source Title</cite></footer>
+                                </blockquote>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- <div class="row mb-3 mt-1"><div class="col-sm-12"><hr></div></div> -->
+            <div class="row mb-3 pt-3">
+                <div class="col-sm-12 text-center mt-1">
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                    <a href="" class="btn btn-outline-danger">Take a tour</a>
+                </div>
+            </div>
+        </div><!-- container -->
+    </div><!--noidungDemo6-->
+    
+    <!-- Cần tạo file mới, sau đó gõ !CarouselTemplate -> tab
+        cuối cùng chỉnh sửa lại caroulse vào file này, đây là carousel bs5-->
+    <div id="myCarouselDemo7" class="carousel slide" data-ride="carousel">
+        <div class="container mt-2 mb-2">
+            <div class="row">
+                <h2 class="col-sm-10 push-sm-1 text-center">What are people saying about Velocity?</h2>
+                <div class="col-sm-10 push-sm-1 mt-2">
+                    <ol class="carousel-indicators">
+                        <li data-target="#myCarouselDemo7" data-slide-to="0" class="active"></li>
+                        <li data-target="#myCarouselDemo7" data-slide-to="1"></li>
+                        <li data-target="#myCarouselDemo7" data-slide-to="2"></li>
+                    </ol>
+                    <div class="carousel-inner" role="listbox">
+                        <div class="carousel-item active">
+                            <div class="container">
+                                <div class="row">
+                                    
+                                    <img class="col-sm-3" src="image/6.JPG" alt=""> <!--add thêm hình ảnh vào-->
+                                    
+                                    <div class="col-sm-9">
+                                        <!-- <div class="container"> -->
+                                            <div class="text-left">
+                                                <blockquote class="blockquote text-right pb-0 mb-0">
+                                                    <p class="mb-2">Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime ducim</p>
+                                                    <footer class="blockquote-footer"> Lorem, ipsum dolor sit <br><cite title="Source Title">CT0, Paul</cite> </footer>
+                                                </blockquote>
+                                            </div>
+                                        <!-- </div> -->
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="carousel-item">
+                            <div class="container">
+                                <div class="row">
+                                    
+                                    <img class="col-sm-3" src="image/5.JPG" alt=""> <!--add thêm hình ảnh vào-->
+                                    
+                                    <div class="col-sm-9">
+                                        <!-- <div class="container"> -->
+                                            <div class="text-left">
+                                                <blockquote class="blockquote text-right pb-0 mb-0">
+                                                    <p class="mb-2">Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime ducim</p>
+                                                    <footer class="blockquote-footer"> Lorem, ipsum dolor sit <br><cite title="Source Title">CT0, Paul</cite></footer>
+                                                </blockquote>
+                                            </div>
+                                        <!-- </div> -->
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="carousel-item">
+                            <div class="container">
+                                <div class="row">
+                                    
+                                    <img class="col-sm-3" src="image/4.JPG" alt=""> <!--add thêm hình ảnh vào-->
+                                    
+                                    <div class="col-sm-9">
+                                        <!-- <div class="container"> -->
+                                            <div class="text-left">
+                                                <blockquote class="blockquote text-right pb-0 mb-0">
+                                                    <p class="mb-2">Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime ducim</p>
+                                                    <footer class="blockquote-footer"> Lorem, ipsum dolor sit <br> <cite title="Source Title">CT0, Paul</cite> </footer>
+                                                </blockquote>
+                                            </div>
+                                        <!-- </div> -->
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <a class="carousel-control-prev" href="#myCarouselDemo7" role="button" data-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="sr-only">Previous</span>
+                    </a>
+                    <a class="carousel-control-next" href="#myCarouselDemo7" role="button" data-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="sr-only">Next</span>
+                    </a>
+                </div><!--col-sm-10 push-sm-1-->
+            </div><!--row-->
+        </div><!--container-->
+    </div>
+
+    <div class="serviceDemo6" style="transform: translateY(-55px);">
+        <div class="container" style="transform: translateY(25px);">     <!--phần dịch vụ-->
+            <div class="row">
+                <div class="col-xs-12 text-center">
+                    <h3>See all our work</h3>
+                </div>
+            </div>
+        </div>
+        <div class="container-fluid" style="padding-top: 55px;">     <!--phần dịch vụ-->
+            <div class="container">
+            <div class="row" style="padding-bottom: 70px;">
+                <div class="col-sm-3">
+                    <div class="row text-center">
+                        <div class="col-2 mt-0 ml-0 mr-0 mb-0 pt-0 pl-0 pr-0 pb-0"><i class="far fa-lightbulb fa-2x" style="background-color: yellow; border-radius: 50%; color: black;"></i></div>
+                        <div class="col-10 mt-0 ml-0 mr-0 mb-0 pt-0 pl-0 pr-0 pb-0"><h4>Your first title here</h4></div>
+                    </div>
+                    <div class="row">
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Delectus necessitatibus quibusdam porro quam sed quos, in atque libero, voluptatem neque ab nesciunt nam sint vel magni! Aut eveniet porro similique.</p>
+                    </div>
+                </div>
+                <div class="col-sm-3">
+                    <div class="row text-center">
+                        <div class="col-2 mt-0 ml-0 mr-0 mb-0 pt-0 pl-0 pr-0 pb-0"><i class="fas fa-lock fa-2x" style="background-color: yellow; border-radius: 50%; color: black;"></i></div>
+                        <div class="col-10 mt-0 ml-0 mr-0 mb-0 pt-0 pl-0 pr-0 pb-0"><h4>Your first title here</h4></div>
+                    </div>
+                    <div class="row">
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Delectus necessitatibus quibusdam porro quam sed quos, in atque libero, voluptatem neque ab nesciunt nam sint vel magni! Aut eveniet porro similique.</p>
+                    </div>
+                </div>
+                <div class="col-sm-3">
+                    <div class="row text-center">
+                        <div class="col-2 mt-0 ml-0 mr-0 mb-0 pt-0 pl-0 pr-0 pb-0"><i class="fas fa-pen fa-2x" style="background-color: yellow; border-radius: 50%; color: black;"></i></div>
+                        <div class="col-10 mt-0 ml-0 mr-0 mb-0 pt-0 pl-0 pr-0 pb-0"><h4>Your first title here</h4></div>
+                    </div>
+                    <div class="row">
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Delectus necessitatibus quibusdam porro quam sed quos, in atque libero, voluptatem neque ab nesciunt nam sint vel magni! Aut eveniet porro similique.</p>
+                    </div>
+                </div>
+                <div class="col-sm-3">
+                    <div class="row text-center">
+                        <div class="col-2 mt-0 ml-0 mr-0 mb-0 pt-0 pl-0 pr-0 pb-0"><i class="fas fa-user fa-2x" style="background-color: yellow; border-radius: 50%; color: black;"></i></div>
+                        <div class="col-10 mt-0 ml-0 mr-0 mb-0 pt-0 pl-0 pr-0 pb-0"><h4>Your first title here</h4></div>
+                    </div>
+                    <div class="row">
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Delectus necessitatibus quibusdam porro quam sed quos, in atque libero, voluptatem neque ab nesciunt nam sint vel magni! Aut eveniet porro similique.</p>
+                    </div>
+                </div>
+            </div>
+            </div>
+        </div>  <!--container-->
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <!-- Marketing messaging and featurettes
+    ================================================== -->
+    <!-- Wrap the rest of the page in another container to center all the content. -->
+
+    <div class="container marketing">
+
+        <!-- Three columns of text below the carousel -->
+        <div class="row">
+        <div class="col-lg-4">
+            <svg class="bd-placeholder-img rounded-circle" width="140" height="140" xmlns="http://www.w3.org/2000/svg"
+            aria-label="Placeholder: 140x140" preserveAspectRatio="xMidYMid slice" role="img" focusable="false">
+            <title>Placeholder</title>
+            <rect width="100%" height="100%" fill="#777" /><text x="50%" y="50%" fill="#777" dy=".3em">140x140</text>
+            </svg>
+
+            <h2>Heading</h2>
+            <p>Donec sed odio dui. Etiam porta sem malesuada magna mollis euismod. Nullam id dolor id nibh ultricies
+            vehicula ut id elit. Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Praesent commodo cursus
+            magna.</p>
+            <p><a class="btn btn-secondary" href="#" role="button">View details &raquo;</a></p>
+        </div><!-- /.col-lg-4 -->
+        <div class="col-lg-4">
+            <svg class="bd-placeholder-img rounded-circle" width="140" height="140" xmlns="http://www.w3.org/2000/svg"
+            aria-label="Placeholder: 140x140" preserveAspectRatio="xMidYMid slice" role="img" focusable="false">
+            <title>Placeholder</title>
+            <rect width="100%" height="100%" fill="#777" /><text x="50%" y="50%" fill="#777" dy=".3em">140x140</text>
+            </svg>
+
+            <h2>Heading</h2>
+            <p>Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Cras
+            mattis consectetur purus sit amet fermentum. Fusce dapibus, tellus ac cursus commodo, tortor mauris
+            condimentum nibh.</p>
+            <p><a class="btn btn-secondary" href="#" role="button">View details &raquo;</a></p>
+        </div><!-- /.col-lg-4 -->
+        <div class="col-lg-4">
+            <svg class="bd-placeholder-img rounded-circle" width="140" height="140" xmlns="http://www.w3.org/2000/svg"
+            aria-label="Placeholder: 140x140" preserveAspectRatio="xMidYMid slice" role="img" focusable="false">
+            <title>Placeholder</title>
+            <rect width="100%" height="100%" fill="#777" /><text x="50%" y="50%" fill="#777" dy=".3em">140x140</text>
+            </svg>
+
+            <h2>Heading</h2>
+            <p>Donec sed odio dui. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Vestibulum id ligula porta
+            felis euismod semper. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum
+            massa justo sit amet risus.</p>
+            <p><a class="btn btn-secondary" href="#" role="button">View details &raquo;</a></p>
+        </div><!-- /.col-lg-4 -->
+        </div><!-- /.row -->
+
+
+        <!-- START THE FEATURETTES -->
+
+        <hr class="featurette-divider">
+
+        <div class="row featurette">
+        <div class="col-md-7">
+            <h2 class="featurette-heading">First featurette heading. <span class="text-muted">It’ll blow your mind.</span>
+            </h2>
+            <p class="lead">Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod
+            semper. Praesent commodo cursus magna, vel scelerisque nisl consectetur. Fusce dapibus, tellus ac cursus
+            commodo.</p>
+        </div>
+        <div class="col-md-5">
+            <svg class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" width="500"
+            height="500" xmlns="http://www.w3.org/2000/svg" aria-label="Placeholder: 500x500"
+            preserveAspectRatio="xMidYMid slice" role="img" focusable="false">
+            <title>Placeholder</title>
+            <rect width="100%" height="100%" fill="#eee" /><text x="50%" y="50%" fill="#aaa" dy=".3em">500x500</text>
+            </svg>
+
+        </div>
+        </div>
+
+        <hr class="featurette-divider">
+
+        <div class="row featurette">
+        <div class="col-md-7 order-md-2">
+            <h2 class="featurette-heading">Oh yeah, it’s that good. <span class="text-muted">See for yourself.</span></h2>
+            <p class="lead">Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod
+            semper. Praesent commodo cursus magna, vel scelerisque nisl consectetur. Fusce dapibus, tellus ac cursus
+            commodo.</p>
+        </div>
+        <div class="col-md-5 order-md-1">
+            <svg class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" width="500"
+            height="500" xmlns="http://www.w3.org/2000/svg" aria-label="Placeholder: 500x500"
+            preserveAspectRatio="xMidYMid slice" role="img" focusable="false">
+            <title>Placeholder</title>
+            <rect width="100%" height="100%" fill="#eee" /><text x="50%" y="50%" fill="#aaa" dy=".3em">500x500</text>
+            </svg>
+
+        </div>
+        </div>
+
+        <hr class="featurette-divider">
+
+        <div class="row featurette">
+        <div class="col-md-7">
+            <h2 class="featurette-heading">And lastly, this one. <span class="text-muted">Checkmate.</span></h2>
+            <p class="lead">Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod
+            semper. Praesent commodo cursus magna, vel scelerisque nisl consectetur. Fusce dapibus, tellus ac cursus
+            commodo.</p>
+        </div>
+        <div class="col-md-5">
+            <svg class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" width="500"
+            height="500" xmlns="http://www.w3.org/2000/svg" aria-label="Placeholder: 500x500"
+            preserveAspectRatio="xMidYMid slice" role="img" focusable="false">
+            <title>Placeholder</title>
+            <rect width="100%" height="100%" fill="#eee" /><text x="50%" y="50%" fill="#aaa" dy=".3em">500x500</text>
+            </svg>
+
+        </div>
+        </div>
+
+        <hr class="featurette-divider">
+
+        <!-- /END THE FEATURETTES -->
+
+    </div><!-- /.container -->
+
+
+    <!-- FOOTER -->
+    <footer class="container">
+        <p class="float-right"><a href="#">Back to top</a></p>
+        <p>&copy; 2017-2020 Company, Inc. &middot; <a href="#">Privacy</a> &middot; <a href="#">Terms</a></p>
+    </footer>
+    
+
+
+
+
+
+
+</body>
+</html>
+
